@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-  .dark {
+  :root {
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;
@@ -39,7 +39,7 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
-  :root {
+  .dark {
     --background: 240 10% 4%;
     /* --background: 240 2% 8%; */
     --foreground: 0 0% 98%;
@@ -124,8 +124,7 @@ img {
   left: 0;
   height: 1px;
   width: 100%;
-  color: rgb(48, 48, 48);
-  background: radial-gradient(50% 56400% at 50% 100%, rgb(34, 41, 57) 0%, rgba(169, 163, 194, 0) 100%);
+  background: radial-gradient(50% 56400% at 50% 100%, hsl(var(--border)) 0%, transparent 100%);
 }
 
 .companies::after {
@@ -138,16 +137,15 @@ img {
   width: 70%;
   border-radius: 100%;
   filter: blur(6rem);
-  background: rgb(85, 145, 243);
+  background: hsl(var(--primary) / 0.1);
 }
 
 .footer::before {
-  background: radial-gradient(50% 56400% at 50% 100%, rgb(34, 44, 57) 0%, rgba(169, 163, 194, 0) 100%);
+  background: radial-gradient(50% 56400% at 50% 100%, hsl(var(--border)) 0%, transparent 100%);
   top: 0;
   content: "";
   height: 1px;
   left: 0;
   position: absolute;
   width: 100%;
-  color: rgb(23, 23, 23);
 }
