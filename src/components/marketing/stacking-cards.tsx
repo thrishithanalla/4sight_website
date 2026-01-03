@@ -7,35 +7,7 @@ import Container from '../global/container';
 
 // --- Data Definitions ---
 
-const WHY_CHOOSE_ITEMS = [
-    {
-        id: "analytics",
-        title: "Intelligent Analytics",
-        label: "Insights",
-        desc: "Gain real-time insights into your operations with our advanced AI-driven analytics platform. Make data-driven decisions with confidence.",
-        gradient: "from-blue-500 to-cyan-400",
-        link: "#",
-        linkText: "Learn more",
-    },
-    {
-        id: "automation",
-        title: "Automated Workflows",
-        label: "Efficiency",
-        desc: "Streamline your business processes by automating repetitive tasks with 99.9% accuracy. Reduce errors and save valuable time.",
-        gradient: "from-purple-500 to-pink-500",
-        link: "#",
-        linkText: "Discover Automation",
-    },
-    {
-        id: "security",
-        title: "Secure Infrastructure",
-        label: "Security",
-        desc: "Enterprise-grade security ensuring your data remains protected while leveraging the power of cloud AI. Compliance and safety first.",
-        gradient: "from-orange-500 to-amber-400",
-        link: "#",
-        linkText: "View Security",
-    },
-];
+
 
 const PRODUCT_ITEMS = [
     {
@@ -215,22 +187,7 @@ const SectionHeader = ({ title, description }: { title: string, description: str
 const StackingCards = () => {
     return (
         <section className="relative w-full bg-background/50">
-            {/* Why Choose Section */}
-            <div className="py-20">
-                <Wrapper className="lg:!max-w-[90%]">
-                    <Container>
-                        <SectionHeader
-                            title="Why Choose 4sight AI?"
-                            description="Discover how our cutting-edge technology can transform your enterprise operations."
-                        />
-                        <div className="relative flex flex-col gap-4 pb-10">
-                            {WHY_CHOOSE_ITEMS.map((item, index) => (
-                                <StackingCard key={item.id} item={item} index={index} />
-                            ))}
-                        </div>
-                    </Container>
-                </Wrapper>
-            </div>
+
 
             {/* Products Section */}
             <div className="py-20 bg-muted/20">

@@ -13,7 +13,7 @@ const productsData = [
         desc: 'AI Envelop is our flagship enterprise AI infrastructure solution designed to seamlessly wrap around your existing systems and processes. Think of it as an intelligent layer that enhances every aspect of your operations without requiring a complete system overhaul.',
         img: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&q=80',
         alt: 'AI Envelop - Enterprise AI Infrastructure',
-        route: '#' // route: '/products/ai-envelop'
+        route: '/products/ai-envelop'
     },
     {
         id: 'ai-copilot-consulting',
@@ -21,7 +21,7 @@ const productsData = [
         desc: 'The AI Co-pilot for Consulting is a specialized tool designed to augment the capabilities of consulting professionals. It serves as an intelligent assistant that helps consultants deliver deeper insights, faster analysis, and more strategic recommendations to their clients.',
         img: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80',
         alt: 'AI Co-pilot for Consulting',
-        route: '#' // route: '/products/ai-copilot-consulting'
+        route: '/products/ai-copilot-consulting'
     },
     {
         id: 'nutrition-copilot',
@@ -29,7 +29,7 @@ const productsData = [
         desc: 'Nutrition Co-Pilot is an AI-powered wellness platform that revolutionizes how individuals and healthcare providers approach nutrition and health management. This intelligent system provides personalized dietary recommendations based on individual health profiles, goals, and preferences.',
         img: 'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&q=80',
         alt: 'Nutrition Co-Pilot - Healthcare AI',
-        route: '#' // route: '/products/nutrition-copilot'
+        route: '/products/nutrition-copilot'
     },
     {
         id: 'news-ai',
@@ -37,7 +37,7 @@ const productsData = [
         desc: 'News AI is an intelligent news aggregation and analysis platform that transforms how organizations and individuals consume information. It goes beyond simple news feeds to provide curated, analyzed, and contextualized news insights tailored to your specific interests and needs.',
         img: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&q=80',
         alt: 'News AI - Intelligent News Platform',
-        route: '#' // route: '/products/news-ai'
+        route: '/products/news-ai'
     },
     {
         id: 'ai-copilot-police',
@@ -45,7 +45,7 @@ const productsData = [
         desc: 'The AI Co-pilot for Police Departments is a sophisticated public safety tool designed to enhance law enforcement capabilities while ensuring transparency and accountability. This system assists officers in data analysis, pattern recognition, resource allocation, and administrative tasks.',
         img: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80',
         alt: 'AI Co-pilot for Police Department',
-        route: '#' // route: '/products/ai-copilot-police'
+        route: '/products/ai-copilot-police'
     },
     {
         id: 'personal-finance-copilot',
@@ -53,7 +53,7 @@ const productsData = [
         desc: "The Personal Finance Co-pilot is an innovative AI-powered financial advisor designed specifically for Pocket FM's user base. This intelligent assistant helps users make informed financial decisions, manage budgets, track expenses, and plan for their financial future.",
         img: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&q=80',
         alt: 'Personal Finance Co-pilot',
-        route: '#' // route: '/products/personal-finance-copilot'
+        route: '/products/personal-finance-copilot'
     },
     {
         id: 'underworks',
@@ -61,7 +61,7 @@ const productsData = [
         desc: 'UnderWorks is a comprehensive AI-powered educational platform that brings together three specialized co-pilots designed to transform the academic experience: Study Buddy, Lab Technician Co-pilot, and Campus Co-pilot.',
         img: 'https://images.unsplash.com/photo-1504711331083-9c895941bf81?w=800&q=80',
         alt: 'UnderWorks - Education AI Suite',
-        route: '#' // route: '/products/underworks'
+        route: '/products/underworks'
     }
 ];
 
