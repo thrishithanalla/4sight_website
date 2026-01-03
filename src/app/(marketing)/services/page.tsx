@@ -13,7 +13,7 @@ const servicesData = [
         desc: 'Strategic guidance to help you navigate the landscape of Generative AI. We work with your leadership to identify high-impact use cases, assess organizational readiness, and develop a roadmap for sustainable AI adoption.',
         img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
         alt: 'Advisory',
-        route: '#' // route: '/services/genai-advisory'
+        route: '/services/genai-advisory'
     },
     {
         id: 'project-scoping',
@@ -21,7 +21,7 @@ const servicesData = [
         desc: 'Detailed execution plans, technical architectures, and requirements gathered to ensure your AI initiative starts on solid ground. We deliver comprehensive blueprints that minimize risk and clarify resource needs.',
         img: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80',
         alt: 'Scoping',
-        route: '#' // route: '/services/project-scoping'
+        route: '/services/project-scoping'
     },
     {
         id: 'building-poc',
@@ -29,7 +29,7 @@ const servicesData = [
         desc: 'Rapid prototypes to validate AI use cases before full investment. Our agile POC development process allows you to demonstrate value, test assumptions, and gather user feedback quickly.',
         img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80',
         alt: 'POC',
-        route: '#' // route: '/services/building-poc'
+        route: '/services/building-poc'
     },
     {
         id: 'genai-consulting',
@@ -37,7 +37,7 @@ const servicesData = [
         desc: 'End-to-end support for your AI transformation journey. From model selection and fine-tuning to integration and change management, our consultants ensure your GenAI solutions deliver real business value.',
         img: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80',
         alt: 'Consulting',
-        route: '#' // route: '/services/genai-consulting'
+        route: '/services/genai-consulting'
     }
 ];
 

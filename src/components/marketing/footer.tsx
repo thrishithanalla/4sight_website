@@ -9,9 +9,8 @@ const Footer = () => {
                 <Container>
                     <div className="flex flex-col items-start justify-start md:max-w-[200px]">
                         <div className="flex items-center gap-2">
-                            <Icons.icon className="w-auto h-5" />
                             <span className="text-base md:text-lg font-medium text-foreground">
-                                Vetra
+                                4sightAI
                             </span>
                         </div>
                         <p className="text-muted-foreground mt-4 text-sm text-start">
@@ -24,27 +23,32 @@ const Footer = () => {
                     <div className="md:grid md:grid-cols-2 md:gap-8">
                         <Container delay={0.1} className="h-auto">
                             <h3 className="text-base font-medium text-foreground">
-                                Product
+                                Products
                             </h3>
                             <ul className="mt-4 text-sm text-muted-foreground space-y-4">
                                 <li className="mt-2">
-                                    <Link href="#" className="link hover:text-foreground transition-all duration-300">
-                                        Features
+                                    <Link href="/products/ai-envelop" className="link hover:text-foreground transition-all duration-300">
+                                        AI Envelop
                                     </Link>
                                 </li>
                                 <li className="mt-2">
-                                    <Link href="#" className="link hover:text-foreground transition-all duration-300">
-                                        Pricing
+                                    <Link href="/products/ai-copilot-consulting" className="link hover:text-foreground transition-all duration-300">
+                                        AI Co-pilot (Consulting)
                                     </Link>
                                 </li>
                                 <li className="mt-2">
-                                    <Link href="#" className="link hover:text-foreground transition-all duration-300">
-                                        Testimonials
+                                    <Link href="/products/nutrition-copilot" className="link hover:text-foreground transition-all duration-300">
+                                        Nutrition Co-Pilot
                                     </Link>
                                 </li>
                                 <li className="mt-2">
-                                    <Link href="#" className="link hover:text-foreground transition-all duration-300">
-                                        Supported Languages
+                                    <Link href="/products/news-ai" className="link hover:text-foreground transition-all duration-300">
+                                        News AI
+                                    </Link>
+                                </li>
+                                <li className="mt-2">
+                                    <Link href="/products/ai-copilot-police" className="link hover:text-foreground transition-all duration-300">
+                                        AI Co-pilot (Police)
                                     </Link>
                                 </li>
                             </ul>
@@ -52,27 +56,27 @@ const Footer = () => {
                         <Container delay={0.2} className="h-auto">
                             <div className="mt-10 md:mt-0 flex flex-col">
                                 <h3 className="text-base font-medium text-foreground">
-                                    Solutions
+                                    Services
                                 </h3>
                                 <ul className="mt-4 text-sm text-muted-foreground space-y-4">
                                     <li>
-                                        <Link href="#" className="link hover:text-foreground transition-all duration-300">
-                                            Content Creators
+                                        <Link href="/services/genai-advisory" className="link hover:text-foreground transition-all duration-300">
+                                            GenAI Advisory
                                         </Link>
                                     </li>
                                     <li className="mt-2">
-                                        <Link href="#" className="link hover:text-foreground transition-all duration-300">
-                                            Businesses
+                                        <Link href="/services/project-scoping" className="link hover:text-foreground transition-all duration-300">
+                                            Project Scoping
                                         </Link>
                                     </li>
                                     <li className="mt-2">
-                                        <Link href="#" className="link hover:text-foreground transition-all duration-300">
-                                            Education
+                                        <Link href="/services/building-poc" className="link hover:text-foreground transition-all duration-300">
+                                            Building GenAI POC
                                         </Link>
                                     </li>
                                     <li className="mt-2">
-                                        <Link href="#" className="link hover:text-foreground transition-all duration-300">
-                                            Enterprise
+                                        <Link href="/services/genai-consulting" className="link hover:text-foreground transition-all duration-300">
+                                            GenAI Consulting
                                         </Link>
                                     </li>
                                 </ul>
@@ -82,22 +86,27 @@ const Footer = () => {
                     <div className="md:grid md:grid-cols-2 md:gap-8">
                         <Container delay={0.3} className="h-auto">
                             <h3 className="text-base font-medium text-foreground">
-                                Resources
+                                Socials
                             </h3>
                             <ul className="mt-4 text-sm text-muted-foreground space-y-4">
                                 <li className="mt-2">
                                     <Link href="#" className="link hover:text-foreground transition-all duration-300">
-                                        Blog
+                                        LinkedIn
                                     </Link>
                                 </li>
                                 <li className="mt-2">
                                     <Link href="#" className="link hover:text-foreground transition-all duration-300">
-                                        Translation Guides
+                                        Instagram
                                     </Link>
                                 </li>
                                 <li className="mt-2">
                                     <Link href="#" className="link hover:text-foreground transition-all duration-300">
-                                        Support
+                                        Facebook
+                                    </Link>
+                                </li>
+                                <li className="mt-2">
+                                    <Link href="#" className="link hover:text-foreground transition-all duration-300">
+                                        Twitter
                                     </Link>
                                 </li>
                             </ul>
@@ -109,7 +118,7 @@ const Footer = () => {
                                 </h3>
                                 <ul className="mt-4 text-sm text-muted-foreground space-y-4">
                                     <li>
-                                        <Link href="#" className="link hover:text-foreground transition-all duration-300">
+                                        <Link href="/about" className="link hover:text-foreground transition-all duration-300">
                                             About Us
                                         </Link>
                                     </li>
@@ -119,7 +128,7 @@ const Footer = () => {
                                         </Link>
                                     </li>
                                     <li className="mt-2">
-                                        <Link href="#" className="link hover:text-foreground transition-all duration-300">
+                                        <Link href="/terms" className="link hover:text-foreground transition-all duration-300">
                                             Terms & Conditions
                                         </Link>
                                     </li>
@@ -133,7 +142,7 @@ const Footer = () => {
             <Container delay={0.5} className="w-full relative mt-12 lg:mt-20">
                 <div className="mt-8 md:flex md:items-center justify-center footer w-full">
                     <p className="text-sm text-muted-foreground mt-8 md:mt-0">
-                        &copy; {new Date().getFullYear()} Vetra. All rights reserved.
+                        &copy; {new Date().getFullYear()} 4sightAI. All rights reserved.
                     </p>
                 </div>
             </Container>

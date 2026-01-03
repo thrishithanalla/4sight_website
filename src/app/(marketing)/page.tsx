@@ -8,6 +8,9 @@ import StackingCards from "@/components/marketing/stacking-cards";
 import ImpactStats from "@/components/marketing/impact-stats";
 import LanguageSupport from "@/components/marketing/lang-support";
 import Pricing from "@/components/marketing/pricing";
+import Team from "@/components/marketing/team";
+import UseCases from "@/components/marketing/use-cases";
+import Testimonials from "@/components/marketing/testimonials";
 
 const HomePage = () => {
     return (
@@ -16,16 +19,22 @@ const HomePage = () => {
                 <Hero />
             </Wrapper>
 
-            <StackingCards />
+            <Features />
+            <Testimonials />
+
+            {/* <StackingCards /> */}
 
             <Wrapper className="pb-20 relative overflow-hidden">
                 <ImpactStats />
-                <Companies />
-                <Features />
-                <Analysis />
-                <Pricing />
-                <LanguageSupport />
-                <CTA />
+                <Team />
+                <UseCases />
+                {/* <Companies /> */}
+
+                {/* <Analysis /> */}
+                {/* <Pricing /> */}
+                {/* <Pricing /> */}
+                {/* <LanguageSupport /> */}
+                {/* <CTA /> */}
             </Wrapper>
         </div>
     )
