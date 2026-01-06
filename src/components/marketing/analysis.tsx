@@ -20,60 +20,58 @@ const Analysis = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative w-full">
 
                 <Container delay={0.2}>
-                    <div className="rounded-2xl bg-background/40 relative border border-border/50">
+                    <div className="rounded-3xl bg-card/40 backdrop-blur-xl relative border border-border/50 overflow-hidden group hover:border-blue-500/50 transition-all duration-500">
                         <MagicCard
                             gradientFrom="#38bdf8"
                             gradientTo="#3b82f6"
                             gradientColor="rgba(59,130,246,0.1)"
-                            className="p-4 lg:p-8 w-full overflow-hidden"
+                            className="p-4 lg:p-8 w-full overflow-hidden relative z-10"
                         >
-                            <div className="absolute bottom-0 right-0 bg-blue-500 w-1/4 h-1/4 blur-[8rem] z-20"></div>
-                            <div className="space-y-4">
-                                <h3 className="text-xl font-semibold">
-                                    Campaign Insights
-                                </h3>
-                                <p className="text-sm text-muted-foreground">
-                                    Track your campaign performance with data-driven insights.
-                                </p>
+                            <div className="absolute top-0 right-0 -mr-10 -mt-10 w-40 h-40 bg-blue-500/20 blur-[60px] rounded-full pointer-events-none group-hover:bg-blue-500/30 transition-colors"></div>
 
-                                <div className="space-y-4">
+                            <div className="space-y-6 relative z-20">
+                                <div className="space-y-2">
+                                    <h3 className="text-xl font-semibold flex items-center gap-2">
+                                        <div className="p-1.5 rounded-lg bg-blue-500/10">
+                                            <TrendingUpIcon className="w-5 h-5 text-blue-600" />
+                                        </div>
+                                        Campaign Insights
+                                    </h3>
+                                    <p className="text-sm text-muted-foreground">
+                                        Track your campaign performance with data-driven insights.
+                                    </p>
+                                </div>
+
+                                <div className="space-y-4 bg-background/50 rounded-xl p-4 border border-border/50">
                                     <div className="flex justify-between items-baseline">
                                         <div>
-                                            <div className="text-3xl font-semibold">
+                                            <div className="text-3xl font-bold tracking-tight">
                                                 $12,834
                                             </div>
-                                            <div className="text-sm text-green-500 flex items-center gap-1 mt-2">
-                                                <TrendingUpIcon className="w-4 h-4" />
-                                                +25% from last month
+                                            <div className="text-sm text-emerald-500 flex items-center gap-1 mt-1 font-medium bg-emerald-500/10 px-2 py-0.5 rounded-full w-fit">
+                                                <TrendingUpIcon className="w-3.5 h-3.5" />
+                                                +25% growth
                                             </div>
                                         </div>
-                                        <div className="flex gap-2">
-                                            <Button size="icon" variant="ghost">
-                                                <FilterIcon className="w-5 h-5" />
-                                            </Button>
-                                            <Button size="icon" variant="ghost">
-                                                <DownloadIcon className="w-5 h-5" />
-                                            </Button>
+                                        <div className="flex gap-1">
+                                            <div className="h-8 w-8 rounded-full bg-muted flex items-center justify-center">
+                                                <FilterIcon className="w-4 h-4 text-muted-foreground" />
+                                            </div>
                                         </div>
                                     </div>
 
                                     <div className="space-y-2">
-                                        <div className="grid grid-cols-4 text-sm text-muted-foreground py-2">
-                                            <div>Campaign</div>
-                                            <div>Status</div>
-                                            <div>Reach</div>
-                                            <div>ROI</div>
-                                        </div>
                                         {[
-                                            { name: "Sales", status: "Active", reach: "45K", roi: "+32%" },
-                                            { name: "Emails", status: "Done", reach: "28K", roi: "+18%" },
-                                            { name: "Ads", status: "Active", reach: "62K", roi: "+45%" },
-                                        ].map((campaign) => (
-                                            <div key={campaign.name} className="grid grid-cols-4 text-sm py-2 border-t border-border/50">
-                                                <div>{campaign.name}</div>
-                                                <div>{campaign.status}</div>
-                                                <div>{campaign.reach}</div>
-                                                <div className="font-semibold">{campaign.roi}</div>
+                                            { name: "Sales", status: "Active", val: "45K", color: "bg-blue-500" },
+                                            { name: "Emails", status: "Done", val: "28K", color: "bg-purple-500" },
+                                            { name: "Ads", status: "Active", val: "62K", color: "bg-emerald-500" },
+                                        ].map((item) => (
+                                            <div key={item.name} className="flex items-center justify-between text-sm p-2 hover:bg-muted/50 rounded-lg transition-colors cursor-default group/item">
+                                                <div className="flex items-center gap-3">
+                                                    <span className={`w-2 h-2 rounded-full ${item.color}`}></span>
+                                                    <span className="font-medium text-foreground">{item.name}</span>
+                                                </div>
+                                                <div className="text-muted-foreground group-hover/item:text-foreground transition-colors">{item.val}</div>
                                             </div>
                                         ))}
                                     </div>
@@ -83,62 +81,53 @@ const Analysis = () => {
                     </div>
                 </Container>
 
-                <Container delay={0.2}>
-                    <div className="rounded-2xl bg-background/40 relative border border-border/50">
+                <Container delay={0.3}>
+                    <div className="rounded-3xl bg-card/40 backdrop-blur-xl relative border border-border/50 overflow-hidden group hover:border-violet-500/50 transition-all duration-500">
                         <MagicCard
-                            gradientFrom="#38bdf8"
-                            gradientTo="#3b82f6"
-                            gradientColor="rgba(59,130,246,0.1)"
-                            className="p-4 lg:p-8 w-full overflow-hidden"
+                            gradientFrom="#a855f7"
+                            gradientTo="#6366f1"
+                            gradientColor="rgba(168,85,247,0.1)"
+                            className="p-4 lg:p-8 w-full overflow-hidden relative z-10"
                         >
-                            <div className="absolute bottom-0 right-0 bg-sky-500 w-1/4 h-1/4 blur-[8rem] z-20"></div>
-                            <div className="space-y-4">
-                                <h3 className="text-xl font-semibold">
-                                    Audience Metrics
-                                </h3>
-                                <p className="text-sm text-muted-foreground">
-                                    Understand your audience behavior and engagement patterns.
-                                </p>
+                            <div className="absolute bottom-0 left-0 -ml-10 -mb-10 w-40 h-40 bg-violet-500/20 blur-[60px] rounded-full pointer-events-none group-hover:bg-violet-500/30 transition-colors"></div>
 
-                                <div className="space-y-4">
+                            <div className="space-y-6 relative z-20">
+                                <div className="space-y-2">
+                                    <h3 className="text-xl font-semibold flex items-center gap-2">
+                                        <div className="p-1.5 rounded-lg bg-violet-500/10">
+                                            <FilterIcon className="w-5 h-5 text-violet-600" />
+                                        </div>
+                                        Audience Metrics
+                                    </h3>
+                                    <p className="text-sm text-muted-foreground">
+                                        Understand your audience behavior and engagement patterns.
+                                    </p>
+                                </div>
+
+                                <div className="space-y-4 bg-background/50 rounded-xl p-4 border border-border/50">
                                     <div className="flex justify-between items-baseline">
                                         <div>
-                                            <div className="text-3xl font-semibold">84,392</div>
-                                            <div className="text-sm text-green-500 flex items-center gap-1 mt-2">
-                                                <TrendingUpIcon className="w-4 h-4" />
-                                                +12% engagement rate
+                                            <div className="text-3xl font-bold tracking-tight">84,392</div>
+                                            <div className="text-sm text-blue-500 flex items-center gap-1 mt-1 font-medium bg-blue-500/10 px-2 py-0.5 rounded-full w-fit">
+                                                <TrendingUpIcon className="w-3.5 h-3.5" />
+                                                High engagement
                                             </div>
-                                        </div>
-                                        <div className="flex gap-2">
-                                            <Button size="icon" variant="ghost">
-                                                <FilterIcon className="w-5 h-5" />
-                                            </Button>
-                                            <Button size="icon" variant="ghost">
-                                                <DownloadIcon className="w-5 h-5" />
-                                            </Button>
                                         </div>
                                     </div>
 
-                                    {/* Audience Table */}
-                                    <div className="space-y-2">
-                                        <div className="grid grid-cols-4 text-sm text-muted-foreground py-2">
-                                            <div>Channel</div>
-                                            <div>Users</div>
-                                            <div>Sessions</div>
-                                            <div>Conv. Rate</div>
-                                        </div>
-                                        {[
-                                            { channel: "Social", users: "32K", sessions: "45K", rate: "3.2%" },
-                                            { channel: "Email", users: "28K", sessions: "36K", rate: "4.5%" },
-                                            { channel: "Direct", users: "15K", sessions: "22K", rate: "5.1%" },
-                                        ].map((metric) => (
-                                            <div key={metric.channel} className="grid grid-cols-4 text-sm py-2 border-t border-border/50">
-                                                <div>{metric.channel}</div>
-                                                <div>{metric.users}</div>
-                                                <div>{metric.sessions}</div>
-                                                <div className="font-semibold">{metric.rate}</div>
+                                    {/* Abstract Visual Representation instead of table */}
+                                    <div className="flex items-end justify-between h-32 w-full gap-2 pt-4">
+                                        {[40, 70, 45, 90, 60, 80, 50].map((h, i) => (
+                                            <div key={i} className="w-full bg-muted/50 rounded-t-lg relative group/bar overflow-hidden">
+                                                <div
+                                                    style={{ height: `${h}%` }}
+                                                    className="absolute bottom-0 w-full bg-gradient-to-t from-violet-500 to-indigo-400 opacity-80 group-hover/bar:opacity-100 transition-opacity rounded-t-lg"
+                                                ></div>
                                             </div>
                                         ))}
+                                    </div>
+                                    <div className="flex justify-between text-xs text-muted-foreground px-1">
+                                        <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
                                     </div>
                                 </div>
                             </div>

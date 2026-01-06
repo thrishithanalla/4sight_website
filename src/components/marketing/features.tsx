@@ -35,45 +35,47 @@ const Features = () => {
                 </div>
             </Container>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 relative w-full px-4 xl:px-0 max-w-6xl mx-auto pb-4 md:pb-0">
+            <div className="grid grid-cols-1 md:grid-cols-6 gap-6 mt-8 relative w-full px-4 xl:px-0 max-w-6xl mx-auto pb-4 md:pb-0">
 
-                {/* Card 1 */}
-                <Container delay={0.1} className="w-full">
-                    <div className="rounded-2xl bg-card relative border border-border/50 hover:border-border/100 transition-colors h-full min-h-[300px]">
+                {/* Card 1 - Spans 4 columns */}
+                <Container delay={0.1} className="col-span-1 md:col-span-4 w-full h-full">
+                    <div className="rounded-3xl bg-card relative border border-border/50 hover:border-border/100 transition-colors h-full min-h-[320px] overflow-hidden group">
                         <MagicCard
                             gradientFrom="#38bdf8"
                             gradientTo="#3b82f6"
-                            className="p-6 w-full h-full flex flex-col justify-between"
-                            gradientColor="rgba(59,130,246,0.1)"
+                            className="p-8 w-full h-full flex flex-col justify-between relative z-10"
+                            gradientColor="rgba(59,130,246,0.05)"
                         >
-                            <div className="flex flex-col gap-4 mb-8">
-                                <div className="flex items-center gap-2">
-                                    <WandSparklesIcon className="w-5 h-5 text-foreground" />
-                                    <h3 className="font-semibold text-lg text-foreground">Feature 1</h3>
+                            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                            <div className="flex flex-col gap-4 mb-4 z-20">
+                                <div className="flex items-center gap-3">
+                                    <div className="h-10 w-10 rounded-xl bg-blue-500/10 flex items-center justify-center">
+                                        <WandSparklesIcon className="w-5 h-5 text-blue-500" />
+                                    </div>
+                                    <h3 className="font-heading font-semibold text-xl text-foreground">AI-Powered Automation</h3>
                                 </div>
-                                <p className="text-muted-foreground text-sm">
-                                    Efficiently manage user data and interactions with advanced AI tools
+                                <p className="text-muted-foreground text-sm max-w-xs leading-relaxed">
+                                    Efficiently manage user data and interactions with advanced AI tools that adapt to your workflow.
                                 </p>
                             </div>
 
-                            <div className="flex flex-col items-center justify-end w-full mt-auto relative min-h-[140px] pb-4">
-                                {/* Dashed lines / stacks */}
+                            <div className="flex flex-col items-center justify-end w-full mt-auto relative min-h-[140px] pb-4 z-20">
                                 <div className="absolute bottom-[2px] w-[90%] border-t border-dashed border-neutral-300 dark:border-neutral-700 z-0 opacity-50"></div>
                                 <div className="absolute bottom-[10px] w-[85%] border-t border-dashed border-neutral-300 dark:border-neutral-700 z-0 opacity-70"></div>
                                 <div className="absolute bottom-[18px] w-[80%] border-t border-dashed border-neutral-300 dark:border-neutral-700 z-0"></div>
 
-                                {/* Main Card */}
-                                <div className="bg-neutral-950 text-white rounded-xl p-3 flex shadow-xl z-10 w-[85%] max-w-[240px] relative">
-                                    <div className="bg-blue-600 rounded-lg p-2 mr-3 flex items-center justify-center h-10 w-10 shrink-0">
+                                <div className="bg-neutral-950 text-white rounded-xl p-3 flex shadow-2xl z-10 w-[85%] max-w-[240px] relative border border-neutral-800">
+                                    <div className="bg-blue-600 rounded-lg p-2 mr-3 flex items-center justify-center h-10 w-10 shrink-0 shadow-[0_0_15px_rgba(37,99,235,0.5)]">
                                         <ZapIcon className="w-5 h-5 text-white" fill="currentColor" />
                                     </div>
                                     <div className="flex flex-col justify-center">
                                         <div className="flex items-center gap-2 text-[10px] font-bold text-blue-400 mb-0.5">
-                                            <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-                                            NEW
+                                            <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></span>
+                                            LIVE TRENDS
                                         </div>
-                                        <div className="text-sm font-semibold leading-tight">Top trends</div>
-                                        <div className="text-[10px] text-neutral-400">Today, 10:25</div>
+                                        <div className="text-sm font-semibold leading-tight">Interaction Spike</div>
+                                        <div className="text-[10px] text-neutral-400">Analysis complete</div>
                                     </div>
                                 </div>
                             </div>
@@ -81,83 +83,104 @@ const Features = () => {
                     </div>
                 </Container>
 
-                {/* Card 2 */}
-                <Container delay={0.2} className="w-full">
-                    <div className="rounded-2xl bg-card relative border border-border/50 hover:border-border/100 transition-colors h-full min-h-[300px]">
+                {/* Card 2 - Spans 2 columns */}
+                <Container delay={0.2} className="col-span-1 md:col-span-2 w-full h-full">
+                    <div className="rounded-3xl bg-card relative border border-border/50 hover:border-border/100 transition-colors h-full min-h-[320px] overflow-hidden group">
                         <MagicCard
-                            gradientFrom="#38bdf8"
-                            gradientTo="#3b82f6"
-                            className="p-6 w-full h-full flex flex-col justify-between"
-                            gradientColor="rgba(59,130,246,0.1)"
+                            gradientFrom="#a855f7"
+                            gradientTo="#ec4899"
+                            className="p-8 w-full h-full flex flex-col justify-between relative z-10"
+                            gradientColor="rgba(168,85,247,0.05)"
                         >
-                            <div className="flex flex-col gap-4 mb-4">
-                                <div className="flex items-center gap-2">
-                                    <ChartColumnBigIcon className="w-5 h-5 text-foreground" />
-                                    <h3 className="font-semibold text-lg text-foreground">Feature 2</h3>
+                            <div className="absolute inset-0 bg-gradient-to-bl from-purple-500/10 via-transparent to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                            <div className="flex flex-col gap-4 mb-4 z-20">
+                                <div className="flex items-center gap-3">
+                                    <div className="h-10 w-10 rounded-xl bg-purple-500/10 flex items-center justify-center">
+                                        <ChartColumnBigIcon className="w-5 h-5 text-purple-500" />
+                                    </div>
+                                    <h3 className="font-heading font-semibold text-xl text-foreground">Deep Analytics</h3>
                                 </div>
-                                <p className="text-muted-foreground text-sm">
-                                    Gain deep insights into your audience and campaign performance
+                                <p className="text-muted-foreground text-sm leading-relaxed">
+                                    Gain deep insights into your audience and campaign performance.
                                 </p>
                             </div>
 
-                            <div className="w-full h-40 mt-auto">
+                            <div className="w-full h-32 mt-auto z-20 relative">
+                                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10"></div>
                                 <ResponsiveContainer width="100%" height="100%">
                                     <LineChart data={chartData}>
                                         <Line
                                             type="monotone"
                                             dataKey="val"
-                                            stroke="#2563eb"
+                                            stroke="#a855f7"
                                             strokeWidth={3}
-                                            dot={(props) => {
-                                                const { cx, cy, index } = props;
-                                                if (index === 5) return <circle key={index} cx={cx} cy={cy} r={4} fill="#2563eb" stroke="white" strokeWidth={2} />;
-                                                return <circle key={index} r={0} />;
-                                            }}
-                                        />
-                                        <Tooltip
-                                            cursor={{ stroke: '#2563eb', strokeWidth: 1, strokeDasharray: "4 4" }}
-                                            content={<CustomTooltip />}
+                                            dot={false}
                                         />
                                     </LineChart>
                                 </ResponsiveContainer>
-                                <div className="flex justify-between text-xs text-muted-foreground mt-2 px-1">
-                                    <span>-5</span><span>0</span><span>5</span><span>10</span><span>15</span><span>20</span><span>25</span>
-                                </div>
                             </div>
                         </MagicCard>
                     </div>
                 </Container>
 
-                {/* Card 3 */}
-                <Container delay={0.3} className="w-full">
-                    <div className="rounded-2xl bg-card relative border border-border/50 hover:border-border/100 transition-colors h-full min-h-[300px]">
+                {/* Card 3 - Spans 3 columns */}
+                <Container delay={0.3} className="col-span-1 md:col-span-3 w-full h-full">
+                    <div className="rounded-3xl bg-card relative border border-border/50 hover:border-border/100 transition-colors h-full min-h-[300px] overflow-hidden group">
                         <MagicCard
-                            gradientFrom="#38bdf8"
-                            gradientTo="#3b82f6"
-                            className="p-6 w-full h-full flex flex-col justify-between"
-                            gradientColor="rgba(59,130,246,0.1)"
+                            gradientFrom="#10b981"
+                            gradientTo="#14b8a6"
+                            className="p-8 w-full h-full flex flex-col justify-between relative z-10"
+                            gradientColor="rgba(16,185,129,0.05)"
                         >
-                            <div className="flex flex-col gap-4 mb-8">
-                                <div className="flex items-center gap-2">
-                                    <DatabaseIcon className="w-5 h-5 text-foreground" />
-                                    <h3 className="font-semibold text-lg text-foreground">Feature 3</h3>
+                            <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-transparent to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                            <div className="flex flex-col gap-4 mb-8 z-20">
+                                <div className="flex items-center gap-3">
+                                    <div className="h-10 w-10 rounded-xl bg-emerald-500/10 flex items-center justify-center">
+                                        <DatabaseIcon className="w-5 h-5 text-emerald-500" />
+                                    </div>
+                                    <h3 className="font-heading font-semibold text-xl text-foreground">Data Management</h3>
                                 </div>
-                                <p className="text-muted-foreground text-sm">
-                                    Manage your data with ease and efficiency
+                                <p className="text-muted-foreground text-sm max-w-sm leading-relaxed">
+                                    Secure, scalable storage for all your critical business metrics.
                                 </p>
                             </div>
 
-                            <div className="flex flex-col gap-4 w-full mt-auto px-2 pb-2">
-                                {[1, 2, 3].map(i => (
-                                    <div key={i} className="flex items-center gap-3">
-                                        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-500 text-white shrink-0">
+                            <div className="flex flex-col gap-3 w-full mt-auto z-20 relative">
+                                {[1, 2].map(i => (
+                                    <div key={i} className="flex items-center gap-4 bg-background/50 border border-border/50 p-2.5 rounded-lg backdrop-blur-sm">
+                                        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-500 shrink-0">
                                             <DownloadIcon className="w-4 h-4" />
                                         </div>
-                                        <div className="h-2.5 w-full bg-foreground/80 rounded-full opacity-80"></div>
+                                        <div className="h-2 w-full bg-muted rounded-full overflow-hidden">
+                                            <div className="h-full bg-emerald-500/50 w-2/3 rounded-full"></div>
+                                        </div>
                                     </div>
                                 ))}
                             </div>
                         </MagicCard>
+                    </div>
+                </Container>
+
+                {/* Card 4 - Spans 3 columns (New Visual Card) */}
+                <Container delay={0.4} className="col-span-1 md:col-span-3 w-full h-full">
+                    <div className="rounded-3xl bg-gradient-to-br from-indigo-600 via-violet-600 to-purple-600 relative border border-transparent h-full min-h-[300px] overflow-hidden group">
+                        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150"></div>
+                        <div className="p-8 flex flex-col h-full relative z-10 text-white">
+                            <h3 className="font-heading font-bold text-2xl mb-2">Ready to scale?</h3>
+                            <p className="text-white/80 text-sm mb-6 max-w-xs">
+                                Join thousands of companies using 4SightAI to power their growth.
+                            </p>
+                            <div className="mt-auto">
+                                <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 flex items-center justify-between">
+                                    <span className="font-medium">Get Started Now</span>
+                                    <div className="h-8 w-8 rounded-full bg-white text-violet-600 flex items-center justify-center">
+                                        <ZapIcon className="w-4 h-4 fill-current" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </Container>
 

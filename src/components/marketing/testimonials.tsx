@@ -117,10 +117,10 @@ const Testimonials = () => {
                         <ArrowRight className="w-6 h-6" />
                     </button>
 
-                    {/* Mobile Scroll View (now Vertical Stack) */}
-                    <div className="md:hidden flex flex-col gap-6 px-4 pb-8">
+                    {/* Mobile Scroll View (Horizontal) */}
+                    <div className="md:hidden flex overflow-x-auto gap-4 snap-x snap-mandatory scrollbar-hide pb-8 -mx-4 px-4">
                         {testimonials.map((testimonial) => (
-                            <div key={testimonial.id} className="w-full">
+                            <div key={testimonial.id} className="min-w-[85vw] snap-center h-full">
                                 <div className="bg-card/50 backdrop-blur-sm text-card-foreground rounded-2xl p-8 shadow-sm border border-border/50 h-full flex flex-col items-center text-center">
                                     <div className="relative w-16 h-16 mx-auto mb-4">
                                         <Image

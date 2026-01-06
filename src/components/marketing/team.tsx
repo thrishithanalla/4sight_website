@@ -68,10 +68,10 @@ const Team = () => {
                 </div>
 
                 <div className="w-full px-4 md:px-8">
-                    {/* Mobile Scroll View (now Vertical Stack) */}
-                    <div className="md:hidden flex flex-col gap-6 w-full">
+                    {/* Mobile Scroll View (Horizontal) */}
+                    <div className="md:hidden flex overflow-x-auto gap-4 snap-x snap-mandatory scrollbar-hide pb-8 -mx-4 px-4">
                         {TEAM_MEMBERS.map((member) => (
-                            <div key={member.id} className="w-full">
+                            <div key={member.id} className="min-w-[280px] snap-center h-full">
                                 <Card className="h-full border-border/50 bg-card hover:border-border/100 transition-colors">
                                     <CardContent className="flex flex-col items-center p-6 text-center h-full">
                                         <div className="relative w-32 h-32 mb-6 rounded-full overflow-hidden border-2 border-primary/20">

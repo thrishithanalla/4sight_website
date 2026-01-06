@@ -175,7 +175,7 @@ const EventsPage = () => {
                         </div>
 
                         <div className="bg-white/5 rounded-2xl border border-white/10 p-8 space-y-6">
-                            <h3 className="text-2xl font-bold text-orange-500">Who Should Join?</h3>
+                            <h3 className="text-2xl font-bold text-orange-500">Who Have Joined</h3>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 {["AI Engineers & Developers", "Startups & Tech Firms", "Academic Institutions", "Data Science Researchers"].map((p, i) => (
                                     <div key={i} className="bg-black/20 p-4 rounded-lg flex items-center gap-3">

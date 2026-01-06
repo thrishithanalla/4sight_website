@@ -49,8 +49,14 @@ const Hero = () => {
                         </div>
                     </Container>
                     <Container delay={0.15}>
-                        <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold text-center !leading-tight max-w-4xl mx-auto">
-                            Welcome to 4sight AI
+                        <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold text-center !leading-tight max-w-4xl mx-auto tracking-tight relative">
+                            <span className="bg-clip-text text-transparent bg-gradient-to-b from-foreground via-foreground/90 to-foreground/70">
+                                Welcome to
+                            </span>
+                            <br />
+                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 animate-gradient-x bg-[length:200%_auto]">
+                                4sight AI
+                            </span>
                         </h1>
                     </Container>
                     <Container delay={0.2}>
@@ -61,16 +67,21 @@ const Hero = () => {
                     <Container delay={0.25} className="z-20">
                         <div className="flex items-center justify-center mt-6 gap-x-4">
                             <Link href="/contact" className="flex items-center gap-2 group">
-                                <Button size="lg">
-                                    Contact Us
+                                <Button size="lg" className="h-12 px-8 text-base rounded-full bg-blue-600 hover:bg-blue-500 hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] transition-all duration-300">
+                                    Start Your Journey
+                                    <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                                 </Button>
                             </Link>
                         </div>
                     </Container>
                     <Container delay={0.3} className="relative">
                         <div className="relative p-2 mt-20 max-w-6xl mx-auto">
-                            <div className="absolute top-1/2 left-1/2 -z-10 bg-gradient-to-r from-sky-500 to-blue-600 w-3/4 lg:w-[85%] -translate-x-1/2 h-80 -translate-y-1/2 blur-[4rem] lg:blur-[10rem] animate-image-glow"></div>
-                            <div className="hidden lg:block absolute top-1/2 left-1/2 -z-20 bg-blue-600 w-1/2 -translate-x-1/2 h-80 -translate-y-1/2 blur-[10rem] animate-image-glow"></div>
+                            {/* Improved Gradient Effects */}
+                            <div className="absolute top-1/2 left-1/2 -z-10 bg-gradient-to-r from-violet-600 via-blue-600 to-cyan-400 w-3/4 lg:w-[90%] -translate-x-1/2 h-64 -translate-y-1/2 blur-[5rem] lg:blur-[12rem] animate-pulse opacity-40"></div>
+                            <div className="absolute top-1/2 left-1/2 -z-20 bg-gradient-to-br from-fuchsia-500 to-indigo-500 w-1/2 -translate-x-1/2 h-80 -translate-y-1/2 blur-[8rem] opacity-30"></div>
+
+                            {/* Glassmorphism accent */}
+                            <div className="hidden lg:block absolute inset-0 bg-background/5 backdrop-blur-[1px] rounded-full border border-white/5 opacity-20 pointer-events-none"></div>
                         </div>
                     </Container>
 
