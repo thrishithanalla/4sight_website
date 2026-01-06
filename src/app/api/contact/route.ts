@@ -16,6 +16,12 @@ export async function POST(req: Request) {
         }
 
         // Create transporter
+        console.log('Attempting to create transporter...');
+        console.log('SMTP_HOST present:', !!process.env.SMTP_HOST);
+        console.log('SMTP_PORT:', process.env.SMTP_PORT);
+        console.log('SMTP_USER present:', !!process.env.SMTP_USER);
+        console.log('SMTP_PASS present:', !!process.env.SMTP_PASS);
+
         const transporter = nodemailer.createTransport({
             host: process.env.SMTP_HOST,
             port: parseInt(process.env.SMTP_PORT || '587'),

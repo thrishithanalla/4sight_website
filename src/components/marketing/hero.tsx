@@ -50,18 +50,16 @@ const Hero = () => {
                     </Container>
                     <Container delay={0.15}>
                         <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold text-center !leading-tight max-w-4xl mx-auto tracking-tight relative">
-                            <span className="bg-clip-text text-transparent bg-gradient-to-b from-foreground via-foreground/90 to-foreground/70">
-                                Welcome to
-                            </span>
-                            <br />
                             <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 animate-gradient-x bg-[length:200%_auto]">
                                 4sight AI
                             </span>
                         </h1>
                     </Container>
                     <Container delay={0.2}>
-                        <p className="max-w-xl mx-auto mt-2 text-base lg:text-lg text-center text-muted-foreground">
-                            Where the future of enterprise technology begins
+                        <p className="max-w-3xl mx-auto mt-6 text-base lg:text-lg text-center text-muted-foreground leading-relaxed">
+                            4Sight AI is an engineering-focused AI company helping organizations turn complex problems into scalable AI solutions.
+                            <br className="hidden md:block" />
+                            From Generative AI and LLM systems to enterprise-grade platforms, we build AI that integrates seamlessly into real business workflows.
                         </p>
                     </Container>
                     <Container delay={0.25} className="z-20">
