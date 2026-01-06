@@ -35,11 +35,11 @@ const Features = () => {
                 </div>
             </Container>
 
-            <div className="flex md:grid md:grid-cols-3 overflow-x-auto md:overflow-visible gap-6 mt-8 relative w-full px-4 xl:px-0 max-w-6xl mx-auto snap-x snap-mandatory scroll-pl-4 pb-4 md:pb-0 scrollbar-hide">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 relative w-full px-4 xl:px-0 max-w-6xl mx-auto pb-4 md:pb-0">
 
                 {/* Card 1 */}
-                <Container delay={0.1} className="min-w-[85vw] md:min-w-0 snap-center">
-                    <div className="rounded-2xl bg-card relative border border-border/50 hover:border-border/100 transition-colors h-full">
+                <Container delay={0.1} className="w-full">
+                    <div className="rounded-2xl bg-card relative border border-border/50 hover:border-border/100 transition-colors h-full min-h-[300px]">
                         <MagicCard
                             gradientFrom="#38bdf8"
                             gradientTo="#3b82f6"
@@ -82,8 +82,8 @@ const Features = () => {
                 </Container>
 
                 {/* Card 2 */}
-                <Container delay={0.2} className="min-w-[85vw] md:min-w-0 snap-center">
-                    <div className="rounded-2xl bg-card relative border border-border/50 hover:border-border/100 transition-colors h-full">
+                <Container delay={0.2} className="w-full">
+                    <div className="rounded-2xl bg-card relative border border-border/50 hover:border-border/100 transition-colors h-full min-h-[300px]">
                         <MagicCard
                             gradientFrom="#38bdf8"
                             gradientTo="#3b82f6"
@@ -129,8 +129,8 @@ const Features = () => {
                 </Container>
 
                 {/* Card 3 */}
-                <Container delay={0.3} className="min-w-[85vw] md:min-w-0 snap-center">
-                    <div className="rounded-2xl bg-card relative border border-border/50 hover:border-border/100 transition-colors h-full">
+                <Container delay={0.3} className="w-full">
+                    <div className="rounded-2xl bg-card relative border border-border/50 hover:border-border/100 transition-colors h-full min-h-[300px]">
                         <MagicCard
                             gradientFrom="#38bdf8"
                             gradientTo="#3b82f6"

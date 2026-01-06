@@ -36,16 +36,16 @@ const CustomTooltip = ({ active, payload }: any) => {
 
 const AboutPage = () => {
     return (
-        <Wrapper className="py-20 relative">
+        <Wrapper className="py-12 md:py-20 relative overflow-hidden">
             <Container>
-                <div className="flex flex-col items-center justify-center text-center max-w-4xl mx-auto mb-20">
-                    <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-foreground to-muted-foreground mb-6">
+                <div className="flex flex-col items-center justify-center text-center max-w-4xl mx-auto mb-12 md:mb-20 px-4">
+                    <h1 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-foreground to-muted-foreground mb-4 md:mb-6">
                         Welcome to 4sight AI - where the future of enterprise technology begins
                     </h1>
-                    <p className="text-muted-foreground text-lg mb-6">
+                    <p className="text-muted-foreground text-base md:text-lg mb-4 md:mb-6">
                         4sight AI is the brainchild of a dynamic team comprising ERP Industry Veterans, Visionary Product Developers, and seasoned Enterprise Consulting Professionals. Our collective mission to embark on an exhilarating journey of tapping into the boundless potential of AI. We're dedicated to transforming essential Enterprise processes into sleek, AI-driven tasks, unlocking the magic of Generative AI Processes, and laying the foundation for the awe-inspiring future of Enterprise Artificial General Intelligence (AGI).
                     </p>
-                    <p className="text-muted-foreground text-lg">
+                    <p className="text-muted-foreground text-base md:text-lg">
                         Join us on this extraordinary expedition into the frontiers of technology and innovation. Together, we're shaping the future of the Enterprise world with pioneering AI solutions that are nothing short of admirable.
                     </p>
                 </div>

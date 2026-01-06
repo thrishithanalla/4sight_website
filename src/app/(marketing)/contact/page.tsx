@@ -69,16 +69,16 @@ const Contact = () => {
     return (
         <div className="flex flex-col relative w-full">
             {/* Hero Section */}
-            <Wrapper className="pt-20 pb-10 relative overflow-hidden">
+            <Wrapper className="py-12 md:py-20 relative overflow-hidden">
                 <Container>
-                    <div className="flex flex-col items-center justify-center text-center max-w-3xl mx-auto">
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-foreground to-muted-foreground mb-6">
+                    <div className="flex flex-col items-center justify-center text-center max-w-3xl mx-auto px-4">
+                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-foreground to-muted-foreground mb-4 md:mb-6">
                             Get In Touch
                         </h1>
-                        <p className="text-xl md:text-2xl text-accent-foreground/90 font-medium mb-4">
+                        <p className="text-lg md:text-2xl text-accent-foreground/90 font-medium mb-3 md:mb-4">
                             Let's Discuss Your AI Transformation
                         </p>
-                        <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
+                        <p className="text-muted-foreground text-base md:text-xl leading-relaxed max-w-2xl mx-auto">
                             Let's discuss how 4sight AI can transform your enterprise with cutting-edge AI solutions.
                         </p>
                     </div>
@@ -86,7 +86,7 @@ const Contact = () => {
             </Wrapper>
 
             {/* Contact Section */}
-            <Wrapper className="py-20 bg-muted/20">
+            <Wrapper className="py-12 md:py-20 bg-muted/20">
                 <Container>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
@@ -187,8 +187,8 @@ const Contact = () => {
 
                                 {status.message && (
                                     <div className={`p-4 rounded-lg flex items-start gap-2 text-sm ${status.type === 'success' ? 'bg-green-500/15 text-green-600 border border-green-500/20' :
-                                            status.type === 'error' ? 'bg-destructive/15 text-destructive border border-destructive/20' :
-                                                'bg-muted text-muted-foreground border border-border'
+                                        status.type === 'error' ? 'bg-destructive/15 text-destructive border border-destructive/20' :
+                                            'bg-muted text-muted-foreground border border-border'
                                         }`}>
                                         {status.type === 'success' ? <CheckCircle2 className="w-5 h-5 shrink-0" /> : <AlertCircle className="w-5 h-5 shrink-0" />}
                                         <span>{status.message}</span>
@@ -275,7 +275,7 @@ const Contact = () => {
             </Wrapper>
 
             {/* Why Contact Us Section */}
-            <Wrapper className="py-20 bg-background relative">
+            <Wrapper className="py-12 md:py-20 bg-background relative">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
                         <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400 mb-4">
@@ -328,7 +328,7 @@ const Contact = () => {
             </Wrapper>
 
             {/* FAQ Section */}
-            <Wrapper className="py-20 bg-muted/20">
+            <Wrapper className="py-12 md:py-20 bg-muted/20">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
                         <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -362,7 +362,7 @@ const Contact = () => {
             </Wrapper>
 
             {/* CTA Section */}
-            <Wrapper className="py-20 relative">
+            <Wrapper className="py-12 md:py-20 relative">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center max-w-2xl mx-auto">
                         <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400 mb-6">
