@@ -10,7 +10,7 @@ const CareersPage = () => {
                         Careers
                     </h1>
                     <p className="text-muted-foreground text-lg">
-                        Join our team and help shape the future of AI.
+                        Currently there are no openings.
                     </p>
                 </div>
             </Container>

@@ -90,12 +90,12 @@ const Footer = () => {
                             </h3>
                             <ul className="mt-4 text-sm text-muted-foreground space-y-4">
                                 <li className="mt-2">
-                                    <Link href="#" className="link hover:text-foreground transition-all duration-300">
+                                    <Link href="https://www.linkedin.com/company/4sight-ai/posts/?feedView=all" target="_blank" className="link hover:text-foreground transition-all duration-300">
                                         LinkedIn
                                     </Link>
                                 </li>
                                 <li className="mt-2">
-                                    <Link href="#" className="link hover:text-foreground transition-all duration-300">
+                                    <Link href="https://www.instagram.com/_4sightai?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" className="link hover:text-foreground transition-all duration-300">
                                         Instagram
                                     </Link>
                                 </li>
@@ -105,7 +105,7 @@ const Footer = () => {
                                     </Link>
                                 </li>
                                 <li className="mt-2">
-                                    <Link href="#" className="link hover:text-foreground transition-all duration-300">
+                                    <Link href="https://x.com/_4sightai?s=21" target="_blank" className="link hover:text-foreground transition-all duration-300">
                                         Twitter
                                     </Link>
                                 </li>
