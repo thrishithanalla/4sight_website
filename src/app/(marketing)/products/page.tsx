@@ -11,7 +11,7 @@ const productsData = [
         id: 'ai-envelop',
         title: 'AI Envelop',
         desc: 'AI Envelop is our flagship enterprise AI infrastructure solution designed to seamlessly wrap around your existing systems and processes. Think of it as an intelligent layer that enhances every aspect of your operations without requiring a complete system overhaul.',
-        img: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&q=80',
+        img: '/ps_images/AI Envelope.png',
         alt: 'AI Envelop - Enterprise AI Infrastructure',
         route: '/products/ai-envelop'
     },
@@ -19,7 +19,7 @@ const productsData = [
         id: 'ai-copilot-consulting',
         title: 'AI Co-pilot (Consulting)',
         desc: 'The AI Co-pilot for Consulting is a specialized tool designed to augment the capabilities of consulting professionals. It serves as an intelligent assistant that helps consultants deliver deeper insights, faster analysis, and more strategic recommendations to their clients.',
-        img: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80',
+        img: '/ps_images/AI Co-pilot Consulting.png',
         alt: 'AI Co-pilot for Consulting',
         route: '/products/ai-copilot-consulting'
     },
@@ -27,7 +27,7 @@ const productsData = [
         id: 'nutrition-copilot',
         title: 'Nutrition Co-Pilot',
         desc: 'Nutrition Co-Pilot is an AI-powered wellness platform that revolutionizes how individuals and healthcare providers approach nutrition and health management. This intelligent system provides personalized dietary recommendations based on individual health profiles, goals, and preferences.',
-        img: 'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&q=80',
+        img: '/ps_images/Nutrition CO-PILOT.png',
         alt: 'Nutrition Co-Pilot - Healthcare AI',
         route: '/products/nutrition-copilot'
     },
@@ -35,7 +35,7 @@ const productsData = [
         id: 'news-ai',
         title: 'News AI',
         desc: 'News AI is an intelligent news aggregation and analysis platform that transforms how organizations and individuals consume information. It goes beyond simple news feeds to provide curated, analyzed, and contextualized news insights tailored to your specific interests and needs.',
-        img: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&q=80',
+        img: '/ps_images/News AI.png',
         alt: 'News AI - Intelligent News Platform',
         route: '/products/news-ai'
     },
@@ -43,7 +43,7 @@ const productsData = [
         id: 'ai-copilot-police',
         title: 'AI Co-pilot (Police Department)',
         desc: 'The AI Co-pilot for Police Departments is a sophisticated public safety tool designed to enhance law enforcement capabilities while ensuring transparency and accountability. This system assists officers in data analysis, pattern recognition, resource allocation, and administrative tasks.',
-        img: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80',
+        img: '/ps_images/AI CO-PILOT(Police).png',
         alt: 'AI Co-pilot for Police Department',
         route: '/products/ai-copilot-police'
     },
@@ -51,7 +51,7 @@ const productsData = [
         id: 'personal-finance-copilot',
         title: 'Personal Finance Co-pilot',
         desc: "The Personal Finance Co-pilot is an innovative AI-powered financial advisor designed specifically for Pocket FM's user base. This intelligent assistant helps users make informed financial decisions, manage budgets, track expenses, and plan for their financial future.",
-        img: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&q=80',
+        img: '/ps_images/Personal FInance Co-pilot.png',
         alt: 'Personal Finance Co-pilot',
         route: '/products/personal-finance-copilot'
     },

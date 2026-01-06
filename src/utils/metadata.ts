@@ -18,7 +18,12 @@ interface MetadataProps {
 export const generateMetadata = ({
     title = "4sightAI",
     description = "4sightAI is a leading AI company that provides innovative AI solutions to transform the way businesses operate. Our AI-powered tools and services help businesses automate, optimize, and enhance their operations, leading to increased efficiency, productivity, and profitability.",
-    icons = [],
+    icons = [
+        {
+            rel: "icon",
+            url: "/images/robot-head.png",
+        }
+    ],
     noIndex = false,
     keywords = [
         "AI marketing automation",
