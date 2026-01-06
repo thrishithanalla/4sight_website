@@ -17,12 +17,12 @@ export const NAV_LINKS = [
         href: "/services"
     },
     {
-        name: "Events",
-        href: "/events"
+        name: "Government",
+        href: "/ai4andhrapolice"
     },
     {
-        name: "AI4AndhraPolice",
-        href: "/ai4andhrapolice"
+        name: "Events",
+        href: "/events"
     },
     {
         name: "Careers",

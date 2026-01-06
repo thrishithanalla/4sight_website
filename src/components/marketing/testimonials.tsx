@@ -117,8 +117,41 @@ const Testimonials = () => {
                         <ArrowRight className="w-6 h-6" />
                     </button>
 
-                    {/* Carousel Area */}
-                    <div className="relative h-[400px] md:h-[350px] overflow-hidden flex items-center justify-center">
+                    {/* Mobile Scroll View */}
+                    <div className="md:hidden flex overflow-x-auto gap-6 px-4 snap-x snap-mandatory scrollbar-hide pb-8">
+                        {testimonials.map((testimonial) => (
+                            <div key={testimonial.id} className="min-w-[85vw] snap-center">
+                                <div className="bg-card/50 backdrop-blur-sm text-card-foreground rounded-2xl p-8 shadow-sm border border-border/50 h-full flex flex-col items-center text-center">
+                                    <div className="relative w-16 h-16 mx-auto mb-4">
+                                        <Image
+                                            src={testimonial.avatar}
+                                            alt={testimonial.name}
+                                            width={64}
+                                            height={64}
+                                            className="rounded-full object-cover border-2 border-background shadow-md"
+                                        />
+                                        <div className="absolute -bottom-1 -right-1 bg-primary text-primary-foreground p-1 rounded-full shadow-sm">
+                                            <Quote className="w-2.5 h-2.5 fill-current" />
+                                        </div>
+                                    </div>
+                                    <p className="text-base text-muted-foreground italic mb-4 leading-relaxed flex-1">
+                                        "{testimonial.quote}"
+                                    </p>
+                                    <div>
+                                        <h4 className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-violet-500">
+                                            {testimonial.name}
+                                        </h4>
+                                        <p className="text-xs font-medium text-muted-foreground/80">
+                                            {testimonial.role}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Desktop Carousel Area */}
+                    <div className="hidden md:flex relative h-[400px] md:h-[350px] overflow-hidden items-center justify-center">
                         <AnimatePresence initial={false} custom={direction} mode="wait">
                             <motion.div
                                 key={currentIndex}
@@ -166,14 +199,14 @@ const Testimonials = () => {
                     </div>
 
                     {/* Pagination Dots */}
-                    <div className="flex justify-center gap-3 mt-8">
+                    <div className="hidden md:flex justify-center gap-3 mt-8">
                         {testimonials.map((_, index) => (
                             <button
                                 key={index}
                                 onClick={() => goToSlide(index)}
                                 className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex
-                                        ? "bg-primary scale-125"
-                                        : "bg-primary/20 hover:bg-primary/40"
+                                    ? "bg-primary scale-125"
+                                    : "bg-primary/20 hover:bg-primary/40"
                                     }`}
                                 aria-label={`Go to slide ${index + 1}`}
                             />

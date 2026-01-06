@@ -16,20 +16,9 @@ interface MetadataProps {
 }
 
 export const generateMetadata = ({
-    title = `Vetra - AI-Powered Project Management & Team Collaboration`,
-    description = `Vetra is an intelligent project management platform that transforms how teams work together. Leverage AI to automate workflows, enhance collaboration, and boost productivity. Experience smarter project management today.`,
-    icons = [
-        {
-            rel: "icon",
-            url: "/icons/icon-dark.png",
-            media: "(prefers-color-scheme: light)",
-        },
-        {
-            rel: "icon",
-            url: "/icons/icon.png",
-            media: "(prefers-color-scheme: dark)",
-        },
-    ],
+    title = "4sightAI",
+    description = "4sightAI is a leading AI company that provides innovative AI solutions to transform the way businesses operate. Our AI-powered tools and services help businesses automate, optimize, and enhance their operations, leading to increased efficiency, productivity, and profitability.",
+    icons = [],
     noIndex = false,
     keywords = [
         "AI marketing automation",
@@ -51,14 +40,14 @@ export const generateMetadata = ({
     return {
         metadataBase,
         title: {
-            template: `%s | ${process.env.NEXT_PUBLIC_APP_NAME}`,
+            template: `%s | 4sightAI`,
             default: title
         },
         description,
         keywords,
         authors: [{ name: author }],
         creator: author,
-        publisher: process.env.NEXT_PUBLIC_APP_NAME,
+        publisher: "4sightAI",
         formatDetection: {
             email: false,
             address: false,

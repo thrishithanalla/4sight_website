@@ -16,8 +16,8 @@ const Navbar = () => {
                             <Image
                                 src="/images/logo-final.png"
                                 alt="4sight AI Logo"
-                                width={120}
-                                height={40}
+                                width={150}
+                                height={50}
                                 className="object-contain"
                             />
                         </Link>
