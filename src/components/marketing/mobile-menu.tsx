@@ -30,12 +30,23 @@ const MobileMenu = () => {
                         if (isProducts || isServices) {
                             return (
                                 <div key={index} className="flex flex-col">
-                                    <div
-                                        className="flex items-center justify-between text-base font-medium transition-colors hover:text-primary cursor-pointer py-2"
-                                        onClick={() => setIsOpen(!isOpen)}
-                                    >
-                                        {link.name}
-                                        <ChevronDown className={`h-4 w-4 transition-transform ${isOpen ? "rotate-180" : ""}`} />
+                                    <div className="flex items-center justify-between py-2">
+                                        <Link
+                                            href={link.href}
+                                            onClick={() => setOpen(false)}
+                                            className="text-base font-medium transition-colors hover:text-primary flex-1"
+                                        >
+                                            {link.name}
+                                        </Link>
+                                        <div
+                                            className="p-2 -mr-2 cursor-pointer hover:bg-muted rounded-full transition-colors"
+                                            onClick={(e) => {
+                                                e.preventDefault();
+                                                setIsOpen(!isOpen);
+                                            }}
+                                        >
+                                            <ChevronDown className={`h-4 w-4 transition-transform ${isOpen ? "rotate-180" : ""}`} />
+                                        </div>
                                     </div>
                                     {isOpen && (
                                         <div className="flex flex-col space-y-3 pl-4 mt-2 border-l-2 border-muted ml-2">
