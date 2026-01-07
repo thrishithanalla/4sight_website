@@ -3,8 +3,8 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-import { NAV_LINKS } from "@/constants";
-import { Menu } from "lucide-react";
+import { NAV_LINKS, PRODUCTS, SERVICES } from "@/constants/links";
+import { Menu, ChevronDown } from "lucide-react";
 import Link from "next/link";
 
 const MobileMenu = () => {
@@ -22,17 +22,50 @@ const MobileMenu = () => {
                     <SheetTitle className="text-left">Menu</SheetTitle>
                 </SheetHeader>
                 <nav className="flex flex-col space-y-4">
-                    {NAV_LINKS.map((link, index) => (
-                        <Link
-                            key={index}
-                            href={link.href}
-                            onClick={() => setOpen(false)}
-                            className="text-base font-medium transition-colors hover:text-primary"
-                        >
-                            {link.name}
-                        </Link>
-                    ))}
+                    {NAV_LINKS.map((link, index) => {
+                        const isProducts = link.name === "Products";
+                        const isServices = link.name === "Services";
+                        const [isOpen, setIsOpen] = React.useState(false);
 
+                        if (isProducts || isServices) {
+                            return (
+                                <div key={index} className="flex flex-col">
+                                    <div
+                                        className="flex items-center justify-between text-base font-medium transition-colors hover:text-primary cursor-pointer py-2"
+                                        onClick={() => setIsOpen(!isOpen)}
+                                    >
+                                        {link.name}
+                                        <ChevronDown className={`h-4 w-4 transition-transform ${isOpen ? "rotate-180" : ""}`} />
+                                    </div>
+                                    {isOpen && (
+                                        <div className="flex flex-col space-y-3 pl-4 mt-2 border-l-2 border-muted ml-2">
+                                            {(isProducts ? PRODUCTS : SERVICES).map((subItem, idx) => (
+                                                <Link
+                                                    key={idx}
+                                                    href={subItem.href}
+                                                    onClick={() => setOpen(false)}
+                                                    className="text-sm text-foreground/80 hover:text-primary transition-colors"
+                                                >
+                                                    {subItem.name}
+                                                </Link>
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
+                            );
+                        }
+
+                        return (
+                            <Link
+                                key={index}
+                                href={link.href}
+                                onClick={() => setOpen(false)}
+                                className="text-base font-medium transition-colors hover:text-primary py-2"
+                            >
+                                {link.name}
+                            </Link>
+                        );
+                    })}
                 </nav>
             </SheetContent>
         </Sheet>

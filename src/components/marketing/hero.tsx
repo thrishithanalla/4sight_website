@@ -12,8 +12,8 @@ export default function Hero() {
 
             {/* LEFT CONTENT */}
             <Container className="w-full lg:w-1/2 lg:pr-32 relative z-10 flex flex-col items-center lg:items-start text-center lg:text-left">
-                <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full border border-blue-200 bg-blue-50 mb-8">
-                    <span className="text-xs font-bold text-blue-600 tracking-widest uppercase whitespace-nowrap">
+                <div className="inline-flex items-center justify-center px-4 py-2 rounded-full border border-blue-200 bg-blue-50 mb-8 max-w-[90%] lg:max-w-none">
+                    <span className="text-xs font-bold text-blue-600 tracking-wide md:tracking-widest uppercase whitespace-normal md:whitespace-nowrap text-center lg:text-left break-words leading-relaxed">
                         Empowering Enterprises to harness the power of AI
                     </span>
                 </div>
