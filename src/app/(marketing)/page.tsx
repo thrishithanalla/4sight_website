@@ -15,7 +15,7 @@ import Testimonials from "@/components/marketing/testimonials";
 const HomePage = () => {
     return (
         <div className="flex flex-col relative w-full">
-            <Wrapper className="pt-20 relative overflow-hidden">
+            <Wrapper className="relative overflow-hidden w-full">
                 <Hero />
             </Wrapper>
 

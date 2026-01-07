@@ -1,6 +1,7 @@
 import Wrapper from "@/components/global/wrapper";
 import Container from "@/components/global/container";
 import Link from "next/link";
+import Image from "next/image";
 import React from 'react';
 
 const EventsPage = () => {
@@ -66,7 +67,14 @@ const EventsPage = () => {
                     {/* Objectives Section */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
                         <div className="order-2 md:order-1 relative rounded-2xl overflow-hidden border border-white/10 aspect-video md:aspect-auto w-full h-[300px] md:h-full min-h-[300px]">
-                            <img src="/events_images/ALI05712.JPG" alt="Hackathon Team" className="object-cover w-full h-full opacity-90" />
+                            <Image
+                                src="/events_images/ALI05712.JPG"
+                                alt="Hackathon Team"
+                                fill
+                                className="object-cover opacity-90"
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                                priority
+                            />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                         </div>
                         <div className="order-1 md:order-2 space-y-6">
@@ -217,12 +225,12 @@ const EventsPage = () => {
                                 "ALI05142.JPG", "ALI05635.JPG", "ALI05708.JPG", "ALI05775.JPG"
                             ].map((img, i) => (
                                 <div key={i} className={`aspect-square bg-white/5 rounded-xl border border-white/10 overflow-hidden relative group ${i % 3 === 0 ? 'md:col-span-2 md:row-span-2' : ''}`}>
-                                    <img
+                                    <Image
                                         src={`/events_images/${img}`}
                                         alt={`Event Gallery ${i + 1}`}
-                                        className="object-cover w-full h-full opacity-80 group-hover:opacity-100 transition-opacity duration-500 hover:scale-105 transform"
-                                        loading="eager"
-                                        decoding="sync"
+                                        fill
+                                        className="object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 hover:scale-105 transform"
+                                        sizes="(max-width: 768px) 50vw, 25vw"
                                     />
                                 </div>
                             ))}

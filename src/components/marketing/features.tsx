@@ -23,7 +23,7 @@ const chartData = [
 
 const Features = () => {
     return (
-        <div className="relative flex flex-col items-center justify-center w-full py-20">
+        <div className="relative flex flex-col items-center justify-center w-full pt-4 pb-20">
             <Container>
                 <div className="flex flex-col items-center text-center max-w-2xl mx-auto">
                     <h2 className="text-2xl md:text-4xl lg:text-5xl font-heading font-medium !leading-snug mt-6">
