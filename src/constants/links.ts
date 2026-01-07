@@ -9,16 +9,16 @@ export const NAV_LINKS = [
         href: "/about"
     },
     {
+        name: "Government",
+        href: "/ai4andhrapolice"
+    },
+    {
         name: "Products",
         href: "/products"
     },
     {
         name: "Services",
         href: "/services"
-    },
-    {
-        name: "Government",
-        href: "/ai4andhrapolice"
     },
     {
         name: "Events",

@@ -17,11 +17,11 @@ const MobileMenu = () => {
                     <Menu className="h-6 w-6" />
                 </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-3/4 sm:w-[300px] pt-12">
+            <SheetContent side="right" className="w-3/4 sm:w-[300px] pt-12 flex flex-col h-full">
                 <SheetHeader className="mb-8">
                     <SheetTitle className="text-left">Menu</SheetTitle>
                 </SheetHeader>
-                <nav className="flex flex-col space-y-4">
+                <nav className="flex flex-col space-y-4 flex-1 overflow-y-auto pb-10">
                     {NAV_LINKS.map((link, index) => {
                         const isProducts = link.name === "Products";
                         const isServices = link.name === "Services";
