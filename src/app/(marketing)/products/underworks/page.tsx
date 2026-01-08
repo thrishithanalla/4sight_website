@@ -277,20 +277,9 @@ const UnderWorks = () => {
             <Wrapper className="py-20 relative">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center max-w-2xl mx-auto">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400 mb-6">
-                            Join Our Innovation Journey
-                        </h2>
-                        <p className="text-muted-foreground text-lg mb-8">
-                            Be among the first to experience our cutting-edge AI developments. Contact our team to learn about collaboration opportunities.
-                        </p>
-                        <div className="flex flex-col sm:flex-row items-center gap-4">
-                            <Link href="/contact">
-                                <Button size="lg" className="px-8">Get Involved</Button>
-                            </Link>
-                            <Link href="/products">
-                                <Button size="lg" variant="outline" className="px-8">View Current Products</Button>
-                            </Link>
-                        </div>
+                        <Link href="/products">
+                            <Button size="lg" variant="outline" className="px-8">View All Products</Button>
+                        </Link>
                     </div>
                 </Container>
             </Wrapper>

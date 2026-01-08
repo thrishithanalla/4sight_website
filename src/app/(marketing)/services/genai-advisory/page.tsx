@@ -269,20 +269,9 @@ const GenAIAdvisory = () => {
             <Wrapper className="py-20 relative">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center max-w-2xl mx-auto">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400 mb-6">
-                            Start Your GenAI Journey
-                        </h2>
-                        <p className="text-muted-foreground text-lg mb-8">
-                            Ready to harness the power of Generative AI? Our experts are here to guide you every step of the way.
-                        </p>
-                        <div className="flex flex-col sm:flex-row items-center gap-4">
-                            <Link href="/contact">
-                                <Button size="lg" className="px-8">Schedule Consultation</Button>
-                            </Link>
-                            <Link href="/services">
-                                <Button size="lg" variant="outline" className="px-8">View All Services</Button>
-                            </Link>
-                        </div>
+                        <Link href="/services">
+                            <Button size="lg" variant="outline" className="px-8">View All Services</Button>
+                        </Link>
                     </div>
                 </Container>
             </Wrapper>

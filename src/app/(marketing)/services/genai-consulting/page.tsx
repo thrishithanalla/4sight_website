@@ -286,20 +286,9 @@ const GenAIConsulting = () => {
             <Wrapper className="py-20 relative">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center max-w-2xl mx-auto">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400 mb-6">
-                            Transform Your Business with AI
-                        </h2>
-                        <p className="text-muted-foreground text-lg mb-8">
-                            Ready to harness the power of Generative AI? Our consulting experts are here to guide your enterprise AI transformation.
-                        </p>
-                        <div className="flex flex-col sm:flex-row items-center gap-4">
-                            <Link href="/contact">
-                                <Button size="lg" className="px-8">Start Consulting</Button>
-                            </Link>
-                            <Link href="/services">
-                                <Button size="lg" variant="outline" className="px-8">View All Services</Button>
-                            </Link>
-                        </div>
+                        <Link href="/services">
+                            <Button size="lg" variant="outline" className="px-8">View All Services</Button>
+                        </Link>
                     </div>
                 </Container>
             </Wrapper>
