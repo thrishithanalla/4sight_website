@@ -281,9 +281,10 @@ const EventsPage = () => {
                                                 <Link
                                                     href="https://www.adasia2025.org/speakers.php"
                                                     target="_blank"
-                                                    className="inline-flex items-center justify-center gap-2 bg-white/10 text-white border border-white/10 px-6 py-3 rounded-lg hover:bg-white/20 transition-colors font-medium text-base w-full md:w-auto"
+                                                    className="inline-flex items-center justify-center gap-2 bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors font-medium text-base w-full md:w-auto"
                                                 >
                                                     View Speakers
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
                                                 </Link>
                                             </div>
                                         </div>
@@ -292,58 +293,69 @@ const EventsPage = () => {
                             </div>
                         </div>
 
-                        {/* Objectives Section - Mirrored structure */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-                            <div className="order-2 md:order-1 w-full h-full min-h-[300px]">
-                                {/* Reusing EventGalleryCarousel or Coverflow here for feature image */}
-                                <EventGalleryCarousel images={["c1.jpeg", "c2.jpeg", "c3.jpeg", "c5.jpeg", "c8.jpeg", "c22.jpeg", "c14.jpeg", "c13.jpeg", "c11.jpeg"]} />
-                            </div>
-                            <div className="order-1 md:order-2 space-y-6">
-                                <div className="inline-block px-4 py-1.5 bg-blue-500 text-white rounded-full text-base font-bold shadow-lg shadow-blue-500/20">Keynote Highlight</div>
-                                <h2 className="text-2xl md:text-3xl font-bold text-blue-500">4SightAI at AdAsia</h2>
+                        {/* Keynote Highlight Section */}
+                        <div className="flex flex-col gap-6 md:gap-8">
+                            <div className="space-y-4">
+                                <div className="inline-block px-6 py-2 rounded-full bg-blue-50 border border-blue-100 text-blue-600 font-semibold text-xs md:text-sm tracking-widest uppercase shadow-sm">
+                                    Keynote Highlight
+                                </div>
+                                <h2 className="text-2xl md:text-4xl font-bold text-blue-500">
+                                    4SightAI at AdAsia
+                                </h2>
 
-                                <div className="space-y-4 text-black dark:text-black">
-                                    <p className="leading-relaxed blue-500">
-                                        A major highlight of AdAsia 2025 was the keynote address delivered by  <span className="text-blue-500 font-semibold">Surya Kotha</span>, Chief Executive Officer of 4SightAI (USA).
+                                <div className="space-y-4 text-muted-foreground text-base md:text-lg max-w-none">
+                                    <p className="leading-relaxed">
+                                        A major highlight of AdAsia 2025 was the keynote address delivered by <span className="text-blue-500 font-semibold">Surya Kotha</span>, Chief Executive Officer of 4SightAI (USA).
                                     </p>
                                     <div className="flex items-center gap-2">
-                                        <Link href="https://www.adasia2025.org/surya-kotha.php" target="_blank" className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-medium transition-colors">
+                                        <Link href="https://www.adasia2025.org/surya-kotha.php" target="_blank" className="inline-flex items-center gap-2 text-blue-500 hover:text-blue-600 font-medium transition-colors hover:underline">
                                             Speaker Profile
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /><polyline points="15 3 21 3 21 9" /><line x1="10" y1="14" x2="21" y2="3" /></svg>
                                         </Link>
                                     </div>
                                 </div>
+                            </div>
 
-                                <div className="bg-white/5 border border-blue-500/30 rounded-xl p-6 relative overflow-hidden group hover:border-blue-500/50 transition-colors">
-                                    <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl -mr-16 -mt-16"></div>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center">
+                                <div className="w-full min-h-[300px]">
+                                    <EventGalleryCarousel images={["c1.jpeg", "c2.jpeg", "c3.jpeg", "c5.jpeg", "c8.jpeg", "c22.jpeg", "c14.jpeg", "c13.jpeg", "c11.jpeg"]} />
+                                </div>
+                                <div className="">
+                                    <div className="bg-white/5 border border-blue-500/20 rounded-xl p-6 md:p-8 relative overflow-hidden group hover:border-blue-500/40 transition-colors flex flex-col justify-between">
+                                        <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full blur-3xl -mr-16 -mt-16"></div>
 
-                                    <h3 className="text-xl font-bold text-blue-500 mb-2">Keynote Session</h3>
-                                    <p className="text-blue-500 font-medium text-blue-500 mb-4">“Building the AI-First Agency: Road from GenAI to AGI”</p>
+                                        <div className="space-y-4 relative z-10">
+                                            <div>
+                                                <h3 className="text-xl font-bold text-blue-500 mb-1">Keynote Session</h3>
+                                                <p className="text-blue-500/90 font-medium text-sm md:text-base">“Building the AI-First Agency: Road from GenAI to AGI”</p>
+                                            </div>
 
-                                    <p className="text-black text-sm mb-4 leading-relaxed text-black">
-                                        In this session, 4SightAI presented a forward-looking vision of how agencies can evolve by embedding AI deeply into their intellectual property, workflows, and operational core.
-                                    </p>
+                                            <p className="text-black/80 text-sm leading-relaxed">
+                                                In this session, 4SightAI presented a forward-looking vision of how agencies can evolve by embedding AI deeply into their intellectual property, workflows, and operational core.
+                                            </p>
 
-                                    <ul className="space-y-3">
-                                        {[
-                                            "Transitioning from experimental GenAI tools to AI-native agency models",
-                                            "Using AI as an intelligence layer that continuously learns from data and practice",
-                                            "Enhancing human creativity through AI augmentation, not replacement",
-                                            "Building future-ready agencies that combine strategic thinking, technology, and creativity"
-                                        ].map((item, i) => (
-                                            <li key={i} className="flex items-start gap-3">
-                                                <div className="mt-1 w-5 h-5 rounded-full bg-blue-500/20 flex items-center justify-center shrink-0 border border-blue-500/30 text-blue-400">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
-                                                </div>
-                                                <span className="text-black text-sm">{item}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
+                                            <ul className="space-y-2.5">
+                                                {[
+                                                    "Transitioning from experimental GenAI tools to AI-native agency models",
+                                                    "Using AI as an intelligence layer that continuously learns from data and practice",
+                                                    "Enhancing human creativity through AI augmentation, not replacement",
+                                                    "Building future-ready agencies that combine strategic thinking, technology, and creativity"
+                                                ].map((item, i) => (
+                                                    <li key={i} className="flex items-start gap-3">
+                                                        <div className="mt-1 w-4 h-4 rounded-full bg-blue-500/10 flex items-center justify-center shrink-0 border border-blue-500/20 text-blue-500">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+                                                        </div>
+                                                        <span className="text-black/80 text-sm">{item}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
 
-                                    <div className="mt-6 pt-4 border-t border-white/10">
-                                        <p className="text-sm text-blue-300/80 italic">
-                                            This keynote positioned 4SightAI as a thought leader in AI-driven transformation for the global advertising and marketing industry.
-                                        </p>
+                                        <div className="mt-6 pt-4 border-t border-blue-500/10 relative z-10">
+                                            <p className="text-xs md:text-sm text-blue-500/70 italic">
+                                                This keynote positioned 4SightAI as a thought leader in AI-driven transformation for the global advertising and marketing industry.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
