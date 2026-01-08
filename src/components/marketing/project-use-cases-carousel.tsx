@@ -99,11 +99,11 @@ const ProjectUseCasesCarousel = ({ useCases, color = "blue" }: ProjectUseCasesCa
                                                 <div className={`px-4 py-1.5 rounded-full ${themeColor.bg} ${themeColor.border} border text-sm font-medium ${themeColor.text} w-fit`}>
                                                     Use Case - {index + 1}
                                                 </div>
-                                                <h3 className={`text-3xl md:text-5xl font-bold ${themeColor.text} leading-tight`}>
+                                                <h3 className={`text-2xl md:text-3xl font-bold ${themeColor.text} leading-tight`}>
                                                     {useCase.title}
                                                 </h3>
                                             </div>
-                                            <p className="text-black text-lg md:text-xl leading-relaxed max-w-4xl mx-auto">
+                                            <p className="text-black text-base md:text-lg leading-relaxed max-w-4xl mx-auto">
                                                 {useCase.description}
                                             </p>
                                         </div>
