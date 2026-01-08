@@ -6,7 +6,6 @@ import Autoplay from "embla-carousel-autoplay"
 import { EmblaCarouselType } from 'embla-carousel'
 import { cn } from "@/lib"
 import { ArrowLeft, ArrowRight, CheckCircle2 } from 'lucide-react'
-import { Card } from 'primereact/card';
 
 interface UseCase {
     title: string
@@ -83,39 +82,32 @@ const ProjectUseCasesCarousel = ({ useCases, color = "blue" }: ProjectUseCasesCa
                     {useCases.map((useCase, index) => {
                         const isActive = index === selectedIndex
                         const Icon = useCase.icon || CheckCircle2
-
-                        const header = (
-                            <div className={`w-14 h-14 rounded-full ${themeColor.bg} ${themeColor.border} border flex items-center justify-center mb-4 relative z-10 mx-auto mt-4`}>
-                                <Icon className={`w-7 h-7 ${themeColor.text}`} />
-                            </div>
-                        );
+                        const isAlternate = index % 2 !== 0
 
                         return (
-                            <div key={index} className="flex-[0_0_400px] md:flex-[0_0_600px] min-w-0 transition-opacity duration-300">
+                            <div key={index} className="flex-[0_0_100%] min-w-0 transition-opacity duration-300">
                                 <div className={cn(
-                                    "h-full transition-all duration-300 relative overflow-hidden group",
-                                    isActive ? "scale-100 opacity-100" : "opacity-50 scale-95"
+                                    "h-full min-h-[500px] transition-all duration-300 relative overflow-hidden group rounded-2xl border border-white/10 bg-white/5 p-6 md:p-12",
+                                    isActive ? "opacity-100 scale-100" : "opacity-50 scale-95"
                                 )}>
-                                    <div className={`absolute inset-0 bg-gradient-to-br ${themeColor.hover} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl`}></div>
+                                    <div className={`absolute inset-0 bg-gradient-to-br ${themeColor.hover} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
 
-                                    <Card
-                                        title={useCase.title}
-                                        subTitle=""
-                                        header={header}
-                                        className={cn(
-                                            "h-full bg-white/5 border border-white/10 text-white shadow-none rounded-2xl",
-                                            isActive ? `${themeColor.border} border-blue-500/50 shadow-lg` : "border-white/5"
-                                        )}
-                                        pt={{
-                                            body: { className: 'p-0 text-center gap-4 flex flex-col' },
-                                            title: { className: `text-xl font-bold ${themeColor.text}` },
-                                            content: { className: 'p-0' }
-                                        }}
-                                    >
-                                        <p className="text-gray-300 text-sm leading-relaxed m-0 px-4 pb-6">
-                                            {useCase.description}
-                                        </p>
-                                    </Card>
+                                    <div className="relative z-10 h-full flex flex-col justify-center max-w-5xl mx-auto">
+                                        {/* Text Content */}
+                                        <div className="space-y-8 text-center">
+                                            <div className="space-y-6 flex flex-col items-center">
+                                                <div className={`px-4 py-1.5 rounded-full ${themeColor.bg} ${themeColor.border} border text-sm font-medium ${themeColor.text} w-fit`}>
+                                                    Use Case - {index + 1}
+                                                </div>
+                                                <h3 className={`text-3xl md:text-5xl font-bold ${themeColor.text} leading-tight`}>
+                                                    {useCase.title}
+                                                </h3>
+                                            </div>
+                                            <p className="text-black text-lg md:text-xl leading-relaxed max-w-4xl mx-auto">
+                                                {useCase.description}
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         )

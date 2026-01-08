@@ -9,7 +9,7 @@ export const NAV_LINKS = [
         href: "/about"
     },
     {
-        name: "Government",
+        name: "GOVERNMENT",
         href: "/ai4andhrapolice"
     },
     {
@@ -20,6 +20,7 @@ export const NAV_LINKS = [
         name: "Services",
         href: "/services"
     },
+
     {
         name: "Events",
         href: "/events"
@@ -31,6 +32,10 @@ export const NAV_LINKS = [
     {
         name: "Contact",
         href: "/contact"
+    },
+    {
+        name: "Products2",
+        href: "/products2"
     },
 ];
 
