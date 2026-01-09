@@ -19,11 +19,11 @@ export default function Hero() {
                     </span>
                 </div>
 
-                <h1 className="text-[2.0rem] lg:text-[2.5rem] font-heading font-bold text-gray-900 !leading-tight tracking-tight mb-4">
+                <h1 className="text-[2.0rem] lg:text-[2.5rem] font-heading font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 !leading-tight tracking-tight mb-4">
                     4SightAI <br />
                 </h1>
 
-                <p className="text-gray-500 text-lg md:text-xl max-w-lg font-light leading-relaxed mb-6">
+                <p className="text-muted-foreground text-lg md:text-xl max-w-lg font-light leading-relaxed mb-6">
                     4Sight AI is an engineering-focused AI company helping organizations turn complex problems into scalable AI solutions.
                     <br className="hidden md:block" />
                     From Generative AI and LLM systems to enterprise-grade platforms, we build AI that integrates seamlessly into real business workflows.

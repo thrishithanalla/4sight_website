@@ -59,7 +59,7 @@ const Team = () => {
         <div className="flex flex-col items-center justify-center w-full py-20 bg-muted/20">
             <Container>
                 <div className="flex flex-col items-center text-center max-w-2xl mx-auto mb-16">
-                    <h2 className="text-2xl md:text-4xl lg:text-5xl font-heading font-medium !leading-snug">
+                    <h2 className="text-2xl md:text-4xl lg:text-5xl font-heading font-medium !leading-snug bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400">
                         Meet Our Team
                     </h2>
                     <p className="text-base md:text-lg text-center text-accent-foreground/80 mt-4">

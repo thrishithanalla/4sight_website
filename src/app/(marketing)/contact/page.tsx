@@ -72,7 +72,7 @@ const Contact = () => {
             <Wrapper className="py-12 md:py-20 relative overflow-hidden">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center max-w-3xl mx-auto px-4">
-                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-foreground to-muted-foreground mb-4 md:mb-6">
+                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4 md:mb-6">
                             Get In Touch
                         </h1>
                         <p className="text-lg md:text-2xl text-accent-foreground/90 font-medium mb-3 md:mb-4">
@@ -95,7 +95,7 @@ const Contact = () => {
                             {/* Decorative element mimicking 'floating-particles' implicitly via clean design or subtle gradient */}
                             <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
 
-                            <h2 className="text-2xl font-bold mb-4">Send Us a Message</h2>
+                            <h2 className="text-2xl font-bold mb-4 text-blue-500">Send Us a Message</h2>
                             <p className="text-muted-foreground mb-8">
                                 Fill out the form below and our team will get back to you within 24 hours.
                             </p>
@@ -201,7 +201,7 @@ const Contact = () => {
                         <div className="space-y-8">
                             {/* Info Card */}
                             <div className="bg-card border border-border/50 p-8 rounded-2xl shadow-sm">
-                                <h3 className="text-xl font-bold mb-6">Contact Information</h3>
+                                <h3 className="text-xl font-bold mb-6 text-blue-500">Contact Information</h3>
 
                                 <div className="space-y-6">
                                     <div className="flex items-start gap-4">
@@ -209,7 +209,7 @@ const Contact = () => {
                                             <MapPin className="w-6 h-6" />
                                         </div>
                                         <div>
-                                            <h4 className="font-semibold mb-1">Location</h4>
+                                            <h4 className="font-semibold mb-1 text-blue-400">Location</h4>
                                             <p className="text-muted-foreground text-sm">
                                                 Bangalore, Karnataka<br />
                                                 India
@@ -222,7 +222,7 @@ const Contact = () => {
                                             <Mail className="w-6 h-6" />
                                         </div>
                                         <div>
-                                            <h4 className="font-semibold mb-1">Email</h4>
+                                            <h4 className="font-semibold mb-1 text-blue-400">Email</h4>
                                             <div className="text-muted-foreground text-sm flex flex-col gap-1">
                                                 <a href="mailto:contact@4sightai.com" className="hover:text-primary transition-colors">contact@4sightai.com</a>
                                                 <a href="mailto:sales@4sightai.com" className="hover:text-primary transition-colors">sales@4sightai.com</a>
@@ -235,7 +235,7 @@ const Contact = () => {
                                             <Phone className="w-6 h-6" />
                                         </div>
                                         <div>
-                                            <h4 className="font-semibold mb-1">Phone</h4>
+                                            <h4 className="font-semibold mb-1 text-blue-400">Phone</h4>
                                             <div className="text-muted-foreground text-sm">
                                                 <p>+91 (800) 123-4567</p>
                                                 <p className="text-xs mt-1 opacity-80">Mon-Fri 9:00 AM - 6:00 PM IST</p>
@@ -291,7 +291,7 @@ const Contact = () => {
                             <div className="mx-auto bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mb-4 text-primary">
                                 <Zap className="w-8 h-8" />
                             </div>
-                            <h3 className="font-bold text-lg mb-2">Rapid Response</h3>
+                            <h3 className="font-bold text-lg mb-2 text-blue-400">Rapid Response</h3>
                             <p className="text-muted-foreground text-sm">
                                 We respond to all inquiries within 24 hours. For urgent matters, we'll connect you with the right expert faster.
                             </p>
@@ -300,7 +300,7 @@ const Contact = () => {
                             <div className="mx-auto bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mb-4 text-primary">
                                 <Target className="w-8 h-8" />
                             </div>
-                            <h3 className="font-bold text-lg mb-2">Tailored Solutions</h3>
+                            <h3 className="font-bold text-lg mb-2 text-blue-400">Tailored Solutions</h3>
                             <p className="text-muted-foreground text-sm">
                                 We don't believe in one-size-fits-all. Every consultation begins with understanding your unique needs.
                             </p>
@@ -309,7 +309,7 @@ const Contact = () => {
                             <div className="mx-auto bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mb-4 text-primary">
                                 <Brain className="w-8 h-8" />
                             </div>
-                            <h3 className="font-bold text-lg mb-2">Expert Guidance</h3>
+                            <h3 className="font-bold text-lg mb-2 text-blue-400">Expert Guidance</h3>
                             <p className="text-muted-foreground text-sm">
                                 Connect directly with AI experts who have 10,000+ hours of research and real-world implementation experience.
                             </p>
@@ -318,7 +318,7 @@ const Contact = () => {
                             <div className="mx-auto bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mb-4 text-primary">
                                 <Handshake className="w-8 h-8" />
                             </div>
-                            <h3 className="font-bold text-lg mb-2">No Obligation</h3>
+                            <h3 className="font-bold text-lg mb-2 text-blue-400">No Obligation</h3>
                             <p className="text-muted-foreground text-sm">
                                 Initial consultations are always free. We're here to help you understand AI's potential with no strings attached.
                             </p>
@@ -331,30 +331,30 @@ const Contact = () => {
             <Wrapper className="py-12 md:py-20 bg-muted/20">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-blue-500">
                             Frequently Asked Questions
                         </h2>
                     </div>
 
                     <div className="max-w-3xl mx-auto space-y-6">
                         <div className="bg-card border-l-4 border-l-blue-500 border-y border-r border-border/50 p-6 rounded-r-xl shadow-sm">
-                            <h4 className="font-bold text-lg mb-2">How quickly will I hear back after submitting the form?</h4>
+                            <h4 className="font-bold text-lg mb-2 text-blue-400">How quickly will I hear back after submitting the form?</h4>
                             <p className="text-muted-foreground">We aim to respond to all inquiries within 24 hours on business days. For urgent matters, you can also reach us directly via phone.</p>
                         </div>
                         <div className="bg-card border-l-4 border-l-blue-500 border-y border-r border-border/50 p-6 rounded-r-xl shadow-sm">
-                            <h4 className="font-bold text-lg mb-2">Do you offer free consultations?</h4>
+                            <h4 className="font-bold text-lg mb-2 text-blue-400">Do you offer free consultations?</h4>
                             <p className="text-muted-foreground">Yes! We offer complimentary initial consultations to understand your needs and explore how AI can benefit your organization.</p>
                         </div>
                         <div className="bg-card border-l-4 border-l-blue-500 border-y border-r border-border/50 p-6 rounded-r-xl shadow-sm">
-                            <h4 className="font-bold text-lg mb-2">What information should I prepare before contacting you?</h4>
+                            <h4 className="font-bold text-lg mb-2 text-blue-400">What information should I prepare before contacting you?</h4>
                             <p className="text-muted-foreground">It's helpful to have a general understanding of your business challenges, goals, and any specific AI use cases you're interested in.</p>
                         </div>
                         <div className="bg-card border-l-4 border-l-blue-500 border-y border-r border-border/50 p-6 rounded-r-xl shadow-sm">
-                            <h4 className="font-bold text-lg mb-2">Do you work with companies outside of India?</h4>
+                            <h4 className="font-bold text-lg mb-2 text-blue-400">Do you work with companies outside of India?</h4>
                             <p className="text-muted-foreground">Yes, while we're based in Bangalore, we work with clients globally. Our services are available remotely.</p>
                         </div>
                         <div className="bg-card border-l-4 border-l-blue-500 border-y border-r border-border/50 p-6 rounded-r-xl shadow-sm">
-                            <h4 className="font-bold text-lg mb-2">What's the typical timeline for AI implementation?</h4>
+                            <h4 className="font-bold text-lg mb-2 text-blue-400">What's the typical timeline for AI implementation?</h4>
                             <p className="text-muted-foreground">Timelines vary. A POC can take 4-8 weeks, while full implementations may take 3-6 months. We'll provide a detailed timeline after discussion.</p>
                         </div>
                     </div>

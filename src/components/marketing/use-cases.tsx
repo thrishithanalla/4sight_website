@@ -86,7 +86,7 @@ const UseCases = () => {
         <section className="py-20 relative overflow-hidden">
             <Container>
                 <div className="flex flex-col items-center justify-center text-center mb-8 md:mb-10">
-                    <h2 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-foreground to-muted-foreground mb-6">
+                    <h2 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-6">
                         Our Usecases
                     </h2>
                     <p className="text-muted-foreground text-lg max-w-2xl">

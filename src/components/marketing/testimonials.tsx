@@ -91,7 +91,7 @@ const Testimonials = () => {
 
             <Container>
                 <div className="flex flex-col items-center justify-center text-center mb-16 px-4">
-                    <h2 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-foreground to-muted-foreground mb-6">
+                    <h2 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-6">
                         Trusted and Loved by The World's Best
                     </h2>
                     <p className="text-muted-foreground text-lg max-w-2xl">

@@ -39,7 +39,7 @@ const AboutPage = () => {
         <Wrapper className="py-12 md:py-20 relative overflow-hidden">
             <Container>
                 <div className="flex flex-col items-center justify-center text-center max-w-4xl mx-auto mb-12 md:mb-20 px-4">
-                    <h1 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-foreground to-muted-foreground mb-4 md:mb-6">
+                    <h1 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4 md:mb-6">
                         Welcome to 4sight AI - where the future of enterprise technology begins
                     </h1>
                     <p className="text-muted-foreground text-base md:text-lg mb-4 md:mb-6">
@@ -62,8 +62,8 @@ const AboutPage = () => {
                         >
                             <div className="flex flex-col gap-4 mb-8">
                                 <div className="flex items-center gap-2">
-                                    <WandSparklesIcon className="w-5 h-5 text-foreground" />
-                                    <h3 className="font-semibold text-lg text-foreground">OUR VISION</h3>
+                                    <WandSparklesIcon className="w-5 h-5 text-blue-500" />
+                                    <h3 className="font-semibold text-lg text-blue-500">OUR VISION</h3>
                                 </div>
                                 <p className="text-muted-foreground text-sm">
                                     Efficiently manage user data and interactions with advanced AI tools
@@ -102,8 +102,8 @@ const AboutPage = () => {
                         >
                             <div className="flex flex-col gap-4 mb-4">
                                 <div className="flex items-center gap-2">
-                                    <ChartColumnBigIcon className="w-5 h-5 text-foreground" />
-                                    <h3 className="font-semibold text-lg text-foreground">OUR MISSION</h3>
+                                    <ChartColumnBigIcon className="w-5 h-5 text-blue-500" />
+                                    <h3 className="font-semibold text-lg text-blue-500">OUR MISSION</h3>
                                 </div>
                                 <p className="text-muted-foreground text-sm">
                                     Gain deep insights into your audience and campaign performance
@@ -147,8 +147,8 @@ const AboutPage = () => {
                         >
                             <div className="flex flex-col gap-4 mb-8">
                                 <div className="flex items-center gap-2">
-                                    <DatabaseIcon className="w-5 h-5 text-foreground" />
-                                    <h3 className="font-semibold text-lg text-foreground">OUR VALUES</h3>
+                                    <DatabaseIcon className="w-5 h-5 text-blue-500" />
+                                    <h3 className="font-semibold text-lg text-blue-500">OUR VALUES</h3>
                                 </div>
                                 <p className="text-muted-foreground text-sm">
                                     Manage your data with ease and efficiency
