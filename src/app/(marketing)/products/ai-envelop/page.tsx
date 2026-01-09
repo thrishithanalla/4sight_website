@@ -40,7 +40,7 @@ const AIEnvelopPage = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-video w-full">
                             <Image
-                                src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80"
+                                src="/images/ai-envelop-hero.jpg"
                                 alt="AI Envelop - Enterprise AI Infrastructure"
                                 fill
                                 className="object-cover"

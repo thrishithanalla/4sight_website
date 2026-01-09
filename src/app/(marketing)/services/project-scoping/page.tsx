@@ -41,7 +41,7 @@ const ProjectScoping = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-video w-full">
                             <Image
-                                src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=800&q=80"
+                                src="/images/project-scoping.png"
                                 alt="Project Scoping & Blueprint - AI Project Planning"
                                 fill
                                 className="object-cover"

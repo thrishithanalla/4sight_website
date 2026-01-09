@@ -49,7 +49,7 @@ const NewsAIPage = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-video w-full">
                             <Image
-                                src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&q=80"
+                                src="/images/news-ai.jpg"
                                 alt="News AI - Intelligent News Platform"
                                 fill
                                 className="object-cover"

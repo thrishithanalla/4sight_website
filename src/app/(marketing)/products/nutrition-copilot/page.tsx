@@ -49,7 +49,7 @@ const NutritionCopilotPage = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-video w-full">
                             <Image
-                                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80"
+                                src="/images/nutrition-copilot.jpg"
                                 alt="Nutrition Co-Pilot - AI-Powered Nutrition Guidance"
                                 fill
                                 className="object-cover"

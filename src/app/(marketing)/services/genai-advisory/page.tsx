@@ -41,7 +41,7 @@ const GenAIAdvisory = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-video w-full">
                             <Image
-                                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"
+                                src="/images/genai-advisory.png"
                                 alt="GenAI Advisory - Strategic Generative AI Guidance"
                                 fill
                                 className="object-cover"
