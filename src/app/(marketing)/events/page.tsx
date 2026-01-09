@@ -12,7 +12,7 @@ const EventsPage = () => {
             <Container>
                 {/* Header Section */}
                 <div className="flex flex-col items-center justify-center text-center max-w-3xl mx-auto mb-10 md:mb-16 px-4">
-                    <h1 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-amber-400 mb-4 md:mb-6">
+                    <h1 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-400 mb-4 md:mb-6">
                         Events & Webinars
                     </h1>
                     <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto">

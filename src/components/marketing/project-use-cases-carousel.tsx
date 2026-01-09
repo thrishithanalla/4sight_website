@@ -119,7 +119,7 @@ const ProjectUseCasesCarousel = ({ useCases, color = "blue" }: ProjectUseCasesCa
             <div className="flex justify-center gap-4 mt-8">
                 <button
                     onClick={scrollPrev}
-                    className={`w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white ${themeColor.btnHover} transition-all`}
+                    className={`w-10 h-10 rounded-full ${themeColor.bg} ${themeColor.border} border flex items-center justify-center ${themeColor.text} ${themeColor.btnHover} transition-all`}
                 >
                     <ArrowLeft className="w-5 h-5" />
                 </button>
@@ -127,13 +127,13 @@ const ProjectUseCasesCarousel = ({ useCases, color = "blue" }: ProjectUseCasesCa
                     {useCases.map((_, i) => (
                         <div
                             key={i}
-                            className={`h-1.5 rounded-full transition-all duration-300 ${i === selectedIndex ? `w-6 ${themeColor.text.replace('text-', 'bg-')}` : "w-1.5 bg-white/20"}`}
+                            className={`h-1.5 rounded-full transition-all duration-300 ${i === selectedIndex ? `w-6 ${themeColor.text.replace('text-', 'bg-')}` : `w-1.5 ${themeColor.text.replace('text-', 'bg-')}/20`}`}
                         ></div>
                     ))}
                 </div>
                 <button
                     onClick={scrollNext}
-                    className={`w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white ${themeColor.btnHover} transition-all`}
+                    className={`w-10 h-10 rounded-full ${themeColor.bg} ${themeColor.border} border flex items-center justify-center ${themeColor.text} ${themeColor.btnHover} transition-all`}
                 >
                     <ArrowRight className="w-5 h-5" />
                 </button>

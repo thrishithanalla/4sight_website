@@ -1,13 +1,18 @@
 "use client";
 
 import Container from "../global/container";
+import Link from "next/link";
 import { MagicCard } from "../ui/magic-card";
 import {
     ChartColumnBigIcon,
     DatabaseIcon,
     DownloadIcon,
     WandSparklesIcon,
-    ZapIcon
+    ZapIcon,
+    Brain,
+    Rocket,
+    Handshake,
+    Users
 } from "lucide-react";
 import { Line, LineChart, ResponsiveContainer, Tooltip } from "recharts";
 
@@ -48,37 +53,29 @@ const Features = () => {
                         >
                             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-                            <div className="flex flex-col gap-4 mb-4 z-20">
-                                <div className="flex items-center gap-3">
-                                    <div className="h-10 w-10 rounded-xl bg-blue-500/10 flex items-center justify-center">
-                                        <WandSparklesIcon className="w-5 h-5 text-blue-500" />
-                                    </div>
-                                    <h3 className="font-heading font-semibold text-xl text-foreground">AI-Powered Automation</h3>
-                                </div>
-                                <p className="text-muted-foreground text-sm max-w-xs leading-relaxed">
-                                    Efficiently manage user data and interactions with advanced AI tools that adapt to your workflow.
-                                </p>
-                            </div>
-
-                            <div className="flex flex-col items-center justify-end w-full mt-auto relative min-h-[140px] pb-4 z-20">
-                                <div className="absolute bottom-[2px] w-[90%] border-t border-dashed border-neutral-300 dark:border-neutral-700 z-0 opacity-50"></div>
-                                <div className="absolute bottom-[10px] w-[85%] border-t border-dashed border-neutral-300 dark:border-neutral-700 z-0 opacity-70"></div>
-                                <div className="absolute bottom-[18px] w-[80%] border-t border-dashed border-neutral-300 dark:border-neutral-700 z-0"></div>
-
-                                <div className="bg-neutral-950 text-white rounded-xl p-3 flex shadow-2xl z-10 w-[85%] max-w-[240px] relative border border-neutral-800">
-                                    <div className="bg-blue-600 rounded-lg p-2 mr-3 flex items-center justify-center h-10 w-10 shrink-0 shadow-[0_0_15px_rgba(37,99,235,0.5)]">
-                                        <ZapIcon className="w-5 h-5 text-white" fill="currentColor" />
-                                    </div>
-                                    <div className="flex flex-col justify-center">
-                                        <div className="flex items-center gap-2 text-[10px] font-bold text-blue-400 mb-0.5">
-                                            <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></span>
-                                            LIVE TRENDS
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full h-full relative z-20">
+                                <div className="flex flex-col justify-center gap-4">
+                                    <div className="flex items-center gap-3">
+                                        <div className="h-10 w-10 rounded-xl bg-blue-500/10 flex items-center justify-center">
+                                            <Brain className="w-5 h-5 text-blue-500" />
                                         </div>
-                                        <div className="text-sm font-semibold leading-tight">Interaction Spike</div>
-                                        <div className="text-[10px] text-neutral-400">Analysis complete</div>
+                                        <h3 className="font-heading font-semibold text-xl text-foreground">Human-Centered GenAI Co-Pilots</h3>
+                                    </div>
+                                    <p className="text-muted-foreground text-sm max-w-sm leading-relaxed">
+                                        4SightAI builds GenAI co-pilots that take over repetitive and time-intensive tasks—freeing professionals to focus on creativity, strategy, and meaningful work while improving overall work-life balance.
+                                    </p>
+                                </div>
+
+                                <div className="flex items-center justify-center">
+                                    <div className="bg-primary/5 border border-primary/10 rounded-2xl p-6 backdrop-blur-sm shadow-sm">
+                                        <p className="text-muted-foreground text-sm leading-relaxed italic">
+                                            "We co-create domain-specific GenAI solutions alongside industry partners, delivering practical, high-impact use cases tailored to real business challenges."
+                                        </p>
                                     </div>
                                 </div>
                             </div>
+
+
                         </MagicCard>
                     </div>
                 </Container>
@@ -97,12 +94,12 @@ const Features = () => {
                             <div className="flex flex-col gap-4 mb-4 z-20">
                                 <div className="flex items-center gap-3">
                                     <div className="h-10 w-10 rounded-xl bg-purple-500/10 flex items-center justify-center">
-                                        <ChartColumnBigIcon className="w-5 h-5 text-purple-500" />
+                                        <Rocket className="w-5 h-5 text-purple-500" />
                                     </div>
-                                    <h3 className="font-heading font-semibold text-xl text-foreground">Deep Analytics</h3>
+                                    <h3 className="font-heading font-semibold text-xl text-foreground">Faster Proof-of-Value</h3>
                                 </div>
                                 <p className="text-muted-foreground text-sm leading-relaxed">
-                                    Gain deep insights into your audience and campaign performance.
+                                    Demonstrate real outcomes quickly with rapid PoC creation that helps secure stakeholder confidence and enables smooth transitions.
                                 </p>
                             </div>
 
@@ -138,26 +135,13 @@ const Features = () => {
                             <div className="flex flex-col gap-4 mb-8 z-20">
                                 <div className="flex items-center gap-3">
                                     <div className="h-10 w-10 rounded-xl bg-emerald-500/10 flex items-center justify-center">
-                                        <DatabaseIcon className="w-5 h-5 text-emerald-500" />
+                                        <Handshake className="w-5 h-5 text-emerald-500" />
                                     </div>
-                                    <h3 className="font-heading font-semibold text-xl text-foreground">Data Management</h3>
+                                    <h3 className="font-heading font-semibold text-xl text-foreground">Trusted Partner</h3>
                                 </div>
                                 <p className="text-muted-foreground text-sm max-w-sm leading-relaxed">
-                                    Secure, scalable storage for all your critical business metrics.
+                                    From technology selection and cost optimization to governance and adoption, 4SightAI guides enterprises end-to-end through their GenAI journey.
                                 </p>
-                            </div>
-
-                            <div className="flex flex-col gap-3 w-full mt-auto z-20 relative">
-                                {[1, 2].map(i => (
-                                    <div key={i} className="flex items-center gap-4 bg-background/50 border border-border/50 p-2.5 rounded-lg backdrop-blur-sm">
-                                        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-500 shrink-0">
-                                            <DownloadIcon className="w-4 h-4" />
-                                        </div>
-                                        <div className="h-2 w-full bg-muted rounded-full overflow-hidden">
-                                            <div className="h-full bg-emerald-500/50 w-2/3 rounded-full"></div>
-                                        </div>
-                                    </div>
-                                ))}
                             </div>
                         </MagicCard>
                     </div>
@@ -168,17 +152,23 @@ const Features = () => {
                     <div className="rounded-3xl bg-gradient-to-br from-indigo-600 via-violet-600 to-purple-600 relative border border-transparent h-full min-h-[300px] overflow-hidden group">
                         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150"></div>
                         <div className="p-8 flex flex-col h-full relative z-10 text-white">
-                            <h3 className="font-heading font-bold text-2xl mb-2">Ready to scale?</h3>
+                            <h3 className="font-heading font-bold text-2xl mb-2">Rapid Collaboration</h3>
                             <p className="text-white/80 text-sm mb-6 max-w-xs">
-                                Join thousands of companies using 4SightAI to power their growth.
+                                Have a GenAI idea? Our collaborative approach allows organizations to quickly turn concepts into scalable solutions using our proven frameworks.
                             </p>
-                            <div className="mt-auto">
-                                <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 flex items-center justify-between">
-                                    <span className="font-medium">Get Started Now</span>
-                                    <div className="h-8 w-8 rounded-full bg-white text-violet-600 flex items-center justify-center">
-                                        <ZapIcon className="w-4 h-4 fill-current" />
+                            <div className="mt-auto flex flex-col sm:flex-row gap-3">
+                                <Link href="/careers" className="flex-1 group/btn">
+                                    <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-3 h-full flex items-center justify-center hover:bg-white/20 transition-colors">
+                                        <span className="font-medium text-sm">Join us</span>
                                     </div>
-                                </div>
+                                </Link>
+                                <Link href="/contact" className="flex-1 group/btn">
+                                    <div className="bg-white text-violet-600 rounded-xl p-3 h-full flex items-center justify-center hover:bg-gray-100 transition-colors shadow-lg">
+                                        <span className="font-medium text-sm font-bold flex items-center gap-2">
+                                            Share ideas <Users className="w-4 h-4 fill-current group-hover/btn:scale-110 transition-transform" />
+                                        </span>
+                                    </div>
+                                </Link>
                             </div>
                         </div>
                     </div>
