@@ -10,7 +10,7 @@ export const NAV_LINKS = [
     },
     {
         name: "Government",
-        href: "/ai4andhrapolice"
+        href: "/government"
     },
     {
         name: "Products",
@@ -94,5 +94,28 @@ export const SERVICES = [
         name: "GenAI Consulting",
         href: "/services/genai-consulting",
         description: "End-to-End Implementation"
+    }
+];
+
+export const GOVERNMENT = [
+    {
+        name: "AI 4 AP Police",
+        href: "/government/ai4andhrapolice",
+        description: "Public Safety & Analytics"
+    },
+    {
+        name: "CCTV Analytics",
+        href: "/government/cctv-analytics",
+        description: "Intelligent Video Surveillance"
+    },
+    {
+        name: "Event Governance",
+        href: "/government/event-governance",
+        description: "Real-time Incident Response"
+    },
+    {
+        name: "NewsAI360",
+        href: "/government/newsai360",
+        description: "Automated Media Intelligence"
     }
 ];

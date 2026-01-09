@@ -407,8 +407,8 @@ const EventsPage = () => {
                                             <div className="flex items-center gap-4">
                                                 <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500/20 to-blue-500/10 flex items-center justify-center border border-blue-500/20 group-hover:scale-110 transition-transform duration-300 shadow-inner shadow-blue-500/5">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7 text-blue
-                                                    -400 group-hover:text-blue
-                                                    -300 transition-colors">
+                                                        -400 group-hover:text-blue
+                                                        -300 transition-colors">
                                                         {area.icon}
                                                     </svg>
                                                 </div>

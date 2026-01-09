@@ -1,5 +1,5 @@
 
-import { NAV_LINKS, PRODUCTS, SERVICES } from "@/constants";
+import { NAV_LINKS, PRODUCTS, SERVICES, GOVERNMENT } from "@/constants";
 import Link from "next/link";
 import Image from "next/image";
 import Wrapper from "../global/wrapper";
@@ -72,6 +72,33 @@ const Navbar = () => {
                                                         >
                                                             <div className="font-semibold text-sm mb-0.5">{service.name}</div>
                                                             <div className="text-xs text-muted-foreground line-clamp-1">{service.description}</div>
+                                                        </Link>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        </li>
+                                    );
+                                }
+
+                                if (link.name === "Government") {
+                                    return (
+                                        <li key={index} className="relative group h-16 flex items-center">
+                                            <Link href={link.href} className="flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors group-hover:text-primary">
+                                                {link.name}
+                                                <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
+                                            </Link>
+
+                                            {/* Dropdown Menu */}
+                                            <div className="absolute top-full left-1/2 -translate-x-1/2 hidden group-hover:block pt-2 w-[280px]">
+                                                <div className="bg-card border border-border shadow-xl rounded-xl p-2 flex flex-col gap-1">
+                                                    {GOVERNMENT.map((govItem, gIndex) => (
+                                                        <Link
+                                                            key={gIndex}
+                                                            href={govItem.href}
+                                                            className="block p-3 rounded-lg hover:bg-muted/50 transition-colors"
+                                                        >
+                                                            <div className="font-semibold text-sm mb-0.5">{govItem.name}</div>
+                                                            <div className="text-xs text-muted-foreground line-clamp-1">{govItem.description}</div>
                                                         </Link>
                                                     ))}
                                                 </div>
