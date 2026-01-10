@@ -97,25 +97,32 @@ export const SERVICES = [
     }
 ];
 
+import { Shield, ScanFace, RadioTower, Newspaper } from "lucide-react";
+
 export const GOVERNMENT = [
     {
         name: "AI 4 AP Police",
         href: "/government/ai4andhrapolice",
-        description: "Public Safety & Analytics"
+        description: "Public Safety & Analytics",
+        icon: Shield,
+        iconImage: "/images/ai4ap-logo.png"
     },
     {
         name: "CCTV Analytics",
         href: "/government/cctv-analytics",
-        description: "Intelligent Video Surveillance"
+        description: "Intelligent Video Surveillance",
+        icon: ScanFace
     },
     {
         name: "Event Governance",
         href: "/government/event-governance",
-        description: "Real-time Incident Response"
+        description: "Real-time Incident Response",
+        icon: RadioTower
     },
     {
         name: "NewsAI360",
         href: "/government/newsai360",
-        description: "Automated Media Intelligence"
+        description: "Automated Media Intelligence",
+        icon: Newspaper
     }
 ];

@@ -1,6 +1,7 @@
 import Wrapper from "@/components/global/wrapper";
 import Container from "@/components/global/container";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
     FileTextIcon,
@@ -29,6 +30,15 @@ const AI4AndhraPolicePage = () => {
                 <Container>
                     <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8 md:p-12 hover:border-blue-500/50 hover:bg-white/8 transition-all max-w-5xl mx-auto">
                         <div className="flex flex-col items-center justify-center text-center relative z-10">
+                            <div className="mb-6 relative w-24 h-24 md:w-32 md:h-32">
+                                <Image
+                                    src="/images/ai4ap-logo.png"
+                                    alt="AI 4 Andhra Police Logo"
+                                    fill
+                                    className="object-contain"
+                                    priority
+                                />
+                            </div>
                             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-6">
                                 AI 4 Andhra Police
                             </h1>
