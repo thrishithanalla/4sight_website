@@ -5,9 +5,11 @@ import Wrapper from "@/components/global/wrapper";
 import Container from "@/components/global/container";
 import { useRouter } from "next/navigation";
 import { Lock } from "lucide-react";
+import { useAdminAuth } from "@/context/admin-auth";
 
 const AdminLoginPage = () => {
     const router = useRouter();
+    const { login } = useAdminAuth(); // Use Context
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
@@ -23,7 +25,7 @@ const AdminLoginPage = () => {
             formData.append('username', username);
             formData.append('password', password);
 
-            const res = await fetch("http://localhost:8004/token", {
+            const res = await fetch("http://localhost:8000/token", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/x-www-form-urlencoded",
@@ -33,7 +35,7 @@ const AdminLoginPage = () => {
 
             if (res.ok) {
                 const data = await res.json();
-                localStorage.setItem("admin_token", data.access_token);
+                login(data.access_token); // Set token in context (memory)
                 router.push("/admin/careers");
             } else {
                 setError("Invalid username or password");

@@ -25,17 +25,12 @@ const AddJobPage = () => {
         other_content: "",
     });
 
+    const [region, setRegion] = useState<"US" | "India">("US");
+
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }));
     };
-
-    useEffect(() => {
-        const token = localStorage.getItem("admin_token");
-        if (!token) {
-            router.push("/admin/login");
-        }
-    }, [router]);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -47,14 +42,27 @@ const AddJobPage = () => {
             return;
         }
 
+        // Auto-append country if not present
+        let finalLocation = formData.location;
+        if (region === "US" && !finalLocation.toLowerCase().includes("usa") && !finalLocation.toLowerCase().includes("united states")) {
+            finalLocation += ", USA";
+        } else if (region === "India" && !finalLocation.toLowerCase().includes("india")) {
+            finalLocation += ", India";
+        }
+
+        const submissionData = {
+            ...formData,
+            location: finalLocation
+        };
+
         try {
-            const res = await fetch("http://localhost:8004/api/jobs", {
+            const res = await fetch("http://localhost:8000/api/jobs", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                     "Authorization": `Bearer ${token}`
                 },
-                body: JSON.stringify(formData),
+                body: JSON.stringify(submissionData),
             });
 
             if (res.ok) {
@@ -82,6 +90,36 @@ const AddJobPage = () => {
                     </div>
 
                     <form onSubmit={handleSubmit} className="space-y-6 bg-white/5 border border-white/10 p-8 rounded-xl">
+
+                        {/* Region Selector */}
+                        <div className="space-y-3 pb-6 border-b border-white/10">
+                            <label className="text-base font-medium text-foreground">Select Region</label>
+                            <div className="flex gap-4">
+                                <button
+                                    type="button"
+                                    className={`flex-1 py-3 px-4 rounded-lg border text-sm font-medium transition-all ${region === "US"
+                                        ? "bg-blue-500 border-blue-500 text-white"
+                                        : "bg-white/5 border-white/10 text-muted-foreground hover:bg-white/10"
+                                        }`}
+                                >
+                                    United States (West Coast)
+                                </button>
+                                <button
+                                    type="button"
+                                    onClick={() => setRegion("India")}
+                                    className={`flex-1 py-3 px-4 rounded-lg border text-sm font-medium transition-all ${region === "India"
+                                        ? "bg-blue-500 border-blue-500 text-white"
+                                        : "bg-white/5 border-white/10 text-muted-foreground hover:bg-white/10"
+                                        }`}
+                                >
+                                    India
+                                </button>
+                            </div>
+                            <p className="text-xs text-muted-foreground">
+                                This will categorize the job under the selected region on the careers page.
+                            </p>
+                        </div>
+
                         <div className="space-y-2">
                             <label className="text-sm font-medium text-muted-foreground">Job Title</label>
                             <input
@@ -248,7 +286,7 @@ const AddJobPage = () => {
                             <button
                                 type="submit"
                                 disabled={submitting}
-                                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 rounded-lg transition-all flex justify-center items-center"
+                                className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 rounded-lg transition-all flex justify-center items-center"
                             >
                                 {submitting ? "Saving..." : <><Save className="w-4 h-4 mr-2" /> Publish Job</>}
                             </button>

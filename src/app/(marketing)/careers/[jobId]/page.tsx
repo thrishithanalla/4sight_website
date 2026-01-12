@@ -34,7 +34,7 @@ const JobDetailsPage = () => {
 
         const fetchJob = async () => {
             try {
-                const res = await fetch(`http://localhost:8004/api/jobs/${jobId}`);
+                const res = await fetch(`http://localhost:8000/api/jobs/${jobId}`);
                 if (res.ok) {
                     const data = await res.json();
                     setJob(data);

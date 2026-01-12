@@ -4,9 +4,10 @@ import { useEffect, useState } from "react";
 import Wrapper from "@/components/global/wrapper";
 import Container from "@/components/global/container";
 import Link from "next/link";
-import { Trash2, Eye, EyeOff, Plus, ArrowLeft, Pencil } from "lucide-react";
+import { Trash2, Eye, EyeOff, Plus, ArrowLeft, Pencil, LogOut } from "lucide-react";
 
 import { useRouter } from "next/navigation";
+import { useAdminAuth } from "@/context/admin-auth";
 
 interface Job {
     _id: string;
@@ -20,9 +21,9 @@ const AdminCareersPage = () => {
     const [jobs, setJobs] = useState<Job[]>([]);
     const [loading, setLoading] = useState(true);
     const router = useRouter();
+    const { token, logout, isAuthenticated } = useAdminAuth();
 
     const getAuthHeaders = () => {
-        const token = localStorage.getItem("admin_token");
         return {
             "Content-Type": "application/json",
             "Authorization": `Bearer ${token}`
@@ -30,21 +31,20 @@ const AdminCareersPage = () => {
     };
 
     const fetchJobs = async () => {
-        const token = localStorage.getItem("admin_token");
-        if (!token) {
+        if (!isAuthenticated || !token) {
             router.push("/admin/login");
             return;
         }
 
         try {
-            const res = await fetch("http://localhost:8004/api/admin/jobs", {
+            const res = await fetch("http://localhost:8000/api/admin/jobs", {
                 headers: getAuthHeaders()
             });
             if (res.ok) {
                 const data = await res.json();
                 setJobs(data);
             } else if (res.status === 401) {
-                router.push("/admin/login");
+                logout();
             }
         } catch (error) {
             console.error("Failed to fetch jobs", error);
@@ -54,13 +54,17 @@ const AdminCareersPage = () => {
     };
 
     useEffect(() => {
-        fetchJobs();
-    }, []);
+        if (!isAuthenticated) {
+            router.push("/admin/login");
+        } else {
+            fetchJobs();
+        }
+    }, [isAuthenticated, router]);
 
     const toggleVisibility = async (id: string, currentStatus: boolean) => {
         const action = currentStatus ? "hide" : "show";
         try {
-            const res = await fetch(`http://localhost:8004/api/jobs/${id}/${action}`, {
+            const res = await fetch(`http://localhost:8000/api/jobs/${id}/${action}`, {
                 method: "PUT",
                 headers: getAuthHeaders()
             });
@@ -78,7 +82,7 @@ const AdminCareersPage = () => {
         if (!confirm("Are you sure you want to delete this job? This action cannot be undone.")) return;
 
         try {
-            const res = await fetch(`http://localhost:8004/api/jobs/${id}`, {
+            const res = await fetch(`http://localhost:8000/api/jobs/${id}`, {
                 method: "DELETE",
                 headers: getAuthHeaders()
             });
@@ -103,13 +107,22 @@ const AdminCareersPage = () => {
                         <h1 className="text-3xl font-bold">Manage Jobs</h1>
                         <p className="text-muted-foreground">Admin Dashboard</p>
                     </div>
-                    <Link
-                        href="/admin/careers/new"
-                        className="mt-4 md:mt-0 flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
-                    >
-                        <Plus className="w-4 h-4 mr-2" />
-                        Add New Job
-                    </Link>
+                    <div className="flex gap-4">
+                        <Link
+                            href="/admin/careers/new"
+                            className="mt-4 md:mt-0 flex items-center px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors"
+                        >
+                            <Plus className="w-4 h-4 mr-2" />
+                            Add New Job
+                        </Link>
+                        <button
+                            onClick={logout}
+                            className="mt-4 md:mt-0 flex items-center px-4 py-2 bg-red-600/10 hover:bg-red-600/20 text-red-500 rounded-lg transition-colors border border-red-600/20"
+                        >
+                            <LogOut className="w-4 h-4 mr-2" />
+                            Logout
+                        </button>
+                    </div>
                 </div>
 
                 {loading ? (
