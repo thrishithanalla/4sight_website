@@ -10,12 +10,17 @@ import { ArrowLeft, MapPin, Briefcase, Clock, Calendar } from "lucide-react";
 interface Job {
     _id: string;
     title: string;
-    department: string;
     location: string;
     job_type: string;
     experience: string;
-    description: string;
-    requirements: string;
+    positions: number;
+    compensation: string;
+    role_overview: string;
+    key_responsibilities: string;
+    core_skills: string;
+    highly_desirable: string;
+    other_heading?: string;
+    other_content?: string;
     created_at: string;
 }
 
@@ -29,7 +34,7 @@ const JobDetailsPage = () => {
 
         const fetchJob = async () => {
             try {
-                const res = await fetch(`http://localhost:8000/api/jobs/${jobId}`);
+                const res = await fetch(`http://localhost:8003/api/jobs/${jobId}`);
                 if (res.ok) {
                     const data = await res.json();
                     setJob(data);
@@ -80,9 +85,6 @@ const JobDetailsPage = () => {
                 <div className="max-w-4xl mx-auto">
                     <div className="bg-white/5 border border-white/10 rounded-2xl p-8 md:p-12">
                         <div className="mb-8">
-                            <span className="inline-block px-3 py-1 rounded-full bg-blue-500/10 text-blue-500 text-sm font-medium mb-4">
-                                {job.department}
-                            </span>
                             <h1 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
                                 {job.title}
                             </h1>
@@ -101,26 +103,55 @@ const JobDetailsPage = () => {
                                     {job.experience}
                                 </div>
                                 <div className="flex items-center">
-                                    <Calendar className="w-5 h-5 mr-2" />
-                                    Target Start: Immediate
+                                    <span className="font-semibold text-foreground mr-2">{job.positions}</span> Openings
                                 </div>
+                                {job.compensation && (
+                                    <div className="flex items-center text-green-400">
+                                        {job.compensation}
+                                    </div>
+                                )}
                             </div>
                         </div>
 
                         <div className="space-y-8 text-foreground/90 leading-relaxed">
+                            {job.role_overview && (
+                                <section>
+                                    <h2 className="text-2xl font-semibold mb-4 text-foreground">Role Overview</h2>
+                                    <div className="prose prose-invert max-w-none">
+                                        <p className="whitespace-pre-line">{job.role_overview}</p>
+                                    </div>
+                                </section>
+                            )}
+
                             <section>
-                                <h2 className="text-2xl font-semibold mb-4 text-foreground">Role Overview</h2>
+                                <h2 className="text-2xl font-semibold mb-4 text-foreground">Key Responsibilities</h2>
                                 <div className="prose prose-invert max-w-none">
-                                    <p className="whitespace-pre-line">{job.description}</p>
+                                    <p className="whitespace-pre-line">{job.key_responsibilities}</p>
                                 </div>
                             </section>
 
                             <section>
-                                <h2 className="text-2xl font-semibold mb-4 text-foreground">Requirements & Skills</h2>
+                                <h2 className="text-2xl font-semibold mb-4 text-foreground">Core Skills</h2>
                                 <div className="prose prose-invert max-w-none">
-                                    <p className="whitespace-pre-line">{job.requirements}</p>
+                                    <p className="whitespace-pre-line">{job.core_skills}</p>
                                 </div>
                             </section>
+
+                            <section>
+                                <h2 className="text-2xl font-semibold mb-4 text-foreground">Highly Desirable</h2>
+                                <div className="prose prose-invert max-w-none">
+                                    <p className="whitespace-pre-line">{job.highly_desirable}</p>
+                                </div>
+                            </section>
+
+                            {job.other_heading && job.other_content && (
+                                <section>
+                                    <h2 className="text-2xl font-semibold mb-4 text-foreground">{job.other_heading}</h2>
+                                    <div className="prose prose-invert max-w-none">
+                                        <p className="whitespace-pre-line">{job.other_content}</p>
+                                    </div>
+                                </section>
+                            )}
 
                             <div className="pt-8 border-t border-white/10 mt-12 flex flex-col md:flex-row gap-4 items-center justify-between">
                                 <div className="text-sm text-muted-foreground">
