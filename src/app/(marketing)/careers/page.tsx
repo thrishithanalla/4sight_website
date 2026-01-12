@@ -22,7 +22,7 @@ const CareersPage = () => {
     useEffect(() => {
         const fetchJobs = async () => {
             try {
-                const res = await fetch("http://localhost:8003/api/jobs");
+                const res = await fetch("http://localhost:8004/api/jobs");
                 if (res.ok) {
                     const data = await res.json();
                     setJobs(data);

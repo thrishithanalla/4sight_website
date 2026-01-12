@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Wrapper from "@/components/global/wrapper";
 import Container from "@/components/global/container";
 import Link from "next/link";
@@ -30,15 +30,29 @@ const AddJobPage = () => {
         setFormData(prev => ({ ...prev, [name]: value }));
     };
 
+    useEffect(() => {
+        const token = localStorage.getItem("admin_token");
+        if (!token) {
+            router.push("/admin/login");
+        }
+    }, [router]);
+
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setSubmitting(true);
 
+        const token = localStorage.getItem("admin_token");
+        if (!token) {
+            router.push("/admin/login");
+            return;
+        }
+
         try {
-            const res = await fetch("http://localhost:8003/api/jobs", {
+            const res = await fetch("http://localhost:8004/api/jobs", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
+                    "Authorization": `Bearer ${token}`
                 },
                 body: JSON.stringify(formData),
             });

@@ -6,6 +6,8 @@ import Container from "@/components/global/container";
 import Link from "next/link";
 import { Trash2, Eye, EyeOff, Plus, ArrowLeft, Pencil } from "lucide-react";
 
+import { useRouter } from "next/navigation";
+
 interface Job {
     _id: string;
     title: string;
@@ -17,13 +19,32 @@ interface Job {
 const AdminCareersPage = () => {
     const [jobs, setJobs] = useState<Job[]>([]);
     const [loading, setLoading] = useState(true);
+    const router = useRouter();
+
+    const getAuthHeaders = () => {
+        const token = localStorage.getItem("admin_token");
+        return {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`
+        };
+    };
 
     const fetchJobs = async () => {
+        const token = localStorage.getItem("admin_token");
+        if (!token) {
+            router.push("/admin/login");
+            return;
+        }
+
         try {
-            const res = await fetch("http://localhost:8003/api/admin/jobs");
+            const res = await fetch("http://localhost:8004/api/admin/jobs", {
+                headers: getAuthHeaders()
+            });
             if (res.ok) {
                 const data = await res.json();
                 setJobs(data);
+            } else if (res.status === 401) {
+                router.push("/admin/login");
             }
         } catch (error) {
             console.error("Failed to fetch jobs", error);
@@ -39,11 +60,14 @@ const AdminCareersPage = () => {
     const toggleVisibility = async (id: string, currentStatus: boolean) => {
         const action = currentStatus ? "hide" : "show";
         try {
-            const res = await fetch(`http://localhost:8003/api/jobs/${id}/${action}`, {
+            const res = await fetch(`http://localhost:8004/api/jobs/${id}/${action}`, {
                 method: "PUT",
+                headers: getAuthHeaders()
             });
             if (res.ok) {
                 fetchJobs(); // Refresh list
+            } else if (res.status === 401) {
+                router.push("/admin/login");
             }
         } catch (error) {
             console.error("Failed to update job visibility", error);
@@ -54,11 +78,14 @@ const AdminCareersPage = () => {
         if (!confirm("Are you sure you want to delete this job? This action cannot be undone.")) return;
 
         try {
-            const res = await fetch(`http://localhost:8003/api/jobs/${id}`, {
+            const res = await fetch(`http://localhost:8004/api/jobs/${id}`, {
                 method: "DELETE",
+                headers: getAuthHeaders()
             });
             if (res.ok) {
                 setJobs(jobs.filter(job => job._id !== id));
+            } else if (res.status === 401) {
+                router.push("/admin/login");
             }
         } catch (error) {
             console.error("Failed to delete job", error);

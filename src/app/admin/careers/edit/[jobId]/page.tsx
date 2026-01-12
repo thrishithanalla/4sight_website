@@ -28,11 +28,18 @@ const EditJobPage = () => {
     });
 
     useEffect(() => {
+        const token = localStorage.getItem("admin_token");
+        if (!token) {
+            router.push("/admin/login");
+        }
+    }, [router]);
+
+    useEffect(() => {
         if (!jobId) return;
 
         const fetchJob = async () => {
             try {
-                const res = await fetch(`http://localhost:8003/api/jobs/${jobId}`);
+                const res = await fetch(`http://localhost:8004/api/jobs/${jobId}`);
                 if (res.ok) {
                     const data = await res.json();
                     setFormData({
@@ -73,11 +80,18 @@ const EditJobPage = () => {
         e.preventDefault();
         setSubmitting(true);
 
+        const token = localStorage.getItem("admin_token");
+        if (!token) {
+            router.push("/admin/login");
+            return;
+        }
+
         try {
-            const res = await fetch(`http://localhost:8003/api/jobs/${jobId}`, {
+            const res = await fetch(`http://localhost:8004/api/jobs/${jobId}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
+                    "Authorization": `Bearer ${token}`
                 },
                 body: JSON.stringify(formData),
             });

@@ -2,11 +2,17 @@ from fastapi import FastAPI, Body, HTTPException, status, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from fastapi.encoders import jsonable_encoder
+from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from typing import List, Optional
 from bson import ObjectId
+from datetime import datetime, timedelta
+from jose import JWTError, jwt
+from passlib.context import CryptContext
+from pydantic import BaseModel
 
 from models import Job, JobCreate, JobUpdate
 from database import jobs_collection
+import os
 
 app = FastAPI()
 
@@ -18,6 +24,75 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# --- Auth Configuration ---
+SECRET_KEY = os.getenv("SECRET_KEY", "09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7")
+ALGORITHM = "HS256"
+ACCESS_TOKEN_EXPIRE_MINUTES = 30
+
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str
+
+class TokenData(BaseModel):
+    username: Optional[str] = None
+
+# Hardcoded Admin User (hashed 'admin123')
+FAKE_USERS_DB = {
+    "admin": {
+        "username": "admin",
+        "full_name": "Admin User",
+        "email": "admin@example.com",
+        "hashed_password": pwd_context.hash("admin123"),
+        "disabled": False,
+    }
+}
+
+def verify_password(plain_password, hashed_password):
+    return pwd_context.verify(plain_password, hashed_password)
+
+def get_user(db, username: str):
+    if username in db:
+        user_dict = db[username]
+        return user_dict
+    return None
+
+def create_access_token(data: dict, expires_delta: Optional[timedelta] = None):
+    to_encode = data.copy()
+    if expires_delta:
+        expire = datetime.utcnow() + expires_delta
+    else:
+        expire = datetime.utcnow() + timedelta(minutes=15)
+    to_encode.update({"exp": expire})
+    encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
+    return encoded_jwt
+
+async def get_current_user(token: str = Depends(oauth2_scheme)):
+    credentials_exception = HTTPException(
+        status_code=status.HTTP_401_UNAUTHORIZED,
+        detail="Could not validate credentials",
+        headers={"WWW-Authenticate": "Bearer"},
+    )
+    try:
+        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+        username: str = payload.get("sub")
+        if username is None:
+            raise credentials_exception
+        token_data = TokenData(username=username)
+    except JWTError:
+        raise credentials_exception
+    user = get_user(FAKE_USERS_DB, username=token_data.username)
+    if user is None:
+        raise credentials_exception
+    return user
+
+async def get_current_active_user(current_user: dict = Depends(get_current_user)):
+    if current_user["disabled"]:
+        raise HTTPException(status_code=400, detail="Inactive user")
+    return current_user
+
 # --- Helpers ---
 def fix_id(job):
     if job.get("_id"):
@@ -25,6 +100,21 @@ def fix_id(job):
     return job
 
 # --- Routes ---
+
+@app.post("/token", response_model=Token)
+async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends()):
+    user = get_user(FAKE_USERS_DB, form_data.username)
+    if not user or not verify_password(form_data.password, user["hashed_password"]):
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Incorrect username or password",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
+    access_token_expires = timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
+    access_token = create_access_token(
+        data={"sub": user["username"]}, expires_delta=access_token_expires
+    )
+    return {"access_token": access_token, "token_type": "bearer"}
 
 @app.get("/api/jobs", response_description="List all active jobs", response_model=List[Job])
 async def list_jobs():
@@ -45,14 +135,10 @@ async def show_job(id: str):
         return fix_id(job)
     raise HTTPException(status_code=404, detail=f"Job {id} not found")
 
-
-# --- Admin Routes (Simulated Auth) ---
-# In a real app, use proper OAuth2 or JWT
-# For this task, we assume 'admin' access logic is handled by the caller or simple check
-# The user asked: "only admin should be able to add remove and hide"
+# --- Admin Routes (Protected) ---
 
 @app.get("/api/admin/jobs", response_description="List ALL jobs (Admin)", response_model=List[Job])
-async def list_all_jobs():
+async def list_all_jobs(current_user: dict = Depends(get_current_active_user)):
     jobs = []
     cursor = jobs_collection.find() # Returns all, including hidden
     async for job in cursor:
@@ -60,14 +146,14 @@ async def list_all_jobs():
     return jobs
 
 @app.post("/api/jobs", response_description="Add new job", response_model=Job)
-async def create_job(job: JobCreate = Body(...)):
+async def create_job(job: JobCreate = Body(...), current_user: dict = Depends(get_current_active_user)):
     job = jsonable_encoder(job)
     new_job = await jobs_collection.insert_one(job)
     created_job = await jobs_collection.find_one({"_id": new_job.inserted_id})
     return fix_id(created_job)
 
 @app.put("/api/jobs/{id}", response_description="Update a job", response_model=Job)
-async def update_job(id: str, job: JobUpdate = Body(...)):
+async def update_job(id: str, job: JobUpdate = Body(...), current_user: dict = Depends(get_current_active_user)):
     if not ObjectId.is_valid(id):
         raise HTTPException(status_code=400, detail="Invalid ID format")
 
@@ -90,7 +176,7 @@ async def update_job(id: str, job: JobUpdate = Body(...)):
     raise HTTPException(status_code=404, detail=f"Job {id} not found")
 
 @app.delete("/api/jobs/{id}", response_description="Delete a job")
-async def delete_job(id: str):
+async def delete_job(id: str, current_user: dict = Depends(get_current_active_user)):
     if not ObjectId.is_valid(id):
         raise HTTPException(status_code=400, detail="Invalid ID format")
 
@@ -102,7 +188,7 @@ async def delete_job(id: str):
     raise HTTPException(status_code=404, detail=f"Job {id} not found")
 
 @app.put("/api/jobs/{id}/hide", response_description="Hide a job")
-async def hide_job(id: str):
+async def hide_job(id: str, current_user: dict = Depends(get_current_active_user)):
     if not ObjectId.is_valid(id):
         raise HTTPException(status_code=400, detail="Invalid ID format")
 
@@ -122,7 +208,7 @@ async def hide_job(id: str):
     raise HTTPException(status_code=404, detail=f"Job {id} not found")
 
 @app.put("/api/jobs/{id}/show", response_description="Show a job")
-async def show_job_route(id: str):
+async def show_job_route(id: str, current_user: dict = Depends(get_current_active_user)):
     if not ObjectId.is_valid(id):
         raise HTTPException(status_code=400, detail="Invalid ID format")
 
