@@ -224,3 +224,75 @@ async def show_job_route(id: str, current_user: dict = Depends(get_current_activ
         return {"message": "Job was already active"}
 
     raise HTTPException(status_code=404, detail=f"Job {id} not found")
+
+from dotenv import load_dotenv
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+
+load_dotenv()
+
+# --- Contact Route ---
+
+class ContactForm(BaseModel):
+    name: str
+    email: str
+    phone: Optional[str] = None
+    message: str
+    privacy: bool
+
+def send_email(contact: ContactForm):
+    sender_email = os.getenv("SMTP_USER")
+    sender_password = os.getenv("SMTP_PASS")
+    smtp_host = os.getenv("SMTP_HOST")
+    smtp_port = int(os.getenv("SMTP_PORT", 587))
+
+    if not sender_email or not sender_password:
+        print("SMTP credentials not set. Email not sent.")
+        return False
+
+    msg = MIMEMultipart()
+    msg['From'] = sender_email
+    msg['To'] = sender_email # Send to self/admin
+    msg['Subject'] = f"New Contact: {contact.name}"
+
+    body = f"""
+    New Contact Form Submission:
+
+    Name: {contact.name}
+    Email: {contact.email}
+    Phone: {contact.phone}
+    
+    Message:
+    {contact.message}
+    """
+    msg.attach(MIMEText(body, 'plain'))
+
+    try:
+        server = smtplib.SMTP(smtp_host, smtp_port)
+        server.starttls()
+        server.login(sender_email, sender_password)
+        text = msg.as_string()
+        server.sendmail(sender_email, sender_email, text)
+        server.quit()
+        return True
+    except Exception as e:
+        print(f"Error sending email: {e}")
+        return False
+
+@app.post("/api/contact", response_description="Submit contact form")
+async def submit_contact_form(contact: ContactForm = Body(...)):
+    print(f"--- Contact Form Submission ---")
+    print(f"Name: {contact.name}")
+    print(f"Email: {contact.email}")
+    print(f"Phone: {contact.phone}")
+    print(f"Message: {contact.message}")
+    
+    success = send_email(contact)
+    if success:
+        print("Email sent successfully.")
+    else:
+        print("Failed to send email.")
+        
+    print(f"-------------------------------")
+    return {"success": True, "message": "Message received!"}
