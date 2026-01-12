@@ -9,7 +9,12 @@ import {
     DatabaseIcon,
     DownloadIcon,
     WandSparklesIcon,
-    ZapIcon
+    ZapIcon,
+    RocketIcon,
+    Building2Icon,
+    ShieldCheckIcon,
+    RefreshCwIcon,
+    UsersIcon
 } from "lucide-react";
 import { Line, LineChart, ResponsiveContainer, Tooltip } from "recharts";
 
@@ -40,18 +45,18 @@ const AboutPage = () => {
             <Container>
                 <div className="flex flex-col items-center justify-center text-center max-w-4xl mx-auto mb-12 md:mb-20 px-4">
                     <h1 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4 md:mb-6">
-                        Welcome to 4sight AI - where the future of enterprise technology begins
+                        Turning AI potential into enterprise reality.
                     </h1>
                     <p className="text-muted-foreground text-base md:text-lg mb-4 md:mb-6">
-                        4sight AI is the brainchild of a dynamic team comprising ERP Industry Veterans, Visionary Product Developers, and seasoned Enterprise Consulting Professionals. Our collective mission to embark on an exhilarating journey of tapping into the boundless potential of AI. We're dedicated to transforming essential Enterprise processes into sleek, AI-driven tasks, unlocking the magic of Generative AI Processes, and laying the foundation for the awe-inspiring future of Enterprise Artificial General Intelligence (AGI).
+                        4SightAI is an Artificial Intelligence and Generative AI company that builds production-ready, large-scale AI platforms for governments and enterprises. We specialize in domain-specific Large Language Models (LLMs), AI agents, and real-time decision systems that move organizations beyond experimentation into real-world impact.
                     </p>
                     <p className="text-muted-foreground text-base md:text-lg">
-                        Join us on this extraordinary expedition into the frontiers of technology and innovation. Together, we're shaping the future of the Enterprise world with pioneering AI solutions that are nothing short of admirable.
+                        Led by experienced enterprise architects and AI practitioners, we help organizations transition from traditional software systems to AI-first and GenAI-driven operating models. Our end-to-end approach spans AI architecture, data foundations, governance, and deployment. Through our 4SightAI Accelerators, we provide up to 40% of the foundational building blocks required for GenAI projects—reducing time, cost, and risk while ensuring scalability and long-term value.
                     </p>
                 </div>
 
-                {/* Vision, Mission, Values Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative w-full">
+                {/* Vision, Mission Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative w-full mb-12">
                     {/* Card 1: Vision */}
                     <div className="rounded-2xl bg-card relative border border-border/50 hover:border-border/100 transition-colors h-full min-h-[300px]">
                         <MagicCard
@@ -66,7 +71,7 @@ const AboutPage = () => {
                                     <h3 className="font-semibold text-lg text-blue-500">OUR VISION</h3>
                                 </div>
                                 <p className="text-muted-foreground text-sm">
-                                    Efficiently manage user data and interactions with advanced AI tools
+                                    To enable organizations and governments to operate intelligently, responsibly, and in real time by building AI-first systems that evolve from today’s GenAI capabilities toward future autonomous and decision-driven models.
                                 </p>
                             </div>
 
@@ -106,7 +111,7 @@ const AboutPage = () => {
                                     <h3 className="font-semibold text-lg text-blue-500">OUR MISSION</h3>
                                 </div>
                                 <p className="text-muted-foreground text-sm">
-                                    Gain deep insights into your audience and campaign performance
+                                    To design, build, and scale production-grade AI and GenAI platforms by combining deep enterprise architecture expertise, reusable accelerators, and continuous innovation—helping customers move confidently from traditional applications to AI-powered operating models with measurable outcomes.
                                 </p>
                             </div>
 
@@ -137,35 +142,98 @@ const AboutPage = () => {
                         </MagicCard>
                     </div>
 
-                    {/* Card 3: Values */}
-                    <div className="rounded-2xl bg-card relative border border-border/50 hover:border-border/100 transition-colors h-full min-h-[300px]">
-                        <MagicCard
-                            gradientFrom="#38bdf8"
-                            gradientTo="#3b82f6"
-                            className="p-6 w-full h-full flex flex-col justify-between"
-                            gradientColor="rgba(59,130,246,0.1)"
-                        >
-                            <div className="flex flex-col gap-4 mb-8">
-                                <div className="flex items-center gap-2">
-                                    <DatabaseIcon className="w-5 h-5 text-blue-500" />
-                                    <h3 className="font-semibold text-lg text-blue-500">OUR VALUES</h3>
-                                </div>
-                                <p className="text-muted-foreground text-sm">
-                                    Manage your data with ease and efficiency
-                                </p>
-                            </div>
+                </div>
 
-                            <div className="flex flex-col gap-4 w-full mt-auto px-2 pb-2">
-                                {[1, 2, 3].map(i => (
-                                    <div key={i} className="flex items-center gap-3">
-                                        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-500 text-white shrink-0">
-                                            <DownloadIcon className="w-4 h-4" />
+                {/* Core Values Section */}
+                <div className="flex flex-col items-center justify-center w-full mt-20">
+                    <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-12 text-center">
+                        Our Core Values
+                    </h2>
+                    <div className="flex flex-wrap justify-center gap-6 w-full">
+                        {[
+                            {
+                                title: "Production Over Promises",
+                                icon: RocketIcon,
+                                desc: "We prioritize real deployments, operational reliability, and measurable impact over experimentation and hype."
+                            },
+                            {
+                                title: "Architecture Matters",
+                                icon: Building2Icon,
+                                desc: "Strong AI systems require solid foundations. We believe long-term success comes from robust architecture, data readiness, and governance."
+                            },
+                            {
+                                title: "Responsible AI by Design",
+                                icon: ShieldCheckIcon,
+                                desc: "We build AI systems that are transparent, secure, and accountable—especially in mission-critical enterprise and government environments."
+                            },
+                            {
+                                title: "Continuous Evolution",
+                                icon: RefreshCwIcon,
+                                desc: "AI is moving fast. We commit to continuous learning and adoption, ensuring our solutions remain current and future-ready."
+                            },
+                            {
+                                title: "Partnership Mindset",
+                                icon: UsersIcon,
+                                desc: "We work as long-term partners, collaborating closely with customers and ecosystem players to co-create value and scale impact."
+                            }
+                        ].map((value, index) => (
+                            <div key={index} className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.33%-16px)] min-h-[250px] relative rounded-2xl bg-card border border-border/50 hover:border-border/100 transition-all duration-300">
+                                <MagicCard
+                                    gradientFrom="#38bdf8"
+                                    gradientTo="#3b82f6"
+                                    className="p-6 w-full h-full flex flex-col items-start gap-4"
+                                    gradientColor="rgba(59,130,246,0.1)"
+                                >
+                                    <div className="p-3 rounded-xl bg-blue-500/10 text-blue-500 mb-2">
+                                        <value.icon className="w-6 h-6" />
+                                    </div>
+                                    <h3 className="text-xl font-bold text-foreground">{value.title}</h3>
+                                    <p className="text-muted-foreground text-sm leading-relaxed">
+                                        {value.desc}
+                                    </p>
+                                </MagicCard>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Partners & Collaborations Section */}
+                <div className="flex flex-col items-center justify-center w-full mt-20 max-w-4xl mx-auto px-4">
+                    <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-8 text-center">
+                        Partners & Collaborations
+                    </h2>
+
+                    <div className="prose prose-invert max-w-none text-muted-foreground">
+                        <p className="text-base md:text-lg text-center mb-8">
+                            Collaboration is a core pillar of how 4SightAI builds and scales meaningful AI solutions. We work closely with industry partners, domain experts, technology providers, system integrators, research institutions, and public sector stakeholders to co-create production-ready GenAI platforms.
+                        </p>
+
+                        <p className="text-base md:text-lg text-center mb-12">
+                            By combining partner domain expertise with our GenAI frameworks, accelerators, and enterprise-grade architecture, we enable faster innovation, reduced delivery risk, and scalable outcomes across industries. Our collaboration model supports co-innovation, shared solution development, and joint go-to-market efforts, ensuring that GenAI solutions are both technically robust and deeply aligned with real-world needs.
+                        </p>
+
+                        <div className="bg-card border border-border/50 rounded-2xl p-8 mb-12">
+                            <h3 className="text-xl font-semibold text-foreground mb-6 text-center">We actively collaborate across areas such as:</h3>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                {[
+                                    "Enterprise platforms and business applications",
+                                    "Industry-specific solutions (Real Estate, Automotive, Healthcare, Financial Services)",
+                                    "Government, public safety, and citizen-centric systems",
+                                    "Applied AI research and emerging GenAI technologies"
+                                ].map((item, index) => (
+                                    <div key={index} className="flex items-start gap-3 p-3 rounded-lg hover:bg-white/5 transition-colors">
+                                        <div className="mt-1">
+                                            <div className="w-2 h-2 rounded-full bg-blue-500"></div>
                                         </div>
-                                        <div className="h-2.5 w-full bg-foreground/80 rounded-full opacity-80"></div>
+                                        <span className="text-sm md:text-base">{item}</span>
                                     </div>
                                 ))}
                             </div>
-                        </MagicCard>
+                        </div>
+
+                        <p className="text-base md:text-lg text-center font-medium text-foreground">
+                            Whether you are bringing domain knowledge, technology platforms, or high-impact GenAI use cases, 4SightAI welcomes collaboration to jointly build next-generation AI solutions with long-term value.
+                        </p>
                     </div>
                 </div>
             </Container>
