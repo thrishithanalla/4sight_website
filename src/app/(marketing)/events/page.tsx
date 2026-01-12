@@ -69,9 +69,9 @@ const EventsPage = () => {
                     {/* Objectives Section */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
                         <div className="order-2 md:order-1 w-full h-full min-h-[300px]">
-                            <EventGalleryCarousel images={[
-                                "1p1_11zon.jpg", "1p2.JPG", "1p3.jpg", "1p4.jpg",
-                                "1p5.jpg", "1p6.JPG", "1p7.jpg", "1p8.JPG"
+                            <EventGalleryCarousel items={[
+                                { src: "1p1_11zon.jpg" }, { src: "1p2.JPG" }, { src: "1p3.jpg" }, { src: "1p4.jpg" },
+                                { src: "1p5.jpg" }, { src: "1p6.JPG" }, { src: "1p7.jpg" }, { src: "1p8.JPG" }
                             ]} />
                         </div>
                         <div className="order-1 md:order-2 space-y-6">
@@ -218,10 +218,31 @@ const EventsPage = () => {
                             <h2 className="text-2xl font-bold text-white">Event Gallery</h2>
                             <div className="h-px bg-white/10 flex-1"></div>
                         </div>
-                        <EventsCoverflow images={[
-                            "ALI04161.JPG", "ALI05290.JPG", "ALI04711.JPG", "ALI05384.JPG",
-                            "ALI05258.JPG", "ALI05500.JPG", "MVS02596.JPG", "ALI05414.JPG",
-                            "ALI05142.JPG", "ALI05635.JPG", "ALI05708.JPG", "ALI05775.JPG"
+                        <EventsCoverflow items={[
+                            { src: "ALI04161.JPG" }, { src: "ALI05290.JPG" }, { src: "ALI04711.JPG" }, { src: "ALI05384.JPG" },
+                            { src: "ALI05258.JPG" }, { src: "ALI05500.JPG" }, { src: "MVS02596.JPG" }, { src: "ALI05414.JPG" },
+                            { src: "ALI05142.JPG" }, { src: "ALI05635.JPG" }, { src: "ALI05708.JPG" }, { src: "ALI05775.JPG" }
+                        ]} />
+                    </div>
+
+                    <div className="space-y-8">
+                        <div className="flex items-center gap-4">
+                            <h2 className="text-2xl font-bold text-white">Hackathon Highlights</h2>
+                            <div className="h-px bg-white/10 flex-1"></div>
+                        </div>
+                        <EventsCoverflow items={[
+                            { src: "1u.jpeg", caption: "Caption for Image 1" },
+                            { src: "ALI04081.JPG", caption: "Caption for Image 2" },
+                            { src: "ALI04096.JPG", caption: "Caption for Image 3" },
+                            { src: "ALI05635.JPG", caption: "Caption for Image 4" },
+                            { src: "2u.jpeg", caption: "Caption for Image 5" },
+                            { src: "3u.jpeg", caption: "Caption for Image 6" },
+                            { src: "4u.jpeg", caption: "Caption for Image 7" },
+                            { src: "5u.jpeg", caption: "Caption for Image 8" },
+                            { src: "6u.jpeg", caption: "Caption for Image 9" },
+                            { src: "7u.jpeg", caption: "Caption for Image 10" },
+                            { src: "8u.jpeg", caption: "Caption for Image 11" },
+                            { src: "9u.jpeg", caption: "Caption for Image 12" }
                         ]} />
                     </div>
                 </div>
@@ -318,7 +339,11 @@ const EventsPage = () => {
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center">
                                 <div className="w-full min-h-[300px]">
-                                    <EventGalleryCarousel images={["c1.jpeg", "c2.jpeg", "c3.jpeg", "c5.jpeg", "c8.jpeg", "c22.jpeg", "c14.jpeg", "c13.jpeg", "c11.jpeg"]} />
+                                    <EventGalleryCarousel items={[
+                                        { src: "c1.jpeg" }, { src: "c2.jpeg" }, { src: "c3.jpeg" },
+                                        { src: "c5.jpeg" }, { src: "c8.jpeg" }, { src: "c22.jpeg" },
+                                        { src: "c14.jpeg" }, { src: "c13.jpeg" }, { src: "c11.jpeg" }
+                                    ]} />
                                 </div>
                                 <div className="">
                                     <div className="bg-white/5 border border-blue-500/20 rounded-xl p-6 md:p-8 relative overflow-hidden group hover:border-blue-500/40 transition-colors flex flex-col justify-between">

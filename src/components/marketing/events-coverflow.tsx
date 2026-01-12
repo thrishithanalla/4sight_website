@@ -7,17 +7,23 @@ import { EmblaCarouselType, EmblaEventType } from 'embla-carousel'
 import { cn } from "@/lib"
 import { ArrowLeft, ArrowRight } from 'lucide-react'
 
-interface EventsCoverflowProps {
-    images: string[]
+interface CoverflowItem {
+    src: string;
+    caption?: string;
 }
 
-const EventsCoverflow = ({ images }: EventsCoverflowProps) => {
+interface EventsCoverflowProps {
+    items: CoverflowItem[];
+    className?: string;
+}
+
+const EventsCoverflow = ({ items, className }: EventsCoverflowProps) => {
     const [emblaRef, emblaApi] = useEmblaCarousel({
         loop: true,
         align: "center",
         skipSnaps: false,
         containScroll: "trimSnaps",
-    }, [Autoplay({ delay: 1500 })])
+    }, [Autoplay({ delay: 3000 })])
     const [selectedIndex, setSelectedIndex] = useState(0)
     const [scrollSnaps, setScrollSnaps] = useState<number[]>([])
 
@@ -29,57 +35,6 @@ const EventsCoverflow = ({ images }: EventsCoverflowProps) => {
     const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi])
     const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi])
 
-    // Custom "Coverflow" effect logic
-    const tweenFactor = React.useRef(0)
-    const setTweenFactor = useCallback((emblaApi: EmblaCarouselType) => {
-        tweenFactor.current = 0.5 * emblaApi.scrollSnapList().length
-    }, [])
-
-    const tweenOpacity = useCallback((emblaApi: EmblaCarouselType, eventName?: EmblaEventType) => {
-        const engine = emblaApi.internalEngine()
-        const scrollProgress = emblaApi.scrollProgress()
-        const slidesInView = emblaApi.slidesInView()
-        const isScrollEvent = eventName === 'scroll'
-
-        emblaApi.scrollSnapList().forEach((scrollSnap, snapIndex) => {
-            let diffToTarget = scrollSnap - scrollProgress
-            const slidesInSnap = engine.slideRegistry[snapIndex]
-
-            slidesInSnap.forEach((slideIndex) => {
-                if (isScrollEvent && !slidesInView.includes(slideIndex)) return
-
-                if (engine.options.loop) {
-                    engine.slideLooper.loopPoints.forEach((loopItem) => {
-                        const target = loopItem.target()
-
-                        if (slideIndex === loopItem.index && target !== 0) {
-                            const sign = Math.sign(target)
-
-                            if (sign === -1) {
-                                diffToTarget = scrollSnap - (1 + scrollProgress)
-                            }
-                            if (sign === 1) {
-                                diffToTarget = scrollSnap + (1 - scrollProgress)
-                            }
-                        }
-                    })
-                }
-
-                // Calculate scale and opacity based on distance from center
-                // A simple approach: abs(diff) determines "far-ness"
-                // Ideally embla's `scrollSnap` is between 0 and 1. 
-                // But simplified: check element distance from center of viewport.
-
-                // For a simpler CSS-based approach driven by React state or refs:
-                // We'll trust the re-render for `selectedIndex` style updates roughly, 
-                // OR use a pure CSS approach if possible. 
-                // BUT Embla is JS driven. 
-                // Let's stick to a simpler active-class approach for now to ensure reliability 
-                // without complex MATH unless requested. Use "opacity-50 scale-90" for non-active.
-            })
-        })
-    }, [])
-
     useEffect(() => {
         if (!emblaApi) return
 
@@ -90,10 +45,10 @@ const EventsCoverflow = ({ images }: EventsCoverflowProps) => {
     }, [emblaApi, onSelect])
 
     return (
-        <div className="relative w-full py-12">
+        <div className={cn("relative w-full py-12", className)}>
             <div className="overflow-hidden" ref={emblaRef}>
                 <div className="flex touch-pan-y items-center h-[500px]">
-                    {images.map((image, index) => {
+                    {items.map((item, index) => {
                         const isActive = index === selectedIndex
 
                         return (
@@ -101,19 +56,32 @@ const EventsCoverflow = ({ images }: EventsCoverflowProps) => {
                                 style={{
                                     transform: isActive ? 'scale(1.1)' : 'scale(0.9)',
                                     opacity: isActive ? 1 : 0.5,
-                                    zIndex: isActive ? 10 : 0
+                                    zIndex: isActive ? 10 : 0,
+                                    filter: isActive ? 'none' : 'blur(1px)'
                                 }}>
                                 <div className={cn(
-                                    "relative h-full rounded-2xl overflow-hidden border border-white/10 shadow-xl",
+                                    "relative h-full rounded-2xl overflow-hidden border border-white/10 shadow-xl transition-all duration-500",
                                     isActive ? "shadow-orange-500/10" : "grayscale-[50%]"
                                 )}>
                                     {/* Using standard img tag to preserve intrinsic aspect ratio with fixed height */}
                                     <img
-                                        src={`/events_images/${image}`}
+                                        src={`/events_images/${item.src}`}
                                         alt={`Event ${index + 1}`}
                                         className="h-full w-auto object-cover"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-40"></div>
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+
+                                    {/* Caption Overlay - Only visible when active */}
+                                    {item.caption && (
+                                        <div className={cn(
+                                            "absolute bottom-0 left-0 right-0 p-6 transition-all duration-500 transform",
+                                            isActive ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+                                        )}>
+                                            <p className="text-white text-lg md:text-xl font-medium text-center drop-shadow-md">
+                                                {item.caption}
+                                            </p>
+                                        </div>
+                                    )}
                                 </div>
                             </div>
                         )
