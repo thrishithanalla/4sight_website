@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-MONGO_URI = os.getenv("MONGO_URI", "mongodb+srv://trishitanalla03:120805@cluster0.xfsni.mongodb.net/")
+MONGO_URI = os.getenv("MONGO_URI", "ur url")
 DB_NAME = os.getenv("DB_NAME", "4sight_website")
 
 client = motor.motor_asyncio.AsyncIOMotorClient(MONGO_URI)
