@@ -23,10 +23,8 @@ export default function Hero() {
                     4SightAI <br />
                 </h1>
 
-                <p className="text-muted-foreground text-lg md:text-xl max-w-lg font-light leading-relaxed mb-6">
-                    4Sight AI is an engineering-focused AI company helping organizations turn complex problems into scalable AI solutions.
-                    <br className="hidden md:block" />
-                    From Generative AI and LLM systems to enterprise-grade platforms, we build AI that integrates seamlessly into real business workflows.
+                <p className="text-muted-foreground text-base md:text-lg max-w-xl text-left font-light leading-relaxed mb-8">
+                    4SightAI is an Artificial Intelligence and Generative AI company that builds large-scale, domain-specific AI platforms for governments and enterprises, specializing in Large Language Models (LLMs), AI agents, and real-time decision systems. The company develops Government-grade LLMs for Police and Real-Time Governance, while also delivering enterprise AI solutions that embed GenAI into core business workflows to improve productivity, intelligence, and operational efficiency. With strong capabilities across AI architecture, data engineering, and applied GenAI, 4SightAI delivers end-to-end solutions—from master data standardization and AI infrastructure to workflow-driven copilots and autonomous agents—enabling organizations to transition from traditional analytics to AI-driven, real-time, and outcome-focused operating models.
                 </p>
 
                 <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
@@ -45,7 +43,7 @@ export default function Hero() {
 
 
             {/* RIGHT ILLUSTRATION */}
-            <Container className="w-full lg:w-[55%] flex justify-center mt-8 lg:mt-0 relative z-10">
+            <Container className="w-full lg:w-[45%] flex justify-center mt-8 lg:mt-0 relative z-10">
                 <div className="relative w-full max-w-[1000px] aspect-[12/7] transform scale-90 lg:scale-100 origin-center">
                     <HeroDiagram />
                 </div>
