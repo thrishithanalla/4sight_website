@@ -39,8 +39,8 @@ export async function generateStaticParams() {
             jobId: job._id,
         }));
     } catch (error) {
-        console.warn("Backend offline (fetch failed). Skipping static generation for /careers/[jobId].");
-        return [];
+        console.warn("Backend offline (fetch failed). Generating fallback static page for /careers/[jobId].");
+        return [{ jobId: "missing-job-fallback" }];
     }
 }
 
