@@ -39,7 +39,8 @@ const AdminCareersPage = () => {
         }
 
         try {
-            const res = await fetch("http://127.0.0.1:8000/api/admin/jobs", {
+            const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
+            const res = await fetch(`${API_URL}/api/admin/jobs`, {
                 headers: getAuthHeaders()
             });
             if (res.ok) {
@@ -68,7 +69,8 @@ const AdminCareersPage = () => {
     const toggleVisibility = async (id: string, currentStatus: boolean) => {
         const action = currentStatus ? "hide" : "show";
         try {
-            const res = await fetch(`http://127.0.0.1:8000/api/jobs/${id}/${action}`, {
+            const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
+            const res = await fetch(`${API_URL}/api/jobs/${id}/${action}`, {
                 method: "PUT",
                 headers: getAuthHeaders()
             });
@@ -86,7 +88,8 @@ const AdminCareersPage = () => {
         if (!confirm("Are you sure you want to delete this job? This action cannot be undone.")) return;
 
         try {
-            const res = await fetch(`http://127.0.0.1:8000/api/jobs/${id}`, {
+            const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
+            const res = await fetch(`${API_URL}/api/jobs/${id}`, {
                 method: "DELETE",
                 headers: getAuthHeaders()
             });

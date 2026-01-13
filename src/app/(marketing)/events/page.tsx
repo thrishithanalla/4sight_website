@@ -11,13 +11,47 @@ const EventsPage = () => {
         <Wrapper className="py-12 md:py-20 relative overflow-hidden">
             <Container>
                 {/* Header Section */}
-                <div className="flex flex-col items-center justify-center text-center max-w-3xl mx-auto mb-10 md:mb-16 px-4">
+                <div className="flex flex-col items-center justify-center text-center max-w-3xl mx-auto mb-16 md:mb-20 px-4">
                     <h1 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-400 mb-4 md:mb-6">
                         Events & Webinars
                     </h1>
                     <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto">
                         Join us for upcoming events, workshops, and webinars to stay ahead of the curve in enterprise AI.
                     </p>
+                </div>
+
+                {/* Small Event Section */}
+                <div className="flex flex-col md:flex-row items-center gap-8 mb-20 p-8 bg-white/5 border border-white/10 rounded-2xl max-w-6xl mx-auto hover:border-blue-500/30 transition-all">
+                    <div className="w-full md:w-1/2 relative aspect-video rounded-xl overflow-hidden shadow-lg">
+                        <Image
+                            src="/images/surya-police-session.png"
+                            alt="AI Strategy Workshop Session"
+                            fill
+                            className="object-cover hover:scale-105 transition-transform duration-500"
+                        />
+                    </div>
+                    <div className="w-full md:w-1/2 space-y-4">
+                        <div className="inline-block px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium">
+                            Upcoming Session
+                        </div>
+                        <h3 className="text-3xl md:text-4xl font-bold text-white leading-tight">
+                            AI Strategy Workshop
+                        </h3>
+                        <p className="text-lg text-muted-foreground leading-relaxed">
+                            Join us for a focused session on implementing AI strategies in your organization.
+                            Quick, impactful, and ready to deploy solutions for modern challenges.
+                        </p>
+                        <div className="flex flex-wrap items-center gap-6 text-base text-gray-300 pt-4">
+                            <div className="flex items-center gap-2">
+                                <span>📅</span>
+                                <span className="font-medium">Oct 15, 2025</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <span>📍</span>
+                                <span className="font-medium">Virtual Meet</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="flex flex-col gap-12 md:gap-20 max-w-7xl mx-auto w-full">

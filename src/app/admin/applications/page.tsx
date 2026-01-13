@@ -45,7 +45,8 @@ const AdminApplicationsPage = () => {
         }
 
         try {
-            const res = await fetch("http://127.0.0.1:8000/api/applications", {
+            const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
+            const res = await fetch(`${API_URL}/api/applications`, {
                 headers: getAuthHeaders()
             });
             if (res.ok) {
@@ -155,7 +156,7 @@ const AdminApplicationsPage = () => {
                                             </td>
                                             <td className="p-4 text-center">
                                                 <a
-                                                    href={`http://127.0.0.1:8000/uploads/${app.resume_path}`}
+                                                    href={`${process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000"}/uploads/${app.resume_path}`}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
                                                     className="inline-flex items-center justify-center p-2 bg-blue-500/10 text-blue-400 hover:bg-blue-500 hover:text-white rounded transition-colors"

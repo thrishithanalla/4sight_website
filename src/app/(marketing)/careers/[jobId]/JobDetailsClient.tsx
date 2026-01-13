@@ -64,7 +64,8 @@ const JobDetailsClient = () => {
 
         const fetchJob = async () => {
             try {
-                const res = await fetch(`http://127.0.0.1:8000/api/jobs/${jobId}`);
+                const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
+                const res = await fetch(`${API_URL}/api/jobs/${jobId}`);
                 if (res.ok) {
                     const data = await res.json();
                     setJob(data);
@@ -115,7 +116,8 @@ const JobDetailsClient = () => {
         data.append("resume", resume);
 
         try {
-            const res = await fetch("http://127.0.0.1:8000/api/applications", {
+            const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
+            const res = await fetch(`${API_URL}/api/applications`, {
                 method: "POST",
                 body: data,
             });

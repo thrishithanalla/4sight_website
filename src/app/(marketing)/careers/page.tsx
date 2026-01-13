@@ -72,7 +72,8 @@ const CareersPage = () => {
     useEffect(() => {
         const fetchJobs = async () => {
             try {
-                const res = await fetch("http://127.0.0.1:8000/api/jobs");
+                const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
+                const res = await fetch(`${API_URL}/api/jobs`);
                 if (res.ok) {
                     const data = await res.json();
                     setJobs(data);
@@ -110,7 +111,8 @@ const CareersPage = () => {
         setErrorMessage("");
 
         try {
-            const res = await fetch(`http://127.0.0.1:8000/api/jobs/${jobId}`);
+            const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
+            const res = await fetch(`${API_URL}/api/jobs/${jobId}`);
             if (res.ok) {
                 const data = await res.json();
                 setSelectedJob(data);
@@ -158,7 +160,8 @@ const CareersPage = () => {
         data.append("resume", resume);
 
         try {
-            const res = await fetch("http://127.0.0.1:8000/api/applications", {
+            const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
+            const res = await fetch(`${API_URL}/api/applications`, {
                 method: "POST",
                 body: data,
             });
