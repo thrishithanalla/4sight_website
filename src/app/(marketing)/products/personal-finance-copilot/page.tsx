@@ -13,9 +13,9 @@ const PersonalFinanceCopilot = () => {
             <Wrapper className="pt-20 pb-10 relative overflow-hidden">
                 <Container>
                     <Container>
-                        <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8 md:p-12 hover:border-blue-500/50 hover:bg-white/8 transition-all max-w-5xl mx-auto">
+                        <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8 md:p-12 hover:border-black/70 hover:bg-white/8 transition-all max-w-5xl mx-auto">
                             <div className="flex flex-col items-center justify-center text-center max-w-3xl mx-auto relative z-10">
-                                <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-6">
+                                <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
                                     Personal Finance Co-Pilot
                                 </h1>
                                 <p className="text-xl md:text-2xl text-accent-foreground/90 font-medium mb-4">
@@ -34,7 +34,7 @@ const PersonalFinanceCopilot = () => {
             <Wrapper className="py-20 bg-muted/20">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Intelligent Financial Intelligence
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -73,7 +73,7 @@ const PersonalFinanceCopilot = () => {
             <Wrapper className="py-20 relative">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Key Features
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -87,7 +87,7 @@ const PersonalFinanceCopilot = () => {
                                 <Target className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Personalized Financial Planning</h3>
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground text-base leading-6">
                                 AI-driven financial planning tailored to your income, expenses, goals, risk tolerance, and
                                 life stage for optimal wealth accumulation and protection.
                             </p>
@@ -97,7 +97,7 @@ const PersonalFinanceCopilot = () => {
                                 <TrendingUp className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Investment Intelligence</h3>
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground text-base leading-6">
                                 Advanced portfolio analysis, asset allocation recommendations, and market timing insights
                                 based on historical data, economic indicators, and predictive modeling.
                             </p>
@@ -107,7 +107,7 @@ const PersonalFinanceCopilot = () => {
                                 <Wallet className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Expense Optimization</h3>
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground text-base leading-6">
                                 Intelligent expense tracking and categorization with automated savings recommendations,
                                 budget optimization, and spending pattern analysis.
                             </p>
@@ -117,7 +117,7 @@ const PersonalFinanceCopilot = () => {
                                 <LineChart className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Financial Forecasting</h3>
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground text-base leading-6">
                                 Predictive financial modeling that forecasts future cash flows, retirement readiness,
                                 and long-term wealth accumulation based on current trajectories.
                             </p>
@@ -130,7 +130,7 @@ const PersonalFinanceCopilot = () => {
             <Wrapper className="py-20 bg-muted/20">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Financial Intelligence Engine
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -139,23 +139,23 @@ const PersonalFinanceCopilot = () => {
                     </div>
 
                     <div className="bg-card border border-border/50 rounded-3xl p-8 md:p-12">
-                        <h3 className="text-2xl font-bold text-primary mb-8">Core Capabilities</h3>
+                        <h3 className="text-2xl font-bold text-foreground mb-8">Core Capabilities</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                             <div>
                                 <h4 className="font-semibold text-lg mb-2 text-foreground">Risk Assessment</h4>
-                                <p className="text-muted-foreground text-sm">Comprehensive risk profiling and tolerance analysis with dynamic portfolio rebalancing recommendations based on market conditions.</p>
+                                <p className="text-muted-foreground text-base leading-6">Comprehensive risk profiling and tolerance analysis with dynamic portfolio rebalancing recommendations based on market conditions.</p>
                             </div>
                             <div>
                                 <h4 className="font-semibold text-lg mb-2 text-foreground">Tax Optimization</h4>
-                                <p className="text-muted-foreground text-sm">Intelligent tax planning and optimization strategies including deduction identification, tax-loss harvesting, and retirement account recommendations.</p>
+                                <p className="text-muted-foreground text-base leading-6">Intelligent tax planning and optimization strategies including deduction identification, tax-loss harvesting, and retirement account recommendations.</p>
                             </div>
                             <div>
                                 <h4 className="font-semibold text-lg mb-2 text-foreground">Goal Tracking</h4>
-                                <p className="text-muted-foreground text-sm">Automated progress tracking for financial goals with milestone alerts, adjustment recommendations, and achievement probability calculations.</p>
+                                <p className="text-muted-foreground text-base leading-6">Automated progress tracking for financial goals with milestone alerts, adjustment recommendations, and achievement probability calculations.</p>
                             </div>
                             <div>
                                 <h4 className="font-semibold text-lg mb-2 text-foreground">Market Intelligence</h4>
-                                <p className="text-muted-foreground text-sm">Real-time market analysis with sentiment tracking, economic indicator monitoring, and automated alerts for significant market events.</p>
+                                <p className="text-muted-foreground text-base leading-6">Real-time market analysis with sentiment tracking, economic indicator monitoring, and automated alerts for significant market events.</p>
                             </div>
                         </div>
                     </div>
@@ -166,7 +166,7 @@ const PersonalFinanceCopilot = () => {
             <Wrapper className="py-20 relative">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Financial Applications
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -183,9 +183,9 @@ const PersonalFinanceCopilot = () => {
                             { title: "Estate Planning", desc: "Integrated estate planning with inheritance projections, beneficiary optimization, and wealth transfer strategy recommendations." },
                             { title: "Tax Planning", desc: "Year-round tax planning with deduction identification, tax bracket optimization, and year-end tax strategy recommendations." }
                         ].map((useCase, idx) => (
-                            <div key={idx} className="bg-card border border-border/50 p-6 rounded-2xl hover:border-primary/30 transition-colors">
+                            <div key={idx} className="bg-card border border-border/50 p-6 rounded-2xl hover:border-black/30 transition-colors">
                                 <h3 className="font-bold text-lg mb-2">{useCase.title}</h3>
-                                <p className="text-muted-foreground text-sm">{useCase.desc}</p>
+                                <p className="text-muted-foreground text-base leading-6">{useCase.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -196,7 +196,7 @@ const PersonalFinanceCopilot = () => {
             <Wrapper className="py-20 bg-muted/20">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Why Personal Finance Co-Pilot Matters
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -207,7 +207,7 @@ const PersonalFinanceCopilot = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
                         <div>
                             <div className="mb-8">
-                                <h3 className="text-xl font-bold text-primary mb-3">Democratized Expertise</h3>
+                                <h3 className="text-xl font-bold text-foreground mb-3">Democratized Expertise</h3>
                                 <p className="text-muted-foreground leading-relaxed">
                                     Personal Finance Co-Pilot makes sophisticated financial planning accessible to everyone,
                                     not just high-net-worth individuals. Advanced algorithms provide the same level of analysis
@@ -216,7 +216,7 @@ const PersonalFinanceCopilot = () => {
                             </div>
 
                             <div>
-                                <h3 className="text-xl font-bold text-primary mb-3">Behavioral Finance Integration</h3>
+                                <h3 className="text-xl font-bold text-foreground mb-3">Behavioral Finance Integration</h3>
                                 <p className="text-muted-foreground leading-relaxed">
                                     Understanding of behavioral biases and emotional decision-making helps overcome common
                                     financial pitfalls, leading to more rational and successful financial behaviors.
@@ -225,7 +225,7 @@ const PersonalFinanceCopilot = () => {
                         </div>
                         <div>
                             <div className="mb-8">
-                                <h3 className="text-xl font-bold text-primary mb-3">Continuous Optimization</h3>
+                                <h3 className="text-xl font-bold text-foreground mb-3">Continuous Optimization</h3>
                                 <p className="text-muted-foreground leading-relaxed">
                                     The AI continuously learns from your financial patterns and market conditions, providing
                                     increasingly personalized and accurate recommendations over time.
@@ -233,7 +233,7 @@ const PersonalFinanceCopilot = () => {
                             </div>
 
                             <div>
-                                <h3 className="text-xl font-bold text-primary mb-3">Proactive Financial Health</h3>
+                                <h3 className="text-xl font-bold text-foreground mb-3">Proactive Financial Health</h3>
                                 <p className="text-muted-foreground leading-relaxed">
                                     Early warning systems and predictive analytics help identify potential financial issues
                                     before they become problems, enabling proactive rather than reactive financial management.

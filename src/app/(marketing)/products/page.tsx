@@ -87,9 +87,9 @@ const ProductsPage = () => {
             <Container>
                 {/* Header */}
                 {/* Header */}
-                <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8 md:p-12 hover:border-blue-500/50 hover:bg-white/8 transition-all max-w-5xl mx-auto mb-16">
+                <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8 md:p-12 hover:border-black/70 hover:bg-white/8 transition-all max-w-5xl mx-auto mb-16">
                     <div className="flex flex-col items-center justify-center text-center max-w-2xl mx-auto relative z-10">
-                        <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-6">
+                        <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
                             Our Products
                         </h1>
                         <p className="text-muted-foreground text-lg">
@@ -106,7 +106,7 @@ const ProductsPage = () => {
                             id={product.id}
                             className="scroll-mt-40"
                         >
-                            <div className="bg-card border border-border/50 p-8 lg:p-10 rounded-3xl shadow-lg transition-all duration-300 hover:shadow-xl hover:border-primary/20">
+                            <div className="bg-card border border-border/50 p-8 lg:p-10 rounded-3xl shadow-lg transition-all duration-300 hover:shadow-xl hover:border-black/20">
                                 <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center`}>
 
                                     {/* Image Side - Order swaps based on index */}
@@ -121,7 +121,7 @@ const ProductsPage = () => {
 
                                     {/* Content Side */}
                                     <div className={`flex flex-col text-left ${index % 2 === 1 ? "lg:order-1" : "lg:order-2"}`}>
-                                        <h2 className="text-2xl lg:text-3xl font-bold text-blue-500 mb-4">
+                                        <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
                                             {product.title}
                                         </h2>
                                         <p className="text-muted-foreground text-base lg:text-lg leading-relaxed mb-8">

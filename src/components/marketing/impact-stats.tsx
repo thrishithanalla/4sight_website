@@ -46,10 +46,10 @@ const ImpactStats = () => {
             <Wrapper>
                 <Container>
                     <div className="flex flex-col items-center justify-center mb-16 text-center">
-                        <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400">
+                        <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground">
                             Our Impact
                         </h2>
-                        <p className="text-muted-foreground text-lg max-w-2xl">
+                        <p className="text-muted-foreground text-base leading-6 max-w-2xl">
                             Delivering measurable results across industries
                         </p>
                     </div>
@@ -72,7 +72,7 @@ const ImpactStats = () => {
                                         }}
                                     />
                                 </span>
-                                <span className="text-sm font-medium text-muted-foreground text-center">
+                                <span className="text-base leading-6 font-medium text-muted-foreground text-center">
                                     {stat.label}
                                 </span>
                             </div>

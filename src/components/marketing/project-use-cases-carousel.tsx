@@ -45,7 +45,7 @@ const ProjectUseCasesCarousel = ({ useCases, color = "blue" }: ProjectUseCasesCa
         blue: {
             bg: "bg-blue-500/10",
             border: "border-blue-500/20",
-            text: "text-blue-500",
+            text: "text-foreground",
             hover: "from-blue-500/20 to-blue-500/5",
             shadow: "shadow-blue-500/10",
             btnHover: "hover:bg-blue-500 hover:border-blue-500"

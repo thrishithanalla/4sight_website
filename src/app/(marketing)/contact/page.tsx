@@ -202,7 +202,7 @@ const Contact = () => {
                         <div className="space-y-8">
                             {/* Info Card */}
                             <div className="bg-card border border-border/50 p-8 rounded-2xl shadow-sm">
-                                <h3 className="text-xl font-bold mb-6 text-blue-500">Contact Information</h3>
+                                <h3 className="text-xl font-bold mb-6 text-foreground">Contact Information</h3>
 
                                 <div className="space-y-6">
                                     <div className="flex items-start gap-4">
@@ -210,7 +210,7 @@ const Contact = () => {
                                             <MapPin className="w-6 h-6" />
                                         </div>
                                         <div>
-                                            <h4 className="font-semibold mb-1 text-blue-400">Location</h4>
+                                            <h3 className="font-semibold text-foreground">Location</h3>
                                             <p className="text-muted-foreground text-sm">
                                                 Bangalore, Karnataka<br />
                                                 India
@@ -223,7 +223,7 @@ const Contact = () => {
                                             <Mail className="w-6 h-6" />
                                         </div>
                                         <div>
-                                            <h4 className="font-semibold mb-1 text-blue-400">Email</h4>
+                                            <h3 className="font-semibold text-foreground">Email</h3>
                                             <div className="text-muted-foreground text-sm flex flex-col gap-1">
                                                 <a href="mailto:contact@4sightai.com" className="hover:text-primary transition-colors">contact@4sightai.com</a>
                                                 <a href="mailto:sales@4sightai.com" className="hover:text-primary transition-colors">sales@4sightai.com</a>
@@ -236,7 +236,7 @@ const Contact = () => {
                                             <Phone className="w-6 h-6" />
                                         </div>
                                         <div>
-                                            <h4 className="font-semibold mb-1 text-blue-400">Phone</h4>
+                                            <h3 className="font-semibold text-foreground">Phone</h3>
                                             <div className="text-muted-foreground text-sm">
                                                 <p>+91 (800) 123-4567</p>
                                                 <p className="text-xs mt-1 opacity-80">Mon-Fri 9:00 AM - 6:00 PM IST</p>
@@ -279,9 +279,9 @@ const Contact = () => {
             <Wrapper className="py-12 md:py-20 bg-background relative">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400 mb-4">
-                            Why Contact 4sight AI?
-                        </h2>
+                        <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+                            Contact Us
+                        </h1>
                         <p className="text-muted-foreground text-lg">
                             What you can expect when you reach out to us
                         </p>

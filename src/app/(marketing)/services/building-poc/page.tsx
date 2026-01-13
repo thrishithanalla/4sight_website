@@ -13,9 +13,9 @@ const BuildingPOC = () => {
             <Wrapper className="pt-20 pb-10 relative overflow-hidden">
                 <Container>
                     <Container>
-                        <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8 md:p-12 hover:border-blue-500/50 hover:bg-white/8 transition-all max-w-5xl mx-auto">
+                        <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8 md:p-12 hover:border-black/70 hover:bg-white/8 transition-all max-w-5xl mx-auto">
                             <div className="flex flex-col items-center justify-center text-center max-w-3xl mx-auto relative z-10">
-                                <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-6">
+                                <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
                                     Building GenAI POC
                                 </h1>
                                 <p className="text-xl md:text-2xl text-accent-foreground/90 font-medium mb-4">
@@ -34,7 +34,7 @@ const BuildingPOC = () => {
             <Wrapper className="py-20 bg-muted/20">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Accelerate AI Innovation
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -72,7 +72,7 @@ const BuildingPOC = () => {
             <Wrapper className="py-20 relative">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             POC Development Framework
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -86,7 +86,7 @@ const BuildingPOC = () => {
                                 <Zap className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Rapid Prototyping</h3>
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground text-base leading-6">
                                 Agile development of functional AI prototypes using pre-trained models, custom fine-tuning,
                                 and rapid iteration cycles to validate core hypotheses quickly.
                             </p>
@@ -96,7 +96,7 @@ const BuildingPOC = () => {
                                 <Database className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Data Preparation & Integration</h3>
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground text-base leading-6">
                                 Comprehensive data pipeline development, quality assessment, and integration with existing
                                 systems to ensure robust and reliable AI model performance.
                             </p>
@@ -106,7 +106,7 @@ const BuildingPOC = () => {
                                 <FlaskConical className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Iterative Testing & Validation</h3>
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground text-base leading-6">
                                 Rigorous testing protocols with performance metrics, user acceptance testing, and continuous
                                 validation against predefined success criteria.
                             </p>
@@ -116,7 +116,7 @@ const BuildingPOC = () => {
                                 <TrendingUp className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Performance Optimization</h3>
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground text-base leading-6">
                                 Model optimization, scalability testing, and performance tuning to ensure production-ready
                                 solutions that meet latency, accuracy, and cost requirements.
                             </p>
@@ -129,7 +129,7 @@ const BuildingPOC = () => {
             <Wrapper className="py-20 bg-muted/20">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Our POC Development Process
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -138,35 +138,35 @@ const BuildingPOC = () => {
                     </div>
 
                     <div className="bg-card border border-border/50 rounded-3xl p-8 md:p-12">
-                        <h3 className="text-2xl font-bold text-primary mb-8">Accelerated Innovation Framework</h3>
+                        <h3 className="text-2xl font-bold text-foreground mb-8">Accelerated Innovation Framework</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                             <div className="flex flex-col items-center text-center">
                                 <div className="bg-primary/5 p-4 rounded-full mb-4">
                                     <Search className="w-8 h-8 text-primary" />
                                 </div>
                                 <h4 className="font-semibold text-lg mb-2 text-foreground">Concept Validation</h4>
-                                <p className="text-muted-foreground text-sm">Initial assessment of AI use case feasibility, data availability, and technical requirements through expert consultation.</p>
+                                <p className="text-muted-foreground text-base leading-6">Initial assessment of AI use case feasibility, data availability, and technical requirements through expert consultation.</p>
                             </div>
                             <div className="flex flex-col items-center text-center">
                                 <div className="bg-primary/5 p-4 rounded-full mb-4">
                                     <Calendar className="w-8 h-8 text-primary" />
                                 </div>
                                 <h4 className="font-semibold text-lg mb-2 text-foreground">Sprint Planning</h4>
-                                <p className="text-muted-foreground text-sm">Agile sprint planning with defined deliverables, timelines, and success metrics for each development iteration.</p>
+                                <p className="text-muted-foreground text-base leading-6">Agile sprint planning with defined deliverables, timelines, and success metrics for each development iteration.</p>
                             </div>
                             <div className="flex flex-col items-center text-center">
                                 <div className="bg-primary/5 p-4 rounded-full mb-4">
                                     <Rocket className="w-8 h-8 text-primary" />
                                 </div>
                                 <h4 className="font-semibold text-lg mb-2 text-foreground">Rapid Development</h4>
-                                <p className="text-muted-foreground text-sm">Intensive development sprints focusing on core functionality, model training, and integration with minimal viable features.</p>
+                                <p className="text-muted-foreground text-base leading-6">Intensive development sprints focusing on core functionality, model training, and integration with minimal viable features.</p>
                             </div>
                             <div className="flex flex-col items-center text-center">
                                 <div className="bg-primary/5 p-4 rounded-full mb-4">
                                     <Repeat className="w-8 h-8 text-primary" />
                                 </div>
                                 <h4 className="font-semibold text-lg mb-2 text-foreground">Testing & Iteration</h4>
-                                <p className="text-muted-foreground text-sm">User testing, performance evaluation, and iterative improvements based on feedback and validation results.</p>
+                                <p className="text-muted-foreground text-base leading-6">User testing, performance evaluation, and iterative improvements based on feedback and validation results.</p>
                             </div>
                         </div>
                     </div>
@@ -177,7 +177,7 @@ const BuildingPOC = () => {
             <Wrapper className="py-20 relative">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Technology & Tools
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -186,41 +186,41 @@ const BuildingPOC = () => {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-primary/30 transition-colors">
+                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-black/30 transition-colors">
                             <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
                                 <Cpu className="w-5 h-5 text-primary" /> Large Language Models
                             </h3>
-                            <p className="text-muted-foreground text-sm">GPT-series, BERT, T5, and custom fine-tuned models for natural language processing and generation tasks.</p>
+                            <p className="text-muted-foreground text-base leading-6">GPT-series, BERT, T5, and custom fine-tuned models for natural language processing and generation tasks.</p>
                         </div>
-                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-primary/30 transition-colors">
+                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-black/30 transition-colors">
                             <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
                                 <ScanEye className="w-5 h-5 text-primary" /> Computer Vision
                             </h3>
-                            <p className="text-muted-foreground text-sm">YOLO, Detectron2, and Vision Transformers for image recognition, object detection, and visual understanding.</p>
+                            <p className="text-muted-foreground text-base leading-6">YOLO, Detectron2, and Vision Transformers for image recognition, object detection, and visual understanding.</p>
                         </div>
-                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-primary/30 transition-colors">
+                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-black/30 transition-colors">
                             <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
                                 <Code2 className="w-5 h-5 text-primary" /> Machine Learning Frameworks
                             </h3>
-                            <p className="text-muted-foreground text-sm">TensorFlow, PyTorch, and Hugging Face Transformers for rapid model development and deployment.</p>
+                            <p className="text-muted-foreground text-base leading-6">TensorFlow, PyTorch, and Hugging Face Transformers for rapid model development and deployment.</p>
                         </div>
-                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-primary/30 transition-colors">
+                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-black/30 transition-colors">
                             <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
                                 <Cloud className="w-5 h-5 text-primary" /> Cloud AI Platforms
                             </h3>
-                            <p className="text-muted-foreground text-sm">AWS SageMaker, Google Vertex AI, and Azure Machine Learning for scalable model training and inference.</p>
+                            <p className="text-muted-foreground text-base leading-6">AWS SageMaker, Google Vertex AI, and Azure Machine Learning for scalable model training and inference.</p>
                         </div>
-                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-primary/30 transition-colors">
+                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-black/30 transition-colors">
                             <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
                                 <Server className="w-5 h-5 text-primary" /> MLOps Tools
                             </h3>
-                            <p className="text-muted-foreground text-sm">MLflow, Kubeflow, and custom CI/CD pipelines for model versioning, monitoring, and automated deployment.</p>
+                            <p className="text-muted-foreground text-base leading-6">MLflow, Kubeflow, and custom CI/CD pipelines for model versioning, monitoring, and automated deployment.</p>
                         </div>
-                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-primary/30 transition-colors">
+                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-black/30 transition-colors">
                             <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
                                 <HardDrive className="w-5 h-5 text-primary" /> Data Processing
                             </h3>
-                            <p className="text-muted-foreground text-sm">Apache Spark, Dask, and custom ETL pipelines for large-scale data processing and feature engineering.</p>
+                            <p className="text-muted-foreground text-base leading-6">Apache Spark, Dask, and custom ETL pipelines for large-scale data processing and feature engineering.</p>
                         </div>
                     </div>
                 </Container>
@@ -230,7 +230,7 @@ const BuildingPOC = () => {
             <Wrapper className="py-20 bg-muted/20">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Why Choose Our POC Development?
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -241,7 +241,7 @@ const BuildingPOC = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
                         <div>
                             <div className="mb-8">
-                                <h3 className="text-xl font-bold text-primary mb-3 flex items-center gap-2">
+                                <h3 className="text-xl font-bold text-foreground mb-3 flex items-center gap-2">
                                     <ShieldCheck className="w-6 h-6" /> Risk Mitigation
                                 </h3>
                                 <p className="text-muted-foreground leading-relaxed">
@@ -251,7 +251,7 @@ const BuildingPOC = () => {
                             </div>
 
                             <div>
-                                <h3 className="text-xl font-bold text-primary mb-3 flex items-center gap-2">
+                                <h3 className="text-xl font-bold text-foreground mb-3 flex items-center gap-2">
                                     <Timer className="w-6 h-6" /> Faster Time-to-Value
                                 </h3>
                                 <p className="text-muted-foreground leading-relaxed">
@@ -262,7 +262,7 @@ const BuildingPOC = () => {
                         </div>
                         <div>
                             <div className="mb-8">
-                                <h3 className="text-xl font-bold text-primary mb-3 flex items-center gap-2">
+                                <h3 className="text-xl font-bold text-foreground mb-3 flex items-center gap-2">
                                     <Code2 className="w-6 h-6" /> Technical Excellence
                                 </h3>
                                 <p className="text-muted-foreground leading-relaxed">
@@ -272,7 +272,7 @@ const BuildingPOC = () => {
                             </div>
 
                             <div>
-                                <h3 className="text-xl font-bold text-primary mb-3 flex items-center gap-2">
+                                <h3 className="text-xl font-bold text-foreground mb-3 flex items-center gap-2">
                                     <TrendingUp className="w-6 h-6" /> Scalable Solutions
                                 </h3>
                                 <p className="text-muted-foreground leading-relaxed">

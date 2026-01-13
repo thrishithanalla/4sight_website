@@ -86,10 +86,10 @@ const UseCases = () => {
         <section className="py-20 relative overflow-hidden">
             <Container>
                 <div className="flex flex-col items-center justify-center text-center mb-8 md:mb-10">
-                    <h2 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-6">
+                    <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
                         Our Usecases
                     </h2>
-                    <p className="text-muted-foreground text-lg max-w-2xl">
+                    <p className="text-muted-foreground text-base leading-6 max-w-2xl">
                         Transforming diverse industries with specialized AI solutions tailored for impact and efficiency.
                     </p>
                 </div>
@@ -155,7 +155,7 @@ const UseCases = () => {
                             </div>
                             <div>
                                 <h3 className={`font-bold text-lg ${useCase.color}`}>{useCase.title}</h3>
-                                <p className="text-sm text-muted-foreground">{useCase.description}</p>
+                                <p className="text-muted-foreground text-base leading-6">{useCase.description}</p>
                             </div>
                         </div>
                     ))}
@@ -177,7 +177,7 @@ const NodeCard = ({ useCase }: { useCase: any }) => (
 
         {/* Hover Description Tooltip */}
         <div className="absolute top-full mt-2 w-48 p-3 rounded-xl bg-popover border border-border shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-50">
-            <p className="text-xs text-muted-foreground">{useCase.description}</p>
+            <p className="text-muted-foreground text-base leading-6">{useCase.description}</p>
         </div>
     </div>
 );

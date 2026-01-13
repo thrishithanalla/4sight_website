@@ -13,9 +13,9 @@ const GenAIConsulting = () => {
             <Wrapper className="pt-20 pb-10 relative overflow-hidden">
                 <Container>
                     <Container>
-                        <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8 md:p-12 hover:border-blue-500/50 hover:bg-white/8 transition-all max-w-5xl mx-auto">
+                        <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8 md:p-12 hover:border-black/70 hover:bg-white/8 transition-all max-w-5xl mx-auto">
                             <div className="flex flex-col items-center justify-center text-center max-w-3xl mx-auto relative z-10">
-                                <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-6">
+                                <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
                                     GenAI Consulting
                                 </h1>
                                 <p className="text-xl md:text-2xl text-accent-foreground/90 font-medium mb-4">
@@ -34,7 +34,7 @@ const GenAIConsulting = () => {
             <Wrapper className="py-20 bg-muted/20">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Comprehensive AI Transformation
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -72,7 +72,7 @@ const GenAIConsulting = () => {
             <Wrapper className="py-20 relative">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Consulting Services
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -86,7 +86,7 @@ const GenAIConsulting = () => {
                                 <Target className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">AI Strategy Development</h3>
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground text-base leading-6">
                                 Comprehensive AI strategy formulation including use case identification, ROI analysis,
                                 technology roadmap, and organizational readiness assessment.
                             </p>
@@ -96,7 +96,7 @@ const GenAIConsulting = () => {
                                 <Settings className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Technical Implementation</h3>
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground text-base leading-6">
                                 Full-stack AI implementation including model development, data pipeline construction,
                                 integration with existing systems, and production deployment.
                             </p>
@@ -106,7 +106,7 @@ const GenAIConsulting = () => {
                                 <Users className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Change Management</h3>
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground text-base leading-6">
                                 Organizational change management including training programs, adoption strategies,
                                 and cultural transformation to ensure successful AI integration.
                             </p>
@@ -116,7 +116,7 @@ const GenAIConsulting = () => {
                                 <BarChart className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Performance Monitoring</h3>
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground text-base leading-6">
                                 Ongoing performance monitoring, optimization, and maintenance services to ensure
                                 sustained AI system effectiveness and continuous improvement.
                             </p>
@@ -129,7 +129,7 @@ const GenAIConsulting = () => {
             <Wrapper className="py-20 bg-muted/20">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Our Consulting Process
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -138,35 +138,35 @@ const GenAIConsulting = () => {
                     </div>
 
                     <div className="bg-card border border-border/50 rounded-3xl p-8 md:p-12">
-                        <h3 className="text-2xl font-bold text-primary mb-8">Enterprise AI Transformation Framework</h3>
+                        <h3 className="text-2xl font-bold text-foreground mb-8">Enterprise AI Transformation Framework</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                             <div className="flex flex-col items-center text-center">
                                 <div className="bg-primary/5 p-4 rounded-full mb-4">
                                     <Search className="w-8 h-8 text-primary" />
                                 </div>
                                 <h4 className="font-semibold text-lg mb-2 text-foreground">Assessment & Planning</h4>
-                                <p className="text-muted-foreground text-sm">Comprehensive assessment of current capabilities, identification of AI opportunities, and development of strategic roadmap.</p>
+                                <p className="text-muted-foreground text-base leading-6">Comprehensive assessment of current capabilities, identification of AI opportunities, and development of strategic roadmap.</p>
                             </div>
                             <div className="flex flex-col items-center text-center">
                                 <div className="bg-primary/5 p-4 rounded-full mb-4">
                                     <Calculator className="w-8 h-8 text-primary" />
                                 </div>
                                 <h4 className="font-semibold text-lg mb-2 text-foreground">Design & Architecture</h4>
-                                <p className="text-muted-foreground text-sm">Technical architecture design, data strategy development, and integration planning for scalable AI solutions.</p>
+                                <p className="text-muted-foreground text-base leading-6">Technical architecture design, data strategy development, and integration planning for scalable AI solutions.</p>
                             </div>
                             <div className="flex flex-col items-center text-center">
                                 <div className="bg-primary/5 p-4 rounded-full mb-4">
                                     <Rocket className="w-8 h-8 text-primary" />
                                 </div>
                                 <h4 className="font-semibold text-lg mb-2 text-foreground">Implementation & Deployment</h4>
-                                <p className="text-muted-foreground text-sm">Agile development, rigorous testing, and production deployment with comprehensive quality assurance processes.</p>
+                                <p className="text-muted-foreground text-base leading-6">Agile development, rigorous testing, and production deployment with comprehensive quality assurance processes.</p>
                             </div>
                             <div className="flex flex-col items-center text-center">
                                 <div className="bg-primary/5 p-4 rounded-full mb-4">
                                     <RefreshCw className="w-8 h-8 text-primary" />
                                 </div>
                                 <h4 className="font-semibold text-lg mb-2 text-foreground">Optimization & Support</h4>
-                                <p className="text-muted-foreground text-sm">Continuous monitoring, performance optimization, user training, and ongoing support for sustained success.</p>
+                                <p className="text-muted-foreground text-base leading-6">Continuous monitoring, performance optimization, user training, and ongoing support for sustained success.</p>
                             </div>
                         </div>
                     </div>
@@ -178,7 +178,7 @@ const GenAIConsulting = () => {
             <Wrapper className="py-20 relative">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Industry Expertise
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -187,41 +187,41 @@ const GenAIConsulting = () => {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-primary/30 transition-colors">
+                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-black/30 transition-colors">
                             <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
                                 <Briefcase className="w-5 h-5 text-primary" /> Financial Services
                             </h3>
-                            <p className="text-muted-foreground text-sm">Regulatory compliance, risk management, algorithmic trading, personalized wealth management, and fraud detection systems.</p>
+                            <p className="text-muted-foreground text-base leading-6">Regulatory compliance, risk management, algorithmic trading, personalized wealth management, and fraud detection systems.</p>
                         </div>
-                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-primary/30 transition-colors">
+                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-black/30 transition-colors">
                             <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
                                 <HeartPulse className="w-5 h-5 text-primary" /> Healthcare & Life Sciences
                             </h3>
-                            <p className="text-muted-foreground text-sm">Clinical decision support, drug discovery, personalized medicine, medical imaging analysis, and healthcare administration.</p>
+                            <p className="text-muted-foreground text-base leading-6">Clinical decision support, drug discovery, personalized medicine, medical imaging analysis, and healthcare administration.</p>
                         </div>
-                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-primary/30 transition-colors">
+                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-black/30 transition-colors">
                             <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
                                 <Factory className="w-5 h-5 text-primary" /> Manufacturing & Industry
                             </h3>
-                            <p className="text-muted-foreground text-sm">Predictive maintenance, quality control, supply chain optimization, industrial automation, and smart manufacturing.</p>
+                            <p className="text-muted-foreground text-base leading-6">Predictive maintenance, quality control, supply chain optimization, industrial automation, and smart manufacturing.</p>
                         </div>
-                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-primary/30 transition-colors">
+                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-black/30 transition-colors">
                             <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
                                 <ShoppingBag className="w-5 h-5 text-primary" /> Retail & E-commerce
                             </h3>
-                            <p className="text-muted-foreground text-sm">Personalized recommendations, inventory optimization, dynamic pricing, customer service automation, and market analysis.</p>
+                            <p className="text-muted-foreground text-base leading-6">Personalized recommendations, inventory optimization, dynamic pricing, customer service automation, and market analysis.</p>
                         </div>
-                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-primary/30 transition-colors">
+                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-black/30 transition-colors">
                             <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
                                 <Laptop className="w-5 h-5 text-primary" /> Technology & Software
                             </h3>
-                            <p className="text-muted-foreground text-sm">Code generation, automated testing, user experience design, product development acceleration, and technical documentation.</p>
+                            <p className="text-muted-foreground text-base leading-6">Code generation, automated testing, user experience design, product development acceleration, and technical documentation.</p>
                         </div>
-                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-primary/30 transition-colors">
+                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-black/30 transition-colors">
                             <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
                                 <MonitorCheck className="w-5 h-5 text-primary" /> Professional Services
                             </h3>
-                            <p className="text-muted-foreground text-sm">Legal research automation, contract analysis, consulting intelligence, knowledge management, and business process automation.</p>
+                            <p className="text-muted-foreground text-base leading-6">Legal research automation, contract analysis, consulting intelligence, knowledge management, and business process automation.</p>
                         </div>
                     </div>
                 </Container>
@@ -231,7 +231,7 @@ const GenAIConsulting = () => {
             <Wrapper className="py-20 bg-muted/20">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Why Choose Our GenAI Consulting?
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -242,7 +242,7 @@ const GenAIConsulting = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
                         <div>
                             <div className="mb-8">
-                                <h3 className="text-xl font-bold text-primary mb-3 flex items-center gap-2">
+                                <h3 className="text-xl font-bold text-foreground mb-3 flex items-center gap-2">
                                     <TrendingUp className="w-6 h-6" /> Proven Track Record
                                 </h3>
                                 <p className="text-muted-foreground leading-relaxed">
@@ -252,7 +252,7 @@ const GenAIConsulting = () => {
                             </div>
 
                             <div>
-                                <h3 className="text-xl font-bold text-primary mb-3 flex items-center gap-2">
+                                <h3 className="text-xl font-bold text-foreground mb-3 flex items-center gap-2">
                                     <Users className="w-6 h-6" /> Full-Service Support
                                 </h3>
                                 <p className="text-muted-foreground leading-relaxed">
@@ -263,7 +263,7 @@ const GenAIConsulting = () => {
                         </div>
                         <div>
                             <div className="mb-8">
-                                <h3 className="text-xl font-bold text-primary mb-3 flex items-center gap-2">
+                                <h3 className="text-xl font-bold text-foreground mb-3 flex items-center gap-2">
                                     <Cpu className="w-6 h-6" /> Technical Excellence
                                 </h3>
                                 <p className="text-muted-foreground leading-relaxed">
@@ -273,7 +273,7 @@ const GenAIConsulting = () => {
                             </div>
 
                             <div>
-                                <h3 className="text-xl font-bold text-primary mb-3 flex items-center gap-2">
+                                <h3 className="text-xl font-bold text-foreground mb-3 flex items-center gap-2">
                                     <Target className="w-6 h-6" /> Business Alignment
                                 </h3>
                                 <p className="text-muted-foreground leading-relaxed">

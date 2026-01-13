@@ -13,9 +13,9 @@ const ProjectScoping = () => {
             <Wrapper className="pt-20 pb-10 relative overflow-hidden">
                 <Container>
                     <Container>
-                        <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8 md:p-12 hover:border-blue-500/50 hover:bg-white/8 transition-all max-w-5xl mx-auto">
+                        <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8 md:p-12 hover:border-black/70 hover:bg-white/8 transition-all max-w-5xl mx-auto">
                             <div className="flex flex-col items-center justify-center text-center max-w-3xl mx-auto relative z-10">
-                                <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-6">
+                                <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
                                     Project Scoping & Blueprint
                                 </h1>
                                 <p className="text-xl md:text-2xl text-accent-foreground/90 font-medium mb-4">
@@ -34,7 +34,7 @@ const ProjectScoping = () => {
             <Wrapper className="py-20 bg-muted/20">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Strategic AI Project Planning
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -73,7 +73,7 @@ const ProjectScoping = () => {
             <Wrapper className="py-20 relative">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Service Components
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -87,7 +87,7 @@ const ProjectScoping = () => {
                                 <Target className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Requirements Analysis</h3>
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground text-base leading-6">
                                 Detailed analysis of business requirements, technical constraints, and success criteria
                                 to establish clear project objectives and scope boundaries.
                             </p>
@@ -97,7 +97,7 @@ const ProjectScoping = () => {
                                 <BarChart className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Technical Architecture Design</h3>
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground text-base leading-6">
                                 Comprehensive technical blueprint including data architecture, AI model specifications,
                                 integration points, and infrastructure requirements.
                             </p>
@@ -107,7 +107,7 @@ const ProjectScoping = () => {
                                 <Clock className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Project Timeline & Milestones</h3>
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground text-base leading-6">
                                 Realistic project timelines with clearly defined milestones, dependencies, and critical
                                 path analysis for effective project management.
                             </p>
@@ -117,7 +117,7 @@ const ProjectScoping = () => {
                                 <Calculator className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Resource & Budget Planning</h3>
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground text-base leading-6">
                                 Detailed resource allocation plans and budget estimates including personnel, technology,
                                 and infrastructure costs for the entire project lifecycle.
                             </p>
@@ -130,7 +130,7 @@ const ProjectScoping = () => {
             <Wrapper className="py-20 bg-muted/20">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Our Planning Process
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -139,35 +139,35 @@ const ProjectScoping = () => {
                     </div>
 
                     <div className="bg-card border border-border/50 rounded-3xl p-8 md:p-12">
-                        <h3 className="text-2xl font-bold text-primary mb-8">Comprehensive Project Planning Framework</h3>
+                        <h3 className="text-2xl font-bold text-foreground mb-8">Comprehensive Project Planning Framework</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                             <div className="flex flex-col items-center text-center">
                                 <div className="bg-primary/5 p-4 rounded-full mb-4">
                                     <Search className="w-8 h-8 text-primary" />
                                 </div>
                                 <h4 className="font-semibold text-lg mb-2 text-foreground">Discovery & Analysis</h4>
-                                <p className="text-muted-foreground text-sm">Deep understanding of your business context, current capabilities, and AI objectives through stakeholder interviews and data assessment.</p>
+                                <p className="text-muted-foreground text-base leading-6">Deep understanding of your business context, current capabilities, and AI objectives through stakeholder interviews and data assessment.</p>
                             </div>
                             <div className="flex flex-col items-center text-center">
                                 <div className="bg-primary/5 p-4 rounded-full mb-4">
                                     <ClipboardList className="w-8 h-8 text-primary" />
                                 </div>
                                 <h4 className="font-semibold text-lg mb-2 text-foreground">Requirements Definition</h4>
-                                <p className="text-muted-foreground text-sm">Clear articulation of functional and non-functional requirements, success metrics, and acceptance criteria for the AI solution.</p>
+                                <p className="text-muted-foreground text-base leading-6">Clear articulation of functional and non-functional requirements, success metrics, and acceptance criteria for the AI solution.</p>
                             </div>
                             <div className="flex flex-col items-center text-center">
                                 <div className="bg-primary/5 p-4 rounded-full mb-4">
                                     <Layers className="w-8 h-8 text-primary" />
                                 </div>
                                 <h4 className="font-semibold text-lg mb-2 text-foreground">Solution Architecture</h4>
-                                <p className="text-muted-foreground text-sm">Design of technical architecture, data pipelines, AI models, and integration patterns that meet your specific requirements.</p>
+                                <p className="text-muted-foreground text-base leading-6">Design of technical architecture, data pipelines, AI models, and integration patterns that meet your specific requirements.</p>
                             </div>
                             <div className="flex flex-col items-center text-center">
                                 <div className="bg-primary/5 p-4 rounded-full mb-4">
                                     <Calendar className="w-8 h-8 text-primary" />
                                 </div>
                                 <h4 className="font-semibold text-lg mb-2 text-foreground">Implementation Planning</h4>
-                                <p className="text-muted-foreground text-sm">Detailed project plan with timelines, resource allocation, risk mitigation strategies, and quality assurance processes.</p>
+                                <p className="text-muted-foreground text-base leading-6">Detailed project plan with timelines, resource allocation, risk mitigation strategies, and quality assurance processes.</p>
                             </div>
                         </div>
                     </div>
@@ -178,7 +178,7 @@ const ProjectScoping = () => {
             <Wrapper className="py-20 relative">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Key Deliverables
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -187,41 +187,41 @@ const ProjectScoping = () => {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-primary/30 transition-colors">
+                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-black/30 transition-colors">
                             <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
                                 <FileText className="w-5 h-5 text-primary" /> Project Charter
                             </h3>
-                            <p className="text-muted-foreground text-sm">Formal project documentation defining scope, objectives, stakeholders, and success criteria with executive sponsorship.</p>
+                            <p className="text-muted-foreground text-base leading-6">Formal project documentation defining scope, objectives, stakeholders, and success criteria with executive sponsorship.</p>
                         </div>
-                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-primary/30 transition-colors">
+                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-black/30 transition-colors">
                             <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
                                 <Settings className="w-5 h-5 text-primary" /> Technical Blueprint
                             </h3>
-                            <p className="text-muted-foreground text-sm">Detailed technical specifications including architecture diagrams, data models, API specifications, and integration requirements.</p>
+                            <p className="text-muted-foreground text-base leading-6">Detailed technical specifications including architecture diagrams, data models, API specifications, and integration requirements.</p>
                         </div>
-                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-primary/30 transition-colors">
+                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-black/30 transition-colors">
                             <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
                                 <ShieldAlert className="w-5 h-5 text-primary" /> Risk Assessment
                             </h3>
-                            <p className="text-muted-foreground text-sm">Comprehensive risk analysis with mitigation strategies, contingency plans, and risk monitoring frameworks.</p>
+                            <p className="text-muted-foreground text-base leading-6">Comprehensive risk analysis with mitigation strategies, contingency plans, and risk monitoring frameworks.</p>
                         </div>
-                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-primary/30 transition-colors">
+                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-black/30 transition-colors">
                             <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
                                 <MapIcon className="w-5 h-5 text-primary" /> Implementation Roadmap
                             </h3>
-                            <p className="text-muted-foreground text-sm">Phased implementation plan with detailed timelines, resource requirements, and success metrics for each project phase.</p>
+                            <p className="text-muted-foreground text-base leading-6">Phased implementation plan with detailed timelines, resource requirements, and success metrics for each project phase.</p>
                         </div>
-                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-primary/30 transition-colors">
+                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-black/30 transition-colors">
                             <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
                                 <Award className="w-5 h-5 text-primary" /> Success Metrics Framework
                             </h3>
-                            <p className="text-muted-foreground text-sm">Comprehensive measurement framework defining KPIs, success criteria, and evaluation methodologies for project outcomes.</p>
+                            <p className="text-muted-foreground text-base leading-6">Comprehensive measurement framework defining KPIs, success criteria, and evaluation methodologies for project outcomes.</p>
                         </div>
-                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-primary/30 transition-colors">
+                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-black/30 transition-colors">
                             <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
                                 <Users className="w-5 h-5 text-primary" /> Change Management Plan
                             </h3>
-                            <p className="text-muted-foreground text-sm">Organizational change management strategy including training plans, communication strategies, and adoption frameworks.</p>
+                            <p className="text-muted-foreground text-base leading-6">Organizational change management strategy including training plans, communication strategies, and adoption frameworks.</p>
                         </div>
                     </div>
                 </Container>
@@ -231,7 +231,7 @@ const ProjectScoping = () => {
             <Wrapper className="py-20 bg-muted/20">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Why Choose Our Scoping Services?
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -242,7 +242,7 @@ const ProjectScoping = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
                         <div>
                             <div className="mb-8">
-                                <h3 className="text-xl font-bold text-primary mb-3 flex items-center gap-2">
+                                <h3 className="text-xl font-bold text-foreground mb-3 flex items-center gap-2">
                                     <AlertTriangle className="w-6 h-6" /> Risk Mitigation
                                 </h3>
                                 <p className="text-muted-foreground leading-relaxed">
@@ -252,7 +252,7 @@ const ProjectScoping = () => {
                             </div>
 
                             <div>
-                                <h3 className="text-xl font-bold text-primary mb-3 flex items-center gap-2">
+                                <h3 className="text-xl font-bold text-foreground mb-3 flex items-center gap-2">
                                     <PieChart className="w-6 h-6" /> Resource Optimization
                                 </h3>
                                 <p className="text-muted-foreground leading-relaxed">
@@ -263,7 +263,7 @@ const ProjectScoping = () => {
                         </div>
                         <div>
                             <div className="mb-8">
-                                <h3 className="text-xl font-bold text-primary mb-3 flex items-center gap-2">
+                                <h3 className="text-xl font-bold text-foreground mb-3 flex items-center gap-2">
                                     <Users className="w-6 h-6" /> Stakeholder Alignment
                                 </h3>
                                 <p className="text-muted-foreground leading-relaxed">
@@ -273,7 +273,7 @@ const ProjectScoping = () => {
                             </div>
 
                             <div>
-                                <h3 className="text-xl font-bold text-primary mb-3 flex items-center gap-2">
+                                <h3 className="text-xl font-bold text-foreground mb-3 flex items-center gap-2">
                                     <Scale className="w-6 h-6" /> Scalable Foundation
                                 </h3>
                                 <p className="text-muted-foreground leading-relaxed">

@@ -91,10 +91,10 @@ const Testimonials = () => {
 
             <Container>
                 <div className="flex flex-col items-center justify-center text-center mb-16 px-4">
-                    <h2 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-6">
+                    <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
                         Trusted and Loved by The World's Best
                     </h2>
-                    <p className="text-muted-foreground text-lg max-w-2xl">
+                    <p className="text-muted-foreground text-base leading-6 max-w-2xl">
                         We're honored that some of the most talented designers and developers out there work with 4SightAI — and you can too.
                     </p>
                 </div>
@@ -134,14 +134,14 @@ const Testimonials = () => {
                                             <Quote className="w-2.5 h-2.5 fill-current" />
                                         </div>
                                     </div>
-                                    <p className="text-base text-muted-foreground italic mb-4 leading-relaxed flex-1">
+                                    <p className="text-muted-foreground text-base leading-6 italic mb-4 flex-1">
                                         "{testimonial.quote}"
                                     </p>
                                     <div>
-                                        <h4 className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-violet-500">
+                                        <h4 className="text-lg font-bold text-foreground">
                                             {testimonial.name}
                                         </h4>
-                                        <p className="text-xs font-medium text-muted-foreground/80">
+                                        <p className="text-muted-foreground text-base leading-6 font-medium">
                                             {testimonial.role}
                                         </p>
                                     </div>
@@ -181,15 +181,15 @@ const Testimonials = () => {
                                         </div>
                                     </div>
 
-                                    <p className="text-lg md:text-xl text-muted-foreground italic mb-6 leading-relaxed">
+                                    <p className="text-muted-foreground text-base leading-6 italic mb-6">
                                         "{testimonials[currentIndex].quote}"
                                     </p>
 
                                     <div>
-                                        <h4 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-violet-500">
+                                        <h4 className="text-xl font-bold text-foreground">
                                             {testimonials[currentIndex].name}
                                         </h4>
-                                        <p className="text-sm font-medium text-muted-foreground/80 mt-1">
+                                        <p className="text-muted-foreground text-base leading-6 font-medium mt-1">
                                             {testimonials[currentIndex].role}
                                         </p>
                                     </div>

@@ -117,13 +117,13 @@ export default function HeroDiagram() {
                 </linearGradient>
 
                 <linearGradient id="activeSectorGrad" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stopColor="#eff6ff" />
-                    <stop offset="100%" stopColor="#93c5fd" />
+                    <stop offset="0%" stopColor="#f5f5f5" />
+                    <stop offset="100%" stopColor="#a3a3a3" />
                 </linearGradient>
 
                 <linearGradient id="arcGrad" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stopColor="#60a5fa" />
-                    <stop offset="100%" stopColor="#2563eb" />
+                    <stop offset="0%" stopColor="#525252" />
+                    <stop offset="100%" stopColor="#171717" />
                 </linearGradient>
 
                 <filter id="glow">
@@ -137,7 +137,7 @@ export default function HeroDiagram() {
                 <filter id="strongShadow" x="-50%" y="-50%" width="200%" height="200%">
                     <feGaussianBlur in="SourceAlpha" stdDeviation="6" />
                     <feOffset dx="0" dy="6" result="offsetblur" />
-                    <feFlood floodColor="#1e3a8a" floodOpacity="0.15" />
+                    <feFlood floodColor="#000000" floodOpacity="0.15" />
                     <feComposite in2="offsetblur" operator="in" />
                     <feMerge>
                         <feMergeNode />
@@ -162,7 +162,7 @@ export default function HeroDiagram() {
                         <path
                             d={sectorPath(s.start, s.end)}
                             fill={isActive ? "url(#activeSectorGrad)" : "url(#sectorGrad)"}
-                            stroke={isActive ? "#3b82f6" : "white"}
+                            stroke={isActive ? "#000000" : "white"}
                             strokeWidth={isActive ? "3" : "2"}
                             className="transition-all duration-300"
                             style={{
@@ -178,29 +178,29 @@ export default function HeroDiagram() {
                                     {/* Chip Body */}
                                     <rect x="-18" y="-18" width="36" height="36" rx="4"
                                         fill="none"
-                                        stroke={isActive ? "#1e3a8a" : "#2563eb"}
+                                        stroke={isActive ? "#000000" : "#262626"}
                                         strokeWidth="2"
                                     />
 
                                     {/* Pins (3 on each side) */}
-                                    <path d="M-10 -18 V-24 M0 -18 V-24 M10 -18 V-24" stroke={isActive ? "#1e3a8a" : "#2563eb"} strokeWidth="2" />
-                                    <path d="M-10 18 V24 M0 18 V24 M10 18 V24" stroke={isActive ? "#1e3a8a" : "#2563eb"} strokeWidth="2" />
-                                    <path d="M-18 -10 H-24 M-18 0 H-24 M-18 10 H-24" stroke={isActive ? "#1e3a8a" : "#2563eb"} strokeWidth="2" />
-                                    <path d="M18 -10 H24 M18 0 H24 M18 10 H24" stroke={isActive ? "#1e3a8a" : "#2563eb"} strokeWidth="2" />
+                                    <path d="M-10 -18 V-24 M0 -18 V-24 M10 -18 V-24" stroke={isActive ? "#000000" : "#262626"} strokeWidth="2" />
+                                    <path d="M-10 18 V24 M0 18 V24 M10 18 V24" stroke={isActive ? "#000000" : "#262626"} strokeWidth="2" />
+                                    <path d="M-18 -10 H-24 M-18 0 H-24 M-18 10 H-24" stroke={isActive ? "#000000" : "#262626"} strokeWidth="2" />
+                                    <path d="M18 -10 H24 M18 0 H24 M18 10 H24" stroke={isActive ? "#000000" : "#262626"} strokeWidth="2" />
 
                                     {/* Internal Network */}
-                                    <circle r="4" fill={isActive ? "#1e3a8a" : "#2563eb"} />
-                                    <circle cx="-8" cy="-8" r="2.5" fill="none" stroke={isActive ? "#1e3a8a" : "#2563eb"} strokeWidth="1.5" />
-                                    <circle cx="8" cy="-8" r="2.5" fill="none" stroke={isActive ? "#1e3a8a" : "#2563eb"} strokeWidth="1.5" />
-                                    <circle cx="-8" cy="8" r="2.5" fill="none" stroke={isActive ? "#1e3a8a" : "#2563eb"} strokeWidth="1.5" />
-                                    <circle cx="8" cy="8" r="2.5" fill="none" stroke={isActive ? "#1e3a8a" : "#2563eb"} strokeWidth="1.5" />
+                                    <circle r="4" fill={isActive ? "#000000" : "#262626"} />
+                                    <circle cx="-8" cy="-8" r="2.5" fill="none" stroke={isActive ? "#000000" : "#262626"} strokeWidth="1.5" />
+                                    <circle cx="8" cy="-8" r="2.5" fill="none" stroke={isActive ? "#000000" : "#262626"} strokeWidth="1.5" />
+                                    <circle cx="-8" cy="8" r="2.5" fill="none" stroke={isActive ? "#000000" : "#262626"} strokeWidth="1.5" />
+                                    <circle cx="8" cy="8" r="2.5" fill="none" stroke={isActive ? "#000000" : "#262626"} strokeWidth="1.5" />
 
-                                    <line x1="0" y1="0" x2="-8" y2="-8" stroke={isActive ? "#1e3a8a" : "#2563eb"} strokeWidth="1.5" />
-                                    <line x1="0" y1="0" x2="8" y2="-8" stroke={isActive ? "#1e3a8a" : "#2563eb"} strokeWidth="1.5" />
-                                    <line x1="0" y1="0" x2="-8" y2="8" stroke={isActive ? "#1e3a8a" : "#2563eb"} strokeWidth="1.5" />
-                                    <line x1="0" y1="0" x2="8" y2="8" stroke={isActive ? "#1e3a8a" : "#2563eb"} strokeWidth="1.5" />
+                                    <line x1="0" y1="0" x2="-8" y2="-8" stroke={isActive ? "#000000" : "#262626"} strokeWidth="1.5" />
+                                    <line x1="0" y1="0" x2="8" y2="-8" stroke={isActive ? "#000000" : "#262626"} strokeWidth="1.5" />
+                                    <line x1="0" y1="0" x2="-8" y2="8" stroke={isActive ? "#000000" : "#262626"} strokeWidth="1.5" />
+                                    <line x1="0" y1="0" x2="8" y2="8" stroke={isActive ? "#000000" : "#262626"} strokeWidth="1.5" />
 
-                                    <text x="0" y="32" textAnchor="middle" className={`text-lg font-bold ${isActive ? 'fill-blue-900' : 'fill-slate-700'}`}>RAG</text>
+                                    <text x="0" y="32" textAnchor="middle" className={`text-lg font-bold ${isActive ? 'fill-black' : 'fill-slate-700'}`}>RAG</text>
                                 </g>
                             )}
 
@@ -209,41 +209,41 @@ export default function HeroDiagram() {
                                     {/* Database Cylinder Shape - 3 Layers */}
                                     <ellipse cx="0" cy="-10" rx="14" ry="4"
                                         fill="none"
-                                        stroke={isActive ? "#1e3a8a" : "#2563eb"}
+                                        stroke={isActive ? "#000000" : "#262626"}
                                         strokeWidth="2"
                                     />
                                     <path d="M-14 -10 V10 A14 4 0 0 0 14 10 V-10"
                                         fill="none"
-                                        stroke={isActive ? "#1e3a8a" : "#2563eb"}
+                                        stroke={isActive ? "#000000" : "#262626"}
                                         strokeWidth="2"
                                     />
                                     <path d="M-14 -3 A14 4 0 0 0 14 -3"
                                         fill="none"
-                                        stroke={isActive ? "#1e3a8a" : "#2563eb"}
+                                        stroke={isActive ? "#000000" : "#262626"}
                                         strokeWidth="2"
                                     />
                                     <path d="M-14 4 A14 4 0 0 0 14 4"
                                         fill="none"
-                                        stroke={isActive ? "#1e3a8a" : "#2563eb"}
+                                        stroke={isActive ? "#000000" : "#262626"}
                                         strokeWidth="2"
                                     />
-                                    <text x="0" y="32" textAnchor="middle" className={`text-lg font-bold ${isActive ? 'fill-blue-900' : 'fill-slate-700'}`}>Vector DB</text>
+                                    <text x="0" y="32" textAnchor="middle" className={`text-lg font-bold ${isActive ? 'fill-black' : 'fill-slate-700'}`}>Vector DB</text>
                                 </g>
                             )}
 
                             {s.label === "Orchestration" && (
                                 <g transform="translate(0, -10)">
-                                    <circle r="16" fill="none" stroke={isActive ? "#1e3a8a" : "#2563eb"} strokeWidth="2" strokeDasharray="4 4" />
-                                    <circle r="4" fill={isActive ? "#1e3a8a" : "#60a5fa"} />
-                                    <text x="0" y="32" textAnchor="middle" className={`text-lg font-bold ${isActive ? 'fill-blue-900' : 'fill-slate-700'}`}>Orchestration</text>
+                                    <circle r="16" fill="none" stroke={isActive ? "#000000" : "#262626"} strokeWidth="2" strokeDasharray="4 4" />
+                                    <circle r="4" fill={isActive ? "#000000" : "#525252"} />
+                                    <text x="0" y="32" textAnchor="middle" className={`text-lg font-bold ${isActive ? 'fill-black' : 'fill-slate-700'}`}>Orchestration</text>
                                 </g>
                             )}
 
                             {s.label === "Control & Flow" && (
                                 <g transform="translate(0, -10)">
-                                    <path d="M-12 -12 L12 12 M-12 12 L12 -12" stroke={isActive ? "#1e3a8a" : "#2563eb"} strokeWidth="2" />
-                                    <rect x="-16" y="-16" width="32" height="32" rx="4" fill="none" stroke={isActive ? "#1e3a8a" : "#2563eb"} strokeWidth="2" />
-                                    <text x="0" y="32" textAnchor="middle" className={`text-lg font-bold ${isActive ? 'fill-blue-900' : 'fill-slate-700'}`}>Control & Flow</text>
+                                    <path d="M-12 -12 L12 12 M-12 12 L12 -12" stroke={isActive ? "#000000" : "#262626"} strokeWidth="2" />
+                                    <rect x="-16" y="-16" width="32" height="32" rx="4" fill="none" stroke={isActive ? "#000000" : "#262626"} strokeWidth="2" />
+                                    <text x="0" y="32" textAnchor="middle" className={`text-lg font-bold ${isActive ? 'fill-black' : 'fill-slate-700'}`}>Control & Flow</text>
                                 </g>
                             )}
                         </g>
@@ -252,7 +252,7 @@ export default function HeroDiagram() {
             })}
 
             {/* CENTER HUB GROUP */}
-            <g style={{ filter: "drop-shadow(0 0 10px rgba(59, 130, 246, 0.1))" }}>
+            <g style={{ filter: "drop-shadow(0 0 10px rgba(0, 0, 0, 0.1))" }}>
                 {/* Main White Hub Background */}
                 <circle cx={cx} cy={cy} r={hubR} fill="url(#hubGrad)" stroke="white" strokeWidth="4" />
 
@@ -271,7 +271,7 @@ export default function HeroDiagram() {
                 <circle
                     ref={orbRef}
                     r="8"
-                    fill="#3b82f6"
+                    fill="#000000"
                     stroke="white"
                     strokeWidth="2"
                     filter="url(#glow)"
@@ -286,7 +286,7 @@ export default function HeroDiagram() {
                     <text x="0" y="85" textAnchor="middle" className="text-xl font-extrabold fill-slate-800">LLM / Model Layer</text>
 
                     {/* Central Node */}
-                    <circle r="8" fill="#2563eb" />
+                    <circle r="8" fill="#262626" />
 
                     {/* 6 Surrounding Nodes (Hexagon Layout) */}
                     {[0, 60, 120, 180, 240, 300].map((angle) => {
@@ -296,8 +296,8 @@ export default function HeroDiagram() {
                         return (
                             <g key={angle}>
                                 {/* Use formatted values to avoid hydration mismatch */}
-                                <line x1="0" y1="0" x2={f(nx)} y2={f(ny)} stroke="#3b82f6" strokeWidth="2" />
-                                <circle cx={f(nx)} cy={f(ny)} r="6" fill="#60a5fa" />
+                                <line x1="0" y1="0" x2={f(nx)} y2={f(ny)} stroke="#000000" strokeWidth="2" />
+                                <circle cx={f(nx)} cy={f(ny)} r="6" fill="#525252" />
                             </g>
                         );
                     })}

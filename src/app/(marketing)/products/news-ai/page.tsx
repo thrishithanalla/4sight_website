@@ -21,9 +21,9 @@ const NewsAIPage = () => {
             <Wrapper className="pt-20 pb-10 relative overflow-hidden">
                 <Container>
                     <Container>
-                        <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8 md:p-12 hover:border-blue-500/50 hover:bg-white/8 transition-all max-w-5xl mx-auto">
+                        <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8 md:p-12 hover:border-black/70 hover:bg-white/8 transition-all max-w-5xl mx-auto">
                             <div className="flex flex-col items-center justify-center text-center max-w-3xl mx-auto relative z-10">
-                                <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-6">
+                                <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
                                     News AI
                                 </h1>
                                 <p className="text-xl md:text-2xl text-accent-foreground/90 font-medium mb-4">
@@ -42,7 +42,7 @@ const NewsAIPage = () => {
             <Wrapper className="py-20 bg-muted/20">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Intelligent News Intelligence
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -79,7 +79,7 @@ const NewsAIPage = () => {
             <Wrapper className="py-20 relative">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Key Features
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -94,7 +94,7 @@ const NewsAIPage = () => {
                                 <TargetIcon className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Personalized Curation</h3>
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground text-base leading-6">
                                 AI-driven news curation that learns your preferences, interests, and reading patterns to deliver
                                 highly relevant content tailored to your specific needs.
                             </p>
@@ -105,7 +105,7 @@ const NewsAIPage = () => {
                                 <ZapIcon className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Real-time Analysis</h3>
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground text-base leading-6">
                                 Instant analysis and summarization of breaking news with sentiment analysis, trend identification,
                                 and impact assessment in real-time.
                             </p>
@@ -116,7 +116,7 @@ const NewsAIPage = () => {
                                 <SearchIcon className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Deep Content Analysis</h3>
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground text-base leading-6">
                                 Advanced NLP algorithms that extract key insights, identify bias, cross-reference sources,
                                 and provide context-rich understanding of news events.
                             </p>
@@ -127,7 +127,7 @@ const NewsAIPage = () => {
                                 <BarChartIcon className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Trend Intelligence</h3>
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground text-base leading-6">
                                 Predictive analytics and trend forecasting that identify emerging patterns, predict outcomes,
                                 and provide strategic insights for decision-making.
                             </p>
@@ -140,7 +140,7 @@ const NewsAIPage = () => {
             <Wrapper className="py-20 bg-muted/20">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             News Intelligence Engine
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -149,35 +149,35 @@ const NewsAIPage = () => {
                     </div>
 
                     <div className="bg-card border border-border/50 rounded-3xl p-8 md:p-12">
-                        <h3 className="text-2xl font-bold text-primary mb-8 text-center md:text-left">Core Capabilities</h3>
+                        <h3 className="text-2xl font-bold text-foreground mb-8 text-center md:text-left">Core Capabilities</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                             <div className="flex flex-col items-center text-center">
                                 <div className="bg-primary/5 p-4 rounded-full mb-4 text-primary">
                                     <GlobeIcon className="w-8 h-8" />
                                 </div>
                                 <h4 className="font-semibold text-lg mb-2 text-foreground">Multi-Source Aggregation</h4>
-                                <p className="text-muted-foreground text-sm">Comprehensive news aggregation from thousands of global sources with automatic duplicate detection and source verification.</p>
+                                <p className="text-muted-foreground text-base leading-6">Comprehensive news aggregation from thousands of global sources with automatic duplicate detection and source verification.</p>
                             </div>
                             <div className="flex flex-col items-center text-center">
                                 <div className="bg-primary/5 p-4 rounded-full mb-4 text-primary">
                                     <FileTextIcon className="w-8 h-8" />
                                 </div>
                                 <h4 className="font-semibold text-lg mb-2 text-foreground">Intelligent Summarization</h4>
-                                <p className="text-muted-foreground text-sm">AI-powered summarization that extracts key facts, quotes, and context while maintaining journalistic integrity and accuracy.</p>
+                                <p className="text-muted-foreground text-base leading-6">AI-powered summarization that extracts key facts, quotes, and context while maintaining journalistic integrity and accuracy.</p>
                             </div>
                             <div className="flex flex-col items-center text-center">
                                 <div className="bg-primary/5 p-4 rounded-full mb-4 text-primary">
                                     <SmileIcon className="w-8 h-8" />
                                 </div>
                                 <h4 className="font-semibold text-lg mb-2 text-foreground">Sentiment Analysis</h4>
-                                <p className="text-muted-foreground text-sm">Advanced sentiment analysis with contextual understanding, emotional tone detection, and public opinion tracking.</p>
+                                <p className="text-muted-foreground text-base leading-6">Advanced sentiment analysis with contextual understanding, emotional tone detection, and public opinion tracking.</p>
                             </div>
                             <div className="flex flex-col items-center text-center">
                                 <div className="bg-primary/5 p-4 rounded-full mb-4 text-primary">
                                     <CheckCircleIcon className="w-8 h-8" />
                                 </div>
                                 <h4 className="font-semibold text-lg mb-2 text-foreground">Fact-Checking Integration</h4>
-                                <p className="text-muted-foreground text-sm">Automated fact-checking against reliable databases with credibility scoring and misinformation detection.</p>
+                                <p className="text-muted-foreground text-base leading-6">Automated fact-checking against reliable databases with credibility scoring and misinformation detection.</p>
                             </div>
                         </div>
                     </div>
@@ -188,7 +188,7 @@ const NewsAIPage = () => {
             <Wrapper className="py-20 relative">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Professional Applications
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -205,9 +205,9 @@ const NewsAIPage = () => {
                             { title: "Policy Analysis", desc: "Government and regulatory news monitoring with policy impact assessment, stakeholder analysis, and legislative tracking." },
                             { title: "Industry Intelligence", desc: "Sector-specific news analysis with competitive positioning, market trend identification, and strategic opportunity alerts." }
                         ].map((useCase, idx) => (
-                            <div key={idx} className="bg-card border border-border/50 p-6 rounded-2xl hover:border-primary/30 transition-colors">
+                            <div key={idx} className="bg-card border border-border/50 p-6 rounded-2xl hover:border-black/30 transition-colors">
                                 <h3 className="font-bold text-lg mb-2">{useCase.title}</h3>
-                                <p className="text-muted-foreground text-sm">{useCase.desc}</p>
+                                <p className="text-muted-foreground text-base leading-6">{useCase.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -218,7 +218,7 @@ const NewsAIPage = () => {
             <Wrapper className="py-20 bg-muted/20">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Why News AI Matters
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -229,7 +229,7 @@ const NewsAIPage = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
                         <div>
                             <div className="mb-8">
-                                <h3 className="text-xl font-bold text-primary mb-3">Information Overload Solution</h3>
+                                <h3 className="text-xl font-bold text-foreground mb-3">Information Overload Solution</h3>
                                 <p className="text-muted-foreground leading-relaxed">
                                     In an era of information overload, News AI cuts through the noise to deliver only the most relevant,
                                     high-impact news that matters to you. This focused approach saves time and ensures you never miss critical developments.
@@ -237,7 +237,7 @@ const NewsAIPage = () => {
                             </div>
 
                             <div>
-                                <h3 className="text-xl font-bold text-primary mb-3">Enhanced Decision Quality</h3>
+                                <h3 className="text-xl font-bold text-foreground mb-3">Enhanced Decision Quality</h3>
                                 <p className="text-muted-foreground leading-relaxed">
                                     By providing context, analysis, and predictive insights alongside news, News AI enables more informed
                                     and strategic decision-making across all levels of an organization.
@@ -246,7 +246,7 @@ const NewsAIPage = () => {
                         </div>
                         <div>
                             <div className="mb-8">
-                                <h3 className="text-xl font-bold text-primary mb-3">Real-time Competitive Advantage</h3>
+                                <h3 className="text-xl font-bold text-foreground mb-3">Real-time Competitive Advantage</h3>
                                 <p className="text-muted-foreground leading-relaxed">
                                     Real-time processing and instant alerts provide a significant competitive advantage, enabling organizations
                                     to respond to market changes, regulatory developments, and industry shifts before competitors.
@@ -254,7 +254,7 @@ const NewsAIPage = () => {
                             </div>
 
                             <div>
-                                <h3 className="text-xl font-bold text-primary mb-3">Scalable Intelligence</h3>
+                                <h3 className="text-xl font-bold text-foreground mb-3">Scalable Intelligence</h3>
                                 <p className="text-muted-foreground leading-relaxed">
                                     News AI scales effortlessly from individual users to enterprise deployments, providing consistent,
                                     high-quality intelligence regardless of organizational size or complexity.

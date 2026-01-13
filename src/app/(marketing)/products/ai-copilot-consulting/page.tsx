@@ -20,9 +20,9 @@ const AICopilotConsultingPage = () => {
             {/* Hero Section */}
             <Wrapper className="pt-20 pb-10 relative overflow-hidden">
                 <Container>
-                    <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8 md:p-12 hover:border-blue-500/50 hover:bg-white/8 transition-all max-w-5xl mx-auto">
+                    <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8 md:p-12 hover:border-black/70 hover:bg-white/8 transition-all max-w-5xl mx-auto">
                         <div className="flex flex-col items-center justify-center text-center max-w-3xl mx-auto relative z-10">
-                            <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-6">
+                            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
                                 AI Co-pilot (Consulting)
                             </h1>
                             <p className="text-xl md:text-2xl text-accent-foreground/90 font-medium mb-4">
@@ -40,7 +40,7 @@ const AICopilotConsultingPage = () => {
             <Wrapper className="py-20 bg-muted/20">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             AI-Powered Consulting Intelligence
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -77,7 +77,7 @@ const AICopilotConsultingPage = () => {
             <Wrapper className="py-20 relative">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Key Features
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -92,7 +92,7 @@ const AICopilotConsultingPage = () => {
                                 <BarChartIcon className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Data Analysis & Insights</h3>
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground text-base leading-6">
                                 Advanced data processing and analysis capabilities that uncover hidden patterns, trends, and insights
                                 from complex datasets to inform strategic recommendations.
                             </p>
@@ -103,7 +103,7 @@ const AICopilotConsultingPage = () => {
                                 <MessageSquareIcon className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Natural Language Processing</h3>
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground text-base leading-6">
                                 Sophisticated NLP capabilities for processing unstructured data, generating reports, and facilitating
                                 natural communication between consultants and clients.
                             </p>
@@ -114,7 +114,7 @@ const AICopilotConsultingPage = () => {
                                 <TargetIcon className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Strategic Recommendations</h3>
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground text-base leading-6">
                                 AI-driven strategic analysis that provides data-backed recommendations, risk assessments, and
                                 implementation roadmaps tailored to specific business contexts.
                             </p>
@@ -125,7 +125,7 @@ const AICopilotConsultingPage = () => {
                                 <ZapIcon className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Automation & Efficiency</h3>
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground text-base leading-6">
                                 Intelligent automation of routine consulting tasks, allowing consultants to focus on high-value
                                 strategic activities and client relationships.
                             </p>
@@ -138,7 +138,7 @@ const AICopilotConsultingPage = () => {
             <Wrapper className="py-20 bg-muted/20">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Consulting Workflow Integration
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -147,35 +147,35 @@ const AICopilotConsultingPage = () => {
                     </div>
 
                     <div className="bg-card border border-border/50 rounded-3xl p-8 md:p-12">
-                        <h3 className="text-2xl font-bold text-primary mb-8 text-center md:text-left">End-to-End Consulting Support</h3>
+                        <h3 className="text-2xl font-bold text-foreground mb-8 text-center md:text-left">End-to-End Consulting Support</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                             <div className="flex flex-col items-center text-center">
                                 <div className="bg-primary/5 p-4 rounded-full mb-4 text-primary">
                                     <SearchIcon className="w-8 h-8" />
                                 </div>
                                 <h4 className="font-semibold text-lg mb-2 text-foreground">Discovery & Analysis</h4>
-                                <p className="text-muted-foreground text-sm">Automated data collection, stakeholder interviews, and initial analysis to establish project scope and objectives.</p>
+                                <p className="text-muted-foreground text-base leading-6">Automated data collection, stakeholder interviews, and initial analysis to establish project scope and objectives.</p>
                             </div>
                             <div className="flex flex-col items-center text-center">
                                 <div className="bg-primary/5 p-4 rounded-full mb-4 text-primary">
                                     <TrendingUpIcon className="w-8 h-8" />
                                 </div>
                                 <h4 className="font-semibold text-lg mb-2 text-foreground">Market Research</h4>
-                                <p className="text-muted-foreground text-sm">Comprehensive market analysis, competitive intelligence, and industry benchmarking with real-time data insights.</p>
+                                <p className="text-muted-foreground text-base leading-6">Comprehensive market analysis, competitive intelligence, and industry benchmarking with real-time data insights.</p>
                             </div>
                             <div className="flex flex-col items-center text-center">
                                 <div className="bg-primary/5 p-4 rounded-full mb-4 text-primary">
                                     <LightbulbIcon className="w-8 h-8" />
                                 </div>
                                 <h4 className="font-semibold text-lg mb-2 text-foreground">Strategy Development</h4>
-                                <p className="text-muted-foreground text-sm">AI-assisted strategy formulation, scenario planning, and recommendation development with risk assessment.</p>
+                                <p className="text-muted-foreground text-base leading-6">AI-assisted strategy formulation, scenario planning, and recommendation development with risk assessment.</p>
                             </div>
                             <div className="flex flex-col items-center text-center">
                                 <div className="bg-primary/5 p-4 rounded-full mb-4 text-primary">
                                     <ClipboardListIcon className="w-8 h-8" />
                                 </div>
                                 <h4 className="font-semibold text-lg mb-2 text-foreground">Implementation Planning</h4>
-                                <p className="text-muted-foreground text-sm">Detailed implementation roadmaps, resource planning, and change management strategies with timeline optimization.</p>
+                                <p className="text-muted-foreground text-base leading-6">Detailed implementation roadmaps, resource planning, and change management strategies with timeline optimization.</p>
                             </div>
                         </div>
                     </div>
@@ -186,7 +186,7 @@ const AICopilotConsultingPage = () => {
             <Wrapper className="py-20 relative">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Consulting Use Cases
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -203,9 +203,9 @@ const AICopilotConsultingPage = () => {
                             { title: "Marketing Consulting", desc: "Market research, customer segmentation, and campaign optimization with consumer behavior analysis and predictive modeling." },
                             { title: "Operations Consulting", desc: "Process optimization, supply chain analysis, and performance improvement with operational data analytics and automation." }
                         ].map((useCase, idx) => (
-                            <div key={idx} className="bg-card border border-border/50 p-6 rounded-2xl hover:border-primary/30 transition-colors">
+                            <div key={idx} className="bg-card border border-border/50 p-6 rounded-2xl hover:border-black/30 transition-colors">
                                 <h3 className="font-bold text-lg mb-2">{useCase.title}</h3>
-                                <p className="text-muted-foreground text-sm">{useCase.desc}</p>
+                                <p className="text-muted-foreground text-base leading-6">{useCase.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -216,7 +216,7 @@ const AICopilotConsultingPage = () => {
             <Wrapper className="py-20 bg-muted/20">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Why AI Co-pilot (Consulting) Matters
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -227,7 +227,7 @@ const AICopilotConsultingPage = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
                         <div>
                             <div className="mb-8">
-                                <h3 className="text-xl font-bold text-primary mb-3">Enhanced Decision Quality</h3>
+                                <h3 className="text-xl font-bold text-foreground mb-3">Enhanced Decision Quality</h3>
                                 <p className="text-muted-foreground leading-relaxed">
                                     AI Co-pilot (Consulting) processes vast amounts of data and considers multiple variables simultaneously,
                                     leading to more comprehensive and accurate recommendations. This data-driven approach reduces bias and increases confidence in strategic decisions.
@@ -235,7 +235,7 @@ const AICopilotConsultingPage = () => {
                             </div>
 
                             <div>
-                                <h3 className="text-xl font-bold text-primary mb-3">Accelerated Delivery</h3>
+                                <h3 className="text-xl font-bold text-foreground mb-3">Accelerated Delivery</h3>
                                 <p className="text-muted-foreground leading-relaxed">
                                     Automation of routine analysis and reporting tasks allows consultants to deliver projects faster while maintaining high quality.
                                     This efficiency enables consultants to take on more complex engagements and provide more value to clients.
@@ -244,7 +244,7 @@ const AICopilotConsultingPage = () => {
                         </div>
                         <div>
                             <div className="mb-8">
-                                <h3 className="text-xl font-bold text-primary mb-3">Competitive Advantage</h3>
+                                <h3 className="text-xl font-bold text-foreground mb-3">Competitive Advantage</h3>
                                 <p className="text-muted-foreground leading-relaxed">
                                     Organizations using AI Co-pilot (Consulting) can offer more sophisticated services at competitive rates,
                                     differentiating themselves in a crowded consulting market. The ability to process and analyze data at scale provides unique insights that competitors cannot match.
@@ -252,7 +252,7 @@ const AICopilotConsultingPage = () => {
                             </div>
 
                             <div>
-                                <h3 className="text-xl font-bold text-primary mb-3">Scalable Expertise</h3>
+                                <h3 className="text-xl font-bold text-foreground mb-3">Scalable Expertise</h3>
                                 <p className="text-muted-foreground leading-relaxed">
                                     AI Co-pilot (Consulting) makes expert-level consulting capabilities accessible to a broader range of consultants,
                                     enabling firms to scale their services without proportional increases in staffing costs.

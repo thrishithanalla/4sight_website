@@ -59,10 +59,10 @@ const Team = () => {
         <div className="flex flex-col items-center justify-center w-full py-20 bg-muted/20">
             <Container>
                 <div className="flex flex-col items-center text-center max-w-2xl mx-auto mb-16">
-                    <h2 className="text-2xl md:text-4xl lg:text-5xl font-heading font-medium !leading-snug bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400">
+                    <h2 className="text-2xl md:text-4xl lg:text-5xl font-heading font-bold !leading-snug text-foreground">
                         Meet Our Team
                     </h2>
-                    <p className="text-base md:text-lg text-center text-accent-foreground/80 mt-4">
+                    <p className="text-muted-foreground text-base leading-6 text-center mt-4">
                         The brilliant minds behind 4sight AI driving innovation and excellence.
                     </p>
                 </div>
@@ -83,8 +83,8 @@ const Team = () => {
                                             />
                                         </div>
                                         <h3 className="text-xl font-bold text-foreground">{member.name}</h3>
-                                        <p className="text-sm font-medium text-primary mb-3">{member.role}</p>
-                                        <p className="text-sm text-muted-foreground leading-relaxed">
+                                        <p className="text-base leading-6 font-medium text-primary mb-3">{member.role}</p>
+                                        <p className="text-muted-foreground text-base leading-6">
                                             {member.description}
                                         </p>
                                     </CardContent>
@@ -116,8 +116,8 @@ const Team = () => {
                                                     />
                                                 </div>
                                                 <h3 className="text-xl font-bold text-foreground">{member.name}</h3>
-                                                <p className="text-sm font-medium text-primary mb-3">{member.role}</p>
-                                                <p className="text-sm text-muted-foreground leading-relaxed">
+                                                <p className="text-base leading-6 font-medium text-primary mb-3">{member.role}</p>
+                                                <p className="text-muted-foreground text-base leading-6">
                                                     {member.description}
                                                 </p>
                                             </CardContent>

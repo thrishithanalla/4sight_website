@@ -34,7 +34,7 @@ const Features = () => {
                     <h2 className="text-2xl md:text-4xl lg:text-5xl font-heading font-medium !leading-snug mt-6">
                         Why Choose <br /><span className="font-subheading italic">4SightAI</span>
                     </h2>
-                    <p className="text-base md:text-lg text-center text-accent-foreground/80 mt-6 leading-relaxed">
+                    <p className="text-muted-foreground text-base leading-6 text-center mt-6">
                         In an era where many organizations claim to “do AI” but struggle to deliver production-ready, end-to-end AI systems, 4SightAI stands apart by focusing on real deployments, measurable outcomes, and long-term AI architecture.
                     </p>
                 </div>
@@ -61,14 +61,14 @@ const Features = () => {
                                         </div>
                                         <h3 className="font-heading font-semibold text-xl text-foreground">Enterprise-Grade Expertise</h3>
                                     </div>
-                                    <p className="text-muted-foreground text-sm leading-relaxed">
+                                    <p className="text-muted-foreground text-base leading-6">
                                         4SightAI is led by seasoned enterprise architects and AI practitioners with deep expertise across traditional systems and modern Generative AI. This dual perspective allows us to successfully execute the complex transition from conventional applications to the GenAI era.
                                     </p>
                                 </div>
 
                                 <div className="flex items-center justify-center">
                                     <div className="bg-primary/5 border border-primary/10 rounded-2xl p-6 backdrop-blur-sm shadow-sm h-full flex items-center">
-                                        <p className="text-muted-foreground text-sm leading-relaxed italic">
+                                        <p className="text-muted-foreground text-base leading-6 italic">
                                             "We do not treat GenAI as a standalone feature; we design it as a foundational capability, integrated with data, workflows, governance, security, and operational processes."
                                         </p>
                                     </div>
@@ -96,7 +96,7 @@ const Features = () => {
                                     </div>
                                     <h3 className="font-heading font-semibold text-xl text-foreground">Proven Accelerators</h3>
                                 </div>
-                                <p className="text-muted-foreground text-sm leading-relaxed">
+                                <p className="text-muted-foreground text-base leading-6">
                                     Our reusable building blocks and architectural patterns typically contribute up to 40% of the foundational components, dramatically reducing risk and time-to-value.
                                 </p>
                             </div>
@@ -137,7 +137,7 @@ const Features = () => {
                                     </div>
                                     <h3 className="font-heading font-semibold text-xl text-foreground">Practical Innovation</h3>
                                 </div>
-                                <p className="text-muted-foreground text-sm leading-relaxed">
+                                <p className="text-muted-foreground text-base leading-6">
                                     In a rapidly evolving AI landscape, we stay aligned with the latest GenAI tools and models. We translate these advancements into practical, cost-effective solutions, passing on both innovation benefits and efficiency gains to our customers.
                                 </p>
                             </div>
@@ -151,7 +151,7 @@ const Features = () => {
                         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150"></div>
                         <div className="p-8 flex flex-col h-full relative z-10 text-white">
                             <h3 className="font-heading font-bold text-2xl mb-2">First Mover Advantage</h3>
-                            <p className="text-white/80 text-sm mb-6 leading-relaxed">
+                            <p className="text-white/80 text-base leading-6 mb-6">
                                 For organizations that aspire to lead their industries with meaningful GenAI use cases, 4SightAI is a long-term transformation partner committed to building systems that are production-ready today and future-proof for tomorrow.
                             </p>
                             <div className="mt-auto flex flex-col sm:flex-row gap-3">

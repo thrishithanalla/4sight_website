@@ -13,9 +13,9 @@ const UnderWorks = () => {
             <Wrapper className="pt-20 pb-10 relative overflow-hidden">
                 <Container>
                     <Container>
-                        <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8 md:p-12 hover:border-blue-500/50 hover:bg-white/8 transition-all max-w-5xl mx-auto">
+                        <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8 md:p-12 hover:border-black/70 hover:bg-white/8 transition-all max-w-5xl mx-auto">
                             <div className="flex flex-col items-center justify-center text-center max-w-3xl mx-auto relative z-10">
-                                <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-6">
+                                <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
                                     UnderWorks
                                 </h1>
                                 <p className="text-xl md:text-2xl text-accent-foreground/90 font-medium mb-4">
@@ -34,7 +34,7 @@ const UnderWorks = () => {
             <Wrapper className="py-20 bg-muted/20">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Next-Generation AI Development
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -71,7 +71,7 @@ const UnderWorks = () => {
             <Wrapper className="py-20 relative">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Development Focus Areas
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -85,7 +85,7 @@ const UnderWorks = () => {
                                 <Brain className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Advanced AGI Research</h3>
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground text-base leading-6">
                                 Exploring artificial general intelligence frameworks and architectures that can adapt to multiple domains
                                 and learn from diverse data sources with minimal supervision.
                             </p>
@@ -95,7 +95,7 @@ const UnderWorks = () => {
                                 <GitBranch className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Neural Architecture Search</h3>
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground text-base leading-6">
                                 Automated discovery and optimization of neural network architectures using evolutionary algorithms
                                 and reinforcement learning for superior performance and efficiency.
                             </p>
@@ -105,7 +105,7 @@ const UnderWorks = () => {
                                 <Globe className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Multi-Modal AI Systems</h3>
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground text-base leading-6">
                                 Integration of multiple data modalities including text, images, audio, and video for comprehensive
                                 understanding and more nuanced AI decision-making.
                             </p>
@@ -115,7 +115,7 @@ const UnderWorks = () => {
                                 <Zap className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Edge AI Optimization</h3>
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground text-base leading-6">
                                 Development of lightweight AI models optimized for edge computing devices, enabling intelligent
                                 processing at the network periphery with minimal latency.
                             </p>
@@ -128,7 +128,7 @@ const UnderWorks = () => {
             <Wrapper className="py-20 bg-muted/20">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Innovation Pipeline
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -137,35 +137,35 @@ const UnderWorks = () => {
                     </div>
 
                     <div className="bg-card border border-border/50 rounded-3xl p-8 md:p-12">
-                        <h3 className="text-2xl font-bold text-primary mb-8">Research & Development Stages</h3>
+                        <h3 className="text-2xl font-bold text-foreground mb-8">Research & Development Stages</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                             <div className="flex flex-col items-center text-center">
                                 <div className="bg-primary/5 p-4 rounded-full mb-4">
                                     <Microscope className="w-8 h-8 text-primary" />
                                 </div>
                                 <h4 className="font-semibold text-lg mb-2 text-foreground">Research Phase</h4>
-                                <p className="text-muted-foreground text-sm">Fundamental research into novel AI algorithms, architectures, and theoretical frameworks that challenge current paradigms.</p>
+                                <p className="text-muted-foreground text-base leading-6">Fundamental research into novel AI algorithms, architectures, and theoretical frameworks that challenge current paradigms.</p>
                             </div>
                             <div className="flex flex-col items-center text-center">
                                 <div className="bg-primary/5 p-4 rounded-full mb-4">
                                     <FlaskConical className="w-8 h-8 text-primary" />
                                 </div>
                                 <h4 className="font-semibold text-lg mb-2 text-foreground">Prototyping</h4>
-                                <p className="text-muted-foreground text-sm">Rapid prototyping and proof-of-concept development to validate theoretical approaches and demonstrate feasibility.</p>
+                                <p className="text-muted-foreground text-base leading-6">Rapid prototyping and proof-of-concept development to validate theoretical approaches and demonstrate feasibility.</p>
                             </div>
                             <div className="flex flex-col items-center text-center">
                                 <div className="bg-primary/5 p-4 rounded-full mb-4">
                                     <FlaskConical className="w-8 h-8 text-primary" />
                                 </div>
                                 <h4 className="font-semibold text-lg mb-2 text-foreground">Testing & Validation</h4>
-                                <p className="text-muted-foreground text-sm">Rigorous testing, benchmarking, and validation against industry standards and real-world performance metrics.</p>
+                                <p className="text-muted-foreground text-base leading-6">Rigorous testing, benchmarking, and validation against industry standards and real-world performance metrics.</p>
                             </div>
                             <div className="flex flex-col items-center text-center">
                                 <div className="bg-primary/5 p-4 rounded-full mb-4">
                                     <Rocket className="w-8 h-8 text-primary" />
                                 </div>
                                 <h4 className="font-semibold text-lg mb-2 text-foreground">Commercialization</h4>
-                                <p className="text-muted-foreground text-sm">Product development, scaling, and market introduction of validated AI innovations ready for enterprise deployment.</p>
+                                <p className="text-muted-foreground text-base leading-6">Product development, scaling, and market introduction of validated AI innovations ready for enterprise deployment.</p>
                             </div>
                         </div>
                     </div>
@@ -176,7 +176,7 @@ const UnderWorks = () => {
             <Wrapper className="py-20 relative">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Emerging Technologies
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -185,41 +185,41 @@ const UnderWorks = () => {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-primary/30 transition-colors">
+                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-black/30 transition-colors">
                             <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
                                 <Cpu className="w-5 h-5 text-primary" /> Quantum-Enhanced AI
                             </h3>
-                            <p className="text-muted-foreground text-sm">Integration of quantum computing principles with traditional AI algorithms for exponential performance improvements in complex optimization problems.</p>
+                            <p className="text-muted-foreground text-base leading-6">Integration of quantum computing principles with traditional AI algorithms for exponential performance improvements in complex optimization problems.</p>
                         </div>
-                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-primary/30 transition-colors">
+                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-black/30 transition-colors">
                             <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
                                 <Brain className="w-5 h-5 text-primary" /> Neuromorphic Computing
                             </h3>
-                            <p className="text-muted-foreground text-sm">Brain-inspired computing architectures that mimic neural structures for more efficient, adaptive, and energy-conscious AI processing.</p>
+                            <p className="text-muted-foreground text-base leading-6">Brain-inspired computing architectures that mimic neural structures for more efficient, adaptive, and energy-conscious AI processing.</p>
                         </div>
-                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-primary/30 transition-colors">
+                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-black/30 transition-colors">
                             <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
                                 <Zap className="w-5 h-5 text-primary" /> Autonomous AI Systems
                             </h3>
-                            <p className="text-muted-foreground text-sm">Self-evolving AI systems capable of independent learning, adaptation, and optimization without human intervention or supervision.</p>
+                            <p className="text-muted-foreground text-base leading-6">Self-evolving AI systems capable of independent learning, adaptation, and optimization without human intervention or supervision.</p>
                         </div>
-                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-primary/30 transition-colors">
+                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-black/30 transition-colors">
                             <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
                                 <Users className="w-5 h-5 text-primary" /> AI-Human Symbiosis
                             </h3>
-                            <p className="text-muted-foreground text-sm">Seamless integration of AI capabilities with human cognition, creating augmented intelligence systems that enhance human potential.</p>
+                            <p className="text-muted-foreground text-base leading-6">Seamless integration of AI capabilities with human cognition, creating augmented intelligence systems that enhance human potential.</p>
                         </div>
-                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-primary/30 transition-colors">
+                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-black/30 transition-colors">
                             <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
                                 <Sparkles className="w-5 h-5 text-primary" /> Consciousness Modeling
                             </h3>
-                            <p className="text-muted-foreground text-sm">Advanced research into artificial consciousness, self-awareness, and emotional intelligence in AI systems.</p>
+                            <p className="text-muted-foreground text-base leading-6">Advanced research into artificial consciousness, self-awareness, and emotional intelligence in AI systems.</p>
                         </div>
-                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-primary/30 transition-colors">
+                        <div className="bg-card border border-border/50 p-6 rounded-2xl hover:border-black/30 transition-colors">
                             <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
                                 <Monitor className="w-5 h-5 text-primary" /> Universal AI Interfaces
                             </h3>
-                            <p className="text-muted-foreground text-sm">Development of universal communication protocols enabling seamless interaction between different AI systems and human operators.</p>
+                            <p className="text-muted-foreground text-base leading-6">Development of universal communication protocols enabling seamless interaction between different AI systems and human operators.</p>
                         </div>
                     </div>
                 </Container>
@@ -229,7 +229,7 @@ const UnderWorks = () => {
             <Wrapper className="py-20 bg-muted/20">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             The Future of AI Development
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -240,7 +240,7 @@ const UnderWorks = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
                         <div>
                             <div className="mb-8">
-                                <h3 className="text-xl font-bold text-primary mb-3">Innovation First Approach</h3>
+                                <h3 className="text-xl font-bold text-foreground mb-3">Innovation First Approach</h3>
                                 <p className="text-muted-foreground leading-relaxed">
                                     UnderWorks embodies our commitment to pushing the boundaries of AI innovation. We believe that true breakthroughs
                                     come from exploring uncharted territories and challenging established paradigms. Our development philosophy
@@ -249,7 +249,7 @@ const UnderWorks = () => {
                             </div>
 
                             <div>
-                                <h3 className="text-xl font-bold text-primary mb-3">Collaborative Ecosystem</h3>
+                                <h3 className="text-xl font-bold text-foreground mb-3">Collaborative Ecosystem</h3>
                                 <p className="text-muted-foreground leading-relaxed">
                                     We actively collaborate with leading research institutions, industry partners, and the global AI community
                                     to accelerate innovation and ensure that our developments benefit society as a whole.
@@ -258,7 +258,7 @@ const UnderWorks = () => {
                         </div>
                         <div>
                             <div className="mb-8">
-                                <h3 className="text-xl font-bold text-primary mb-3">Responsible AI Development</h3>
+                                <h3 className="text-xl font-bold text-foreground mb-3">Responsible AI Development</h3>
                                 <p className="text-muted-foreground leading-relaxed">
                                     Ethical considerations and responsible AI development are core to everything we do at UnderWorks.
                                     We prioritize transparency, fairness, and safety in all our research and development activities.
@@ -266,7 +266,7 @@ const UnderWorks = () => {
                             </div>
 
                             <div>
-                                <h3 className="text-xl font-bold text-primary mb-3">Open Innovation</h3>
+                                <h3 className="text-xl font-bold text-foreground mb-3">Open Innovation</h3>
                                 <p className="text-muted-foreground leading-relaxed">
                                     Through open-source contributions, research publications, and collaborative partnerships, we share our
                                     findings and methodologies with the broader AI community to accelerate collective progress.

@@ -11,7 +11,7 @@ const Analysis = () => {
                     <h2 className="text-2xl md:text-4xl lg:text-5xl font-heading font-medium !leading-snug">
                         Intelligent marketing  <br /><span className="font-subheading italic">dashboard</span>
                     </h2>
-                    <p className="text-base md:text-lg text-accent-foreground/80 mt-4">
+                    <p className="text-muted-foreground text-base leading-6 mt-4">
                         Gain detailed insights into your marketing performance and campaign metrics with our advanced analytics tools.
                     </p>
                 </div>
@@ -37,7 +37,7 @@ const Analysis = () => {
                                         </div>
                                         Campaign Insights
                                     </h3>
-                                    <p className="text-sm text-muted-foreground">
+                                    <p className="text-muted-foreground text-base leading-6">
                                         Track your campaign performance with data-driven insights.
                                     </p>
                                 </div>
@@ -48,7 +48,7 @@ const Analysis = () => {
                                             <div className="text-3xl font-bold tracking-tight">
                                                 $12,834
                                             </div>
-                                            <div className="text-sm text-emerald-500 flex items-center gap-1 mt-1 font-medium bg-emerald-500/10 px-2 py-0.5 rounded-full w-fit">
+                                            <div className="text-base leading-6 text-emerald-500 flex items-center gap-1 mt-1 font-medium bg-emerald-500/10 px-2 py-0.5 rounded-full w-fit">
                                                 <TrendingUpIcon className="w-3.5 h-3.5" />
                                                 +25% growth
                                             </div>
@@ -66,7 +66,7 @@ const Analysis = () => {
                                             { name: "Emails", status: "Done", val: "28K", color: "bg-purple-500" },
                                             { name: "Ads", status: "Active", val: "62K", color: "bg-emerald-500" },
                                         ].map((item) => (
-                                            <div key={item.name} className="flex items-center justify-between text-sm p-2 hover:bg-muted/50 rounded-lg transition-colors cursor-default group/item">
+                                            <div key={item.name} className="flex items-center justify-between text-base leading-6 p-2 hover:bg-muted/50 rounded-lg transition-colors cursor-default group/item">
                                                 <div className="flex items-center gap-3">
                                                     <span className={`w-2 h-2 rounded-full ${item.color}`}></span>
                                                     <span className="font-medium text-foreground">{item.name}</span>
@@ -99,7 +99,7 @@ const Analysis = () => {
                                         </div>
                                         Audience Metrics
                                     </h3>
-                                    <p className="text-sm text-muted-foreground">
+                                    <p className="text-muted-foreground text-base leading-6">
                                         Understand your audience behavior and engagement patterns.
                                     </p>
                                 </div>
@@ -108,7 +108,7 @@ const Analysis = () => {
                                     <div className="flex justify-between items-baseline">
                                         <div>
                                             <div className="text-3xl font-bold tracking-tight">84,392</div>
-                                            <div className="text-sm text-blue-500 flex items-center gap-1 mt-1 font-medium bg-blue-500/10 px-2 py-0.5 rounded-full w-fit">
+                                            <div className="text-base leading-6 text-blue-500 flex items-center gap-1 mt-1 font-medium bg-blue-500/10 px-2 py-0.5 rounded-full w-fit">
                                                 <TrendingUpIcon className="w-3.5 h-3.5" />
                                                 High engagement
                                             </div>

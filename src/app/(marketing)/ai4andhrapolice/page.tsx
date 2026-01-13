@@ -110,7 +110,7 @@ const AI4AndhraPolicePage = () => {
             <Container>
                 {/* Header Section */}
                 <div className="flex flex-col items-center justify-center text-center max-w-3xl mx-auto mb-16 md:mb-24 px-4">
-                    <h1 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-6">
+                    <h1 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
                         Government Projects
                     </h1>
                     <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto">
@@ -126,7 +126,7 @@ const AI4AndhraPolicePage = () => {
                         {/* 1. Project Overview Card */}
                         <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 md:p-10 text-center max-w-7xl mx-auto w-full hover:border-blue-500/50 hover:bg-white/8 transition-all">
                             <div className="flex flex-col items-start space-y-6 text-left">
-                                <h2 className="text-2xl md:text-3xl font-bold text-blue-500">AI4AndhraPolice</h2>
+                                <h2 className="text-2xl md:text-3xl font-bold text-foreground">AI4AndhraPolice</h2>
                                 <div className="text-muted-foreground text-base leading-relaxed max-w-none space-y-4">
                                     <p>
                                         AI4AndhraPolice is a comprehensive artificial intelligence initiative aimed at modernizing the Andhra Pradesh Police by integrating advanced AI technologies into everyday policing operations. The project focuses on enhancing decision-making, improving response times, and strengthening operational efficiency through intelligence-driven systems.
@@ -141,7 +141,7 @@ const AI4AndhraPolicePage = () => {
                         {/* 2. UseCases Card */}
                         <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 md:p-10 w-full hover:border-blue-500/50 hover:bg-white/8 transition-all">
                             <div className="text-center mb-8">
-                                <h3 className="text-2xl md:text-3xl font-bold text-blue-500 mb-4">Use Cases & Features</h3>
+                                <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Use Cases & Features</h3>
                                 <p className="text-muted-foreground max-w-2xl mx-auto text-base">
                                     Empowering officers with actionable intelligence through advanced AI modules.
                                 </p>
@@ -155,22 +155,22 @@ const AI4AndhraPolicePage = () => {
 
                         {/* 3. Impact Card */}
                         <div className="group relative overflow-hidden rounded-2xl border border-blue-500/20 bg-gradient-to-br from-blue-900/20 to-transparent p-6 md:p-10 hover:border-blue-500/50 transition-all">
-                            <h3 className="text-xl font-bold text-blue-900 mb-8 text-center">Project Impact</h3>
+                            <h3 className="text-xl font-bold text-foreground mb-8 text-center">Project Impact</h3>
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                                 <div className="text-center space-y-2">
-                                    <div className="text-3xl md:text-4xl font-bold text-blue-500">40%</div>
+                                    <div className="text-3xl md:text-4xl font-bold text-foreground">40%</div>
                                     <div className="text-sm text-muted-foreground uppercase tracking-wider font-medium">Reduced Response Time</div>
                                 </div>
                                 <div className="text-center space-y-2">
-                                    <div className="text-3xl md:text-4xl font-bold text-blue-500">90%</div>
+                                    <div className="text-3xl md:text-4xl font-bold text-foreground">90%</div>
                                     <div className="text-sm text-muted-foreground uppercase tracking-wider font-medium">Prediction Accuracy</div>
                                 </div>
                                 <div className="text-center space-y-2">
-                                    <div className="text-3xl md:text-4xl font-bold text-blue-500">10k+</div>
+                                    <div className="text-3xl md:text-4xl font-bold text-foreground">10k+</div>
                                     <div className="text-sm text-muted-foreground uppercase tracking-wider font-medium">Man-hours Saved</div>
                                 </div>
                                 <div className="text-center space-y-2">
-                                    <div className="text-3xl md:text-4xl font-bold text-blue-500">100%</div>
+                                    <div className="text-3xl md:text-4xl font-bold text-foreground">100%</div>
                                     <div className="text-sm text-muted-foreground uppercase tracking-wider font-medium">District Coverage</div>
                                 </div>
                             </div>
@@ -183,7 +183,7 @@ const AI4AndhraPolicePage = () => {
                         {/* 1. Project Overview Card */}
                         <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 md:p-10 text-center max-w-7xl mx-auto w-full hover:border-blue-500/50 hover:bg-white/8 transition-all">
                             <div className="flex flex-col items-start space-y-6 text-left">
-                                <h2 className="text-2xl md:text-3xl font-bold text-blue-500">CCTV Analytics</h2>
+                                <h2 className="text-2xl md:text-3xl font-bold text-foreground">CCTV Analytics</h2>
                                 <div className="text-muted-foreground text-base leading-relaxed max-w-none space-y-4">
                                     <p>
                                         Transforming passive surveillance into active intelligence. Our video analytics platform processes thousands of feeds in real-time to detect anomalies and assist law enforcement. It turns standard CCTV networks into proactive security tools that can identify threats before they escalate.
@@ -198,7 +198,7 @@ const AI4AndhraPolicePage = () => {
                         {/* 2. UseCases Card */}
                         <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 md:p-10 w-full hover:border-blue-500/50 hover:bg-white/8 transition-all">
                             <div className="text-center mb-8">
-                                <h3 className="text-2xl md:text-3xl font-bold text-blue-500 mb-4">Key Features</h3>
+                                <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Key Features</h3>
                                 <p className="text-muted-foreground max-w-2xl mx-auto text-base">
                                     Empowering officers with actionable intelligence through advanced AI modules.
                                 </p>
@@ -213,19 +213,19 @@ const AI4AndhraPolicePage = () => {
 
                         {/* 3. Impact Card */}
                         <div className="group relative overflow-hidden rounded-2xl border border-blue-500/20 bg-gradient-to-br from-blue-900/20 to-transparent p-6 md:p-10 hover:border-blue-500/50 transition-all">
-                            <h3 className="text-2xl md:text-3xl font-bold text-blue-500 mb-6 text-center">Operational Impact</h3>
+                            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6 text-center">Operational Impact</h3>
                             <p className="text-muted-foreground leading-relaxed mb-8 text-center max-w-4xl mx-auto text-base">
                                 By automating surveillance, we maximize the value of existing infrastructure. The system acts as a force multiplier, allowing a small team to effectively monitor entire districts. It provides evidential-grade video clips for investigations and statistical insights for long-term planning. The integration with command centers ensures that insights lead to immediate action, creating a safer environment for citizens through continuous, unbiased, and intelligent monitoring.
                             </p>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
                                 <div className="p-6 bg-blue-500/10 border border-blue-500/20 rounded-xl text-center">
-                                    <h4 className="font-bold text-lg text-blue-400 mb-2">5000+ Cameras</h4>
-                                    <p className="text-blue-900/70 text-sm">Seamlessly integrated across major cities for unified monitoring.</p>
+                                    <h4 className="font-bold text-lg text-foreground mb-2">5000+ Cameras</h4>
+                                    <p className="text-muted-foreground text-sm">Seamlessly integrated across major cities for unified monitoring.</p>
                                 </div>
                                 <div className="p-6 bg-blue-500/10 border border-blue-500/20 rounded-xl text-center">
-                                    <h4 className="font-bold text-lg text-blue-400 mb-2">Real-time Alerts</h4>
-                                    <p className="text-blue-900/70 text-sm">Instant detection of traffic violations and security threats.</p>
+                                    <h4 className="font-bold text-lg text-foreground mb-2">Real-time Alerts</h4>
+                                    <p className="text-muted-foreground text-sm">Instant detection of traffic violations and security threats.</p>
                                 </div>
                             </div>
                         </div>
@@ -237,7 +237,7 @@ const AI4AndhraPolicePage = () => {
                         {/* 1. Project Overview Card */}
                         <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 md:p-10 text-center max-w-7xl mx-auto w-full hover:border-blue-500/50 hover:bg-white/8 transition-all">
                             <div className="flex flex-col items-start space-y-6 text-left">
-                                <h2 className="text-2xl md:text-3xl font-bold text-blue-500">Event Governance Platform</h2>
+                                <h2 className="text-2xl md:text-3xl font-bold text-foreground">Event Governance Platform</h2>
                                 <p className="text-muted-foreground text-base leading-relaxed max-w-none">
                                     The Event Governance Platform (EGP) is an AI-powered, event-driven system designed to monitor, analyze, and respond to critical incidents in real time. It ingests data from multiple sources such as cameras, sensors, IoT devices, and user reports, converts raw inputs into standardized events, and applies intelligence rules to detect risks and abnormal patterns. Once an event is identified, EGP automatically triggers predefined response workflows, identifies the right authorities based on location and role, and delivers alerts through appropriate communication channels. The platform enables fast, automated, and accountable governance for safety, security, and operational efficiency.
                                 </p>
@@ -247,7 +247,7 @@ const AI4AndhraPolicePage = () => {
                         {/* 2. UseCases Card */}
                         <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 md:p-10 w-full hover:border-blue-500/50 hover:bg-white/8 transition-all">
                             <div className="text-center mb-8">
-                                <h3 className="text-2xl md:text-3xl font-bold text-blue-500 mb-4">Key Features</h3>
+                                <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Key Features</h3>
                                 <p className="text-muted-foreground max-w-2xl mx-auto text-base">
                                     Comprehensive tools for real-time event monitoring and response.
                                 </p>
@@ -262,19 +262,19 @@ const AI4AndhraPolicePage = () => {
 
                         {/* 3. Impact Card */}
                         <div className="group relative overflow-hidden rounded-2xl border border-blue-500/20 bg-gradient-to-br from-blue-900/20 to-transparent p-6 md:p-10 hover:border-blue-500/50 transition-all">
-                            <h3 className="text-2xl md:text-3xl font-bold text-blue-500 mb-6 text-center">Why EGP Matters</h3>
+                            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6 text-center">Why EGP Matters</h3>
                             <p className="text-muted-foreground leading-relaxed mb-8 text-center max-w-4xl mx-auto text-base">
                                 EGP significantly improves response time, coordination, and decision-making during critical situations. By automating detection, intelligence, and communication, it reduces human dependency and operational delays. The platform ensures that alerts reach the nearest and most relevant authorities, improving safety outcomes and resource utilization. Its adaptive, configuration-driven design allows governments and enterprises to evolve their response strategies as new risks emerge. Overall, EGP enables proactive governance, enhances public safety, and strengthens trust through transparency, accountability, and data-driven actions.
                             </p>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
                                 <div className="p-6 bg-blue-500/10 border border-blue-500/20 rounded-xl text-center">
-                                    <h4 className="font-bold text-lg text-blue-400 mb-2">Zero Major Incidents</h4>
-                                    <p className="text-blue-900/70 text-sm">Maintained flawless safety records during massive religious and political gatherings.</p>
+                                    <h4 className="font-bold text-lg text-foreground mb-2">Zero Major Incidents</h4>
+                                    <p className="text-muted-foreground text-sm">Maintained flawless safety records during massive religious and political gatherings.</p>
                                 </div>
                                 <div className="p-6 bg-blue-500/10 border border-blue-500/20 rounded-xl text-center">
-                                    <h4 className="font-bold text-lg text-blue-400 mb-2">Real-time Coordination</h4>
-                                    <p className="text-blue-900/70 text-sm">Connected 20+ departments on a single digital platform for instant communication.</p>
+                                    <h4 className="font-bold text-lg text-foreground mb-2">Real-time Coordination</h4>
+                                    <p className="text-muted-foreground text-sm">Connected 20+ departments on a single digital platform for instant communication.</p>
                                 </div>
                             </div>
                         </div>
@@ -285,7 +285,7 @@ const AI4AndhraPolicePage = () => {
                         {/* 1. Project Overview Card */}
                         <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 md:p-10 text-center max-w-7xl mx-auto w-full hover:border-blue-500/50 hover:bg-white/8 transition-all">
                             <div className="flex flex-col items-start space-y-6 text-left">
-                                <h2 className="text-2xl md:text-3xl font-bold text-blue-500">NewsAI360</h2>
+                                <h2 className="text-2xl md:text-3xl font-bold text-foreground">NewsAI360</h2>
                                 <p className="text-muted-foreground text-base leading-relaxed max-w-none">
                                     NewsAI360 is an AI-powered news intelligence platform by 4sightAI designed to modernize government news monitoring. It replaces manual newspaper clipping processes with an automated system that collects news from print, e-papers, and digital media. Using advanced AI and language models, the platform analyzes news for relevance, sentiment, and context, ensuring that the right information reaches the right officials in real time. NewsAI360 converts daily media coverage into structured, searchable intelligence, enabling faster awareness, better coordination, and informed decision-making across government departments.
                                 </p>
@@ -295,7 +295,7 @@ const AI4AndhraPolicePage = () => {
                         {/* 2. UseCases Card */}
                         <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 md:p-10 w-full hover:border-blue-500/50 hover:bg-white/8 transition-all">
                             <div className="text-center mb-8">
-                                <h3 className="text-2xl font-bold text-blue-500 mb-4">Key Features</h3>
+                                <h3 className="text-2xl font-bold text-foreground mb-4">Key Features</h3>
                                 <p className="text-muted-foreground max-w-2xl mx-auto text-base">
                                     Intelligent automation for modern media monitoring.
                                 </p>
@@ -310,7 +310,7 @@ const AI4AndhraPolicePage = () => {
 
                         {/* 3. Impact Card */}
                         <div className="group relative overflow-hidden rounded-2xl border border-blue-500/20 bg-gradient-to-br from-blue-900/20 to-transparent p-6 md:p-10 hover:border-blue-500/50 transition-all">
-                            <h3 className="text-xl font-bold text-blue-500 mb-6 text-center">Impact of the Project</h3>
+                            <h3 className="text-xl font-bold text-foreground mb-6 text-center">Impact of the Project</h3>
                             <p className="text-muted-foreground leading-relaxed mb-8 text-center max-w-4xl mx-auto text-base">
                                 NewsAI360 transforms governance from reactive to proactive by enabling real-time awareness and data-backed decisions. It significantly reduces manual effort, preserves institutional memory, and improves response speed during critical events. By turning raw news into actionable intelligence, the platform enhances transparency, strengthens media strategy, and empowers leaders to anticipate issues, respond confidently, and govern more effectively using AI-driven insights.
                             </p>
@@ -329,7 +329,7 @@ const ImpactItem = ({ text, value }: { text: string, value: string }) => (
             <CheckCircle2 className="w-5 h-5 text-blue-500" />
         </div>
         <div>
-            <div className="font-bold text-blue-500">{value}</div>
+            <div className="font-bold text-foreground">{value}</div>
             <div className="text-xs text-muted-foreground">{text}</div>
         </div>
     </div>
@@ -340,7 +340,7 @@ const UseCaseCard = ({ title, description, icon: Icon }: any) => (
         <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center mb-4 group-hover:bg-blue-500/20 transition-colors">
             <Icon className="w-5 h-5 text-blue-500" />
         </div>
-        <h3 className="text-lg font-bold text-blue-500 mb-2">{title}</h3>
+        <h3 className="text-lg font-bold text-foreground mb-2">{title}</h3>
         <p className="text-muted-foreground text-sm leading-relaxed">{description}</p>
     </div>
 );

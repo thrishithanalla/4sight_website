@@ -18,9 +18,9 @@ const CCTVAnalyticsPage = () => {
             {/* Hero Section */}
             <Wrapper className="pt-20 pb-10 relative overflow-hidden">
                 <Container>
-                    <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8 md:p-12 hover:border-blue-500/50 hover:bg-white/8 transition-all max-w-5xl mx-auto">
+                    <div className="group relative overflow-hidden rounded-2xl border border-black bg-white/5 p-8 md:p-12 hover:border-black/70 hover:bg-white/8 transition-all max-w-5xl mx-auto">
                         <div className="flex flex-col items-center justify-center text-center relative z-10 w-full">
-                            <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-6">
+                            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
                                 CCTV Intelligence & Video LLM Innovation
                             </h1>
                             <p className="text-lg md:text-xl text-foreground/90 font-medium mb-6">
@@ -39,7 +39,7 @@ const CCTVAnalyticsPage = () => {
                 <Container>
                     <div className="flex flex-col md:flex-row gap-12 items-start">
                         <div className="flex-1">
-                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 text-blue-500 text-sm font-medium mb-6">
+                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-foreground text-sm font-medium mb-6 border border-black/20">
                                 <BrainCircuitIcon className="w-4 h-4" />
                                 R&D Track
                             </div>
@@ -64,7 +64,7 @@ const CCTVAnalyticsPage = () => {
                                             "Healthcare and critical infrastructure"
                                         ].map((item, i) => (
                                             <li key={i} className="flex items-center gap-2 text-base">
-                                                <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                                                <div className="w-1.5 h-1.5 rounded-full bg-foreground" />
                                                 {item}
                                             </li>
                                         ))}
@@ -76,7 +76,7 @@ const CCTVAnalyticsPage = () => {
                             </div>
                         </div>
                         <div className="hidden md:flex w-full md:w-1/3 justify-center items-center">
-                            <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-video w-full border border-border/50 bg-black/50">
+                            <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-video w-full border border-black/20 bg-black/50">
                                 <Image
                                     src="/gov_images/cctv-analytics.jpg"
                                     alt="Video LLM Research & Innovation"
@@ -93,11 +93,11 @@ const CCTVAnalyticsPage = () => {
             <Wrapper className="py-20 relative">
                 <Container>
                     <div className="flex flex-col items-center text-center mb-16">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-500/10 text-green-500 text-sm font-medium mb-6">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-foreground text-sm font-medium mb-6 border border-black/20">
                             <ActivityIcon className="w-4 h-4" />
                             Production Track
                         </div>
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-6">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                             CCTV Intelligence & Event Governance
                         </h2>
                         <p className="text-muted-foreground text-lg max-w-3xl">
@@ -107,8 +107,8 @@ const CCTVAnalyticsPage = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {/* Feature 1 */}
-                        <div className="bg-card border border-border/50 p-8 rounded-2xl shadow-sm hover:border-blue-500/50 transition-all">
-                            <div className="bg-blue-500/10 w-12 h-12 rounded-lg flex items-center justify-center mb-6 text-blue-500">
+                        <div className="bg-card border border-border/50 p-8 rounded-2xl shadow-sm hover:border-black/50 transition-all">
+                            <div className="bg-white/10 w-12 h-12 rounded-lg flex items-center justify-center mb-6 text-foreground border border-black/10">
                                 <SirenIcon className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-bold mb-3">AI Agents for Alert & Event Management</h3>
@@ -118,8 +118,8 @@ const CCTVAnalyticsPage = () => {
                         </div>
 
                         {/* Feature 2 */}
-                        <div className="bg-card border border-border/50 p-8 rounded-2xl shadow-sm hover:border-blue-500/50 transition-all">
-                            <div className="bg-blue-500/10 w-12 h-12 rounded-lg flex items-center justify-center mb-6 text-blue-500">
+                        <div className="bg-card border border-border/50 p-8 rounded-2xl shadow-sm hover:border-black/50 transition-all">
+                            <div className="bg-white/10 w-12 h-12 rounded-lg flex items-center justify-center mb-6 text-foreground border border-black/10">
                                 <NetworkIcon className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-bold mb-3">Cross-Camera and Location Intelligence</h3>
@@ -129,8 +129,8 @@ const CCTVAnalyticsPage = () => {
                         </div>
 
                         {/* Feature 3 */}
-                        <div className="bg-card border border-border/50 p-8 rounded-2xl shadow-sm hover:border-blue-500/50 transition-all">
-                            <div className="bg-blue-500/10 w-12 h-12 rounded-lg flex items-center justify-center mb-6 text-blue-500">
+                        <div className="bg-card border border-border/50 p-8 rounded-2xl shadow-sm hover:border-black/50 transition-all">
+                            <div className="bg-white/10 w-12 h-12 rounded-lg flex items-center justify-center mb-6 text-foreground border border-black/10">
                                 <WorkflowIcon className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-bold mb-3">Operational Coordination & Action Enablement</h3>
@@ -140,8 +140,8 @@ const CCTVAnalyticsPage = () => {
                         </div>
 
                         {/* Feature 4 */}
-                        <div className="bg-card border border-border/50 p-8 rounded-2xl shadow-sm hover:border-blue-500/50 transition-all">
-                            <div className="bg-blue-500/10 w-12 h-12 rounded-lg flex items-center justify-center mb-6 text-blue-500">
+                        <div className="bg-card border border-border/50 p-8 rounded-2xl shadow-sm hover:border-black/50 transition-all">
+                            <div className="bg-white/10 w-12 h-12 rounded-lg flex items-center justify-center mb-6 text-foreground border border-black/10">
                                 <ShieldCheckIcon className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-bold mb-3">Real-Time Governance Insights</h3>
@@ -151,8 +151,8 @@ const CCTVAnalyticsPage = () => {
                         </div>
                     </div>
 
-                    <div className="mt-16 bg-blue-500/5 border border-blue-500/20 rounded-2xl p-8 text-center max-w-3xl mx-auto">
-                        <EyeIcon className="w-8 h-8 text-blue-500 mx-auto mb-4" />
+                    <div className="mt-16 bg-white/5 border border-black/20 rounded-2xl p-8 text-center max-w-3xl mx-auto">
+                        <EyeIcon className="w-8 h-8 text-foreground mx-auto mb-4" />
                         <h3 className="text-lg font-semibold mb-2">Immediate Operational Value</h3>
                         <p className="text-muted-foreground">
                             This implementation enables agencies to move immediately from alert-heavy surveillance systems to AI-assisted, outcome-driven operations, without replacing existing camera or analytics investments.

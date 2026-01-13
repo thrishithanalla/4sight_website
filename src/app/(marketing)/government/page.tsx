@@ -64,7 +64,7 @@ const GovernmentPage = () => {
             <Container>
                 {/* Header */}
                 <div className="flex flex-col items-center justify-center text-center mb-16 max-w-2xl mx-auto">
-                    <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400 mb-6">
+                    <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
                         Government Initiatives
                     </h1>
                     <p className="text-muted-foreground text-lg">
@@ -95,7 +95,7 @@ const GovernmentPage = () => {
 
                                     {/* Content Side */}
                                     <div className={`flex flex-col text-left ${index % 2 === 1 ? "lg:order-1" : "lg:order-2"}`}>
-                                        <h2 className="text-2xl lg:text-3xl font-bold text-blue-500 mb-4">
+                                        <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
                                             {project.title}
                                         </h2>
                                         <p className="text-muted-foreground text-base lg:text-lg leading-relaxed mb-8">

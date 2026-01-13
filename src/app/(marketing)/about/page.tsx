@@ -44,7 +44,7 @@ const AboutPage = () => {
         <Wrapper className="py-12 md:py-20 relative overflow-hidden">
             <Container>
                 <div className="flex flex-col items-center justify-center text-center max-w-4xl mx-auto mb-12 md:mb-20 px-4">
-                    <h1 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4 md:mb-6">
+                    <h1 className="text-3xl md:text-5xl font-bold text-foreground mb-4 md:mb-6">
                         Turning AI potential into enterprise reality.
                     </h1>
                     <p className="text-muted-foreground text-base md:text-lg mb-4 md:mb-6">
@@ -60,17 +60,17 @@ const AboutPage = () => {
                     {/* Card 1: Vision */}
                     <div className="rounded-2xl bg-card relative border border-border/50 hover:border-border/100 transition-colors h-full min-h-[300px]">
                         <MagicCard
-                            gradientFrom="#38bdf8"
-                            gradientTo="#3b82f6"
+                            gradientFrom="#ffffff"
+                            gradientTo="#a3a3a3"
                             className="p-6 w-full h-full flex flex-col justify-between"
-                            gradientColor="rgba(59,130,246,0.1)"
+                            gradientColor="rgba(255,255,255,0.05)"
                         >
                             <div className="flex flex-col gap-4 mb-8">
                                 <div className="flex items-center gap-2">
-                                    <WandSparklesIcon className="w-5 h-5 text-blue-500" />
-                                    <h3 className="font-semibold text-lg text-blue-500">OUR VISION</h3>
+                                    <WandSparklesIcon className="w-5 h-5 text-foreground" />
+                                    <h3 className="font-semibold text-lg text-foreground">OUR VISION</h3>
                                 </div>
-                                <p className="text-muted-foreground text-sm">
+                                <p className="text-muted-foreground text-base leading-6">
                                     To enable organizations and governments to operate intelligently, responsibly, and in real time by building AI-first systems that evolve from today’s GenAI capabilities toward future autonomous and decision-driven models.
                                 </p>
                             </div>
@@ -81,16 +81,16 @@ const AboutPage = () => {
                                         <Line
                                             type="monotone"
                                             dataKey="val"
-                                            stroke="#2563eb"
+                                            stroke="#000000"
                                             strokeWidth={3}
                                             dot={(props) => {
                                                 const { cx, cy, index } = props;
-                                                if (index === 5) return <circle key={index} cx={cx} cy={cy} r={4} fill="#2563eb" stroke="white" strokeWidth={2} />;
+                                                if (index === 5) return <circle key={index} cx={cx} cy={cy} r={4} fill="#000000" stroke="white" strokeWidth={2} />;
                                                 return <circle key={index} r={0} />;
                                             }}
                                         />
                                         <Tooltip
-                                            cursor={{ stroke: '#2563eb', strokeWidth: 1, strokeDasharray: "4 4" }}
+                                            cursor={{ stroke: '#000000', strokeWidth: 1, strokeDasharray: "4 4" }}
                                             content={<CustomTooltip />}
                                         />
                                     </LineChart>
@@ -102,17 +102,17 @@ const AboutPage = () => {
                     {/* Card 2: Mission */}
                     <div className="rounded-2xl bg-card relative border border-border/50 hover:border-border/100 transition-colors h-full min-h-[300px]">
                         <MagicCard
-                            gradientFrom="#38bdf8"
-                            gradientTo="#3b82f6"
+                            gradientFrom="#ffffff"
+                            gradientTo="#a3a3a3"
                             className="p-6 w-full h-full flex flex-col justify-between"
-                            gradientColor="rgba(59,130,246,0.1)"
+                            gradientColor="rgba(255,255,255,0.05)"
                         >
                             <div className="flex flex-col gap-4 mb-4">
                                 <div className="flex items-center gap-2">
-                                    <ChartColumnBigIcon className="w-5 h-5 text-blue-500" />
-                                    <h3 className="font-semibold text-lg text-blue-500">OUR MISSION</h3>
+                                    <ChartColumnBigIcon className="w-5 h-5 text-foreground" />
+                                    <h3 className="font-semibold text-lg text-foreground">OUR MISSION</h3>
                                 </div>
-                                <p className="text-muted-foreground text-sm">
+                                <p className="text-muted-foreground text-base leading-6">
                                     To design, build, and scale production-grade AI and GenAI platforms by combining deep enterprise architecture expertise, reusable accelerators, and continuous innovation—helping customers move confidently from traditional applications to AI-powered operating models with measurable outcomes.
                                 </p>
                             </div>
@@ -123,16 +123,16 @@ const AboutPage = () => {
                                         <Line
                                             type="monotone"
                                             dataKey="val"
-                                            stroke="#2563eb"
+                                            stroke="#000000"
                                             strokeWidth={3}
                                             dot={(props) => {
                                                 const { cx, cy, index } = props;
-                                                if (index === 5) return <circle key={index} cx={cx} cy={cy} r={4} fill="#2563eb" stroke="white" strokeWidth={2} />;
+                                                if (index === 5) return <circle key={index} cx={cx} cy={cy} r={4} fill="#000000" stroke="white" strokeWidth={2} />;
                                                 return <circle key={index} r={0} />;
                                             }}
                                         />
                                         <Tooltip
-                                            cursor={{ stroke: '#2563eb', strokeWidth: 1, strokeDasharray: "4 4" }}
+                                            cursor={{ stroke: '#000000', strokeWidth: 1, strokeDasharray: "4 4" }}
                                             content={<CustomTooltip />}
                                         />
                                     </LineChart>
@@ -145,7 +145,7 @@ const AboutPage = () => {
 
                 {/* Core Values Section */}
                 <div className="flex flex-col items-center justify-center w-full mt-20">
-                    <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-12 text-center">
+                    <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
                         Our Core Values
                     </h2>
                     <div className="flex flex-wrap justify-center gap-6 w-full">
@@ -178,16 +178,16 @@ const AboutPage = () => {
                         ].map((value, index) => (
                             <div key={index} className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.33%-16px)] min-h-[250px] relative rounded-2xl bg-card border border-border/50 hover:border-border/100 transition-all duration-300">
                                 <MagicCard
-                                    gradientFrom="#38bdf8"
-                                    gradientTo="#3b82f6"
+                                    gradientFrom="#ffffff"
+                                    gradientTo="#a3a3a3"
                                     className="p-6 w-full h-full flex flex-col items-start gap-4"
-                                    gradientColor="rgba(59,130,246,0.1)"
+                                    gradientColor="rgba(255,255,255,0.05)"
                                 >
-                                    <div className="p-3 rounded-xl bg-blue-500/10 text-blue-500 mb-2">
+                                    <div className="p-3 rounded-xl bg-white/10 text-foreground mb-2">
                                         <value.icon className="w-6 h-6" />
                                     </div>
                                     <h3 className="text-xl font-bold text-foreground">{value.title}</h3>
-                                    <p className="text-muted-foreground text-sm leading-relaxed">
+                                    <p className="text-muted-foreground text-base leading-6">
                                         {value.desc}
                                     </p>
                                 </MagicCard>
@@ -198,7 +198,7 @@ const AboutPage = () => {
 
                 {/* Partners & Collaborations Section */}
                 <div className="flex flex-col items-center justify-center w-full mt-20 max-w-4xl mx-auto px-4">
-                    <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-8 text-center">
+                    <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
                         Partners & Collaborations
                     </h2>
 
@@ -222,9 +222,9 @@ const AboutPage = () => {
                                 ].map((item, index) => (
                                     <div key={index} className="flex items-start gap-3 p-3 rounded-lg hover:bg-white/5 transition-colors">
                                         <div className="mt-1">
-                                            <div className="w-2 h-2 rounded-full bg-blue-500"></div>
+                                            <div className="w-2 h-2 rounded-full bg-foreground"></div>
                                         </div>
-                                        <span className="text-sm md:text-base">{item}</span>
+                                        <span className="text-base leading-6">{item}</span>
                                     </div>
                                 ))}
                             </div>

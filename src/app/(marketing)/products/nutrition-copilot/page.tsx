@@ -21,9 +21,9 @@ const NutritionCopilotPage = () => {
             <Wrapper className="pt-20 pb-10 relative overflow-hidden">
                 <Container>
                     <Container>
-                        <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8 md:p-12 hover:border-blue-500/50 hover:bg-white/8 transition-all max-w-5xl mx-auto">
+                        <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8 md:p-12 hover:border-black/70 hover:bg-white/8 transition-all max-w-5xl mx-auto">
                             <div className="flex flex-col items-center justify-center text-center max-w-3xl mx-auto relative z-10">
-                                <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-6">
+                                <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
                                     Nutrition Co-Pilot
                                 </h1>
                                 <p className="text-xl md:text-2xl text-accent-foreground/90 font-medium mb-4">
@@ -42,7 +42,7 @@ const NutritionCopilotPage = () => {
             <Wrapper className="py-20 bg-muted/20">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Intelligent Nutrition Intelligence
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -79,7 +79,7 @@ const NutritionCopilotPage = () => {
             <Wrapper className="py-20 relative">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Key Features
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -94,7 +94,7 @@ const NutritionCopilotPage = () => {
                                 <TargetIcon className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Personalized Recommendations</h3>
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground text-base leading-6">
                                 AI-driven dietary recommendations tailored to individual health profiles, preferences, goals, and
                                 medical conditions for optimal nutrition outcomes.
                             </p>
@@ -105,7 +105,7 @@ const NutritionCopilotPage = () => {
                                 <ActivityIcon className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Health Data Integration</h3>
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground text-base leading-6">
                                 Seamless integration with wearable devices, health apps, and medical records to provide comprehensive
                                 health insights and nutrition correlations.
                             </p>
@@ -116,7 +116,7 @@ const NutritionCopilotPage = () => {
                                 <BrainIcon className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Machine Learning Insights</h3>
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground text-base leading-6">
                                 Advanced ML algorithms that learn from nutritional outcomes, adapt recommendations over time,
                                 and predict health trends based on dietary patterns.
                             </p>
@@ -127,7 +127,7 @@ const NutritionCopilotPage = () => {
                                 <SmartphoneIcon className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Multi-Platform Access</h3>
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground text-base leading-6">
                                 Accessible across web, mobile, and desktop platforms with real-time synchronization and
                                 collaborative features for healthcare teams.
                             </p>
@@ -140,7 +140,7 @@ const NutritionCopilotPage = () => {
             <Wrapper className="py-20 bg-muted/20">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Nutrition Intelligence Engine
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -149,35 +149,35 @@ const NutritionCopilotPage = () => {
                     </div>
 
                     <div className="bg-card border border-border/50 rounded-3xl p-8 md:p-12">
-                        <h3 className="text-2xl font-bold text-primary mb-8 text-center md:text-left">Core Capabilities</h3>
+                        <h3 className="text-2xl font-bold text-foreground mb-8 text-center md:text-left">Core Capabilities</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                             <div className="flex flex-col items-center text-center">
                                 <div className="bg-primary/5 p-4 rounded-full mb-4 text-primary">
                                     <UtensilsIcon className="w-8 h-8" />
                                 </div>
                                 <h4 className="font-semibold text-lg mb-2 text-foreground">Nutrient Analysis</h4>
-                                <p className="text-muted-foreground text-sm">Comprehensive analysis of macronutrients, micronutrients, and nutritional density with real-time tracking and optimization.</p>
+                                <p className="text-muted-foreground text-base leading-6">Comprehensive analysis of macronutrients, micronutrients, and nutritional density with real-time tracking and optimization.</p>
                             </div>
                             <div className="flex flex-col items-center text-center">
                                 <div className="bg-primary/5 p-4 rounded-full mb-4 text-primary">
                                     <CalendarIcon className="w-8 h-8" />
                                 </div>
                                 <h4 className="font-semibold text-lg mb-2 text-foreground">Meal Planning</h4>
-                                <p className="text-muted-foreground text-sm">Intelligent meal planning algorithms that consider dietary restrictions, preferences, and health goals for optimal nutrition.</p>
+                                <p className="text-muted-foreground text-base leading-6">Intelligent meal planning algorithms that consider dietary restrictions, preferences, and health goals for optimal nutrition.</p>
                             </div>
                             <div className="flex flex-col items-center text-center">
                                 <div className="bg-primary/5 p-4 rounded-full mb-4 text-primary">
                                     <LineChartIcon className="w-8 h-8" />
                                 </div>
                                 <h4 className="font-semibold text-lg mb-2 text-foreground">Health Correlations</h4>
-                                <p className="text-muted-foreground text-sm">Advanced correlation analysis between dietary patterns and health outcomes, enabling predictive nutrition interventions.</p>
+                                <p className="text-muted-foreground text-base leading-6">Advanced correlation analysis between dietary patterns and health outcomes, enabling predictive nutrition interventions.</p>
                             </div>
                             <div className="flex flex-col items-center text-center">
                                 <div className="bg-primary/5 p-4 rounded-full mb-4 text-primary">
                                     <TrendingUpIcon className="w-8 h-8" />
                                 </div>
                                 <h4 className="font-semibold text-lg mb-2 text-foreground">Progress Tracking</h4>
-                                <p className="text-muted-foreground text-sm">Comprehensive progress monitoring with biometric correlations, goal achievement tracking, and adaptive recommendations.</p>
+                                <p className="text-muted-foreground text-base leading-6">Comprehensive progress monitoring with biometric correlations, goal achievement tracking, and adaptive recommendations.</p>
                             </div>
                         </div>
                     </div>
@@ -188,7 +188,7 @@ const NutritionCopilotPage = () => {
             <Wrapper className="py-20 relative">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Wellness Applications
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -205,9 +205,9 @@ const NutritionCopilotPage = () => {
                             { title: "Maternal & Child Nutrition", desc: "Specialized nutrition guidance for pregnancy, lactation, infant feeding, and pediatric nutritional development." },
                             { title: "Senior Nutrition", desc: "Age-appropriate nutrition plans addressing sarcopenia, bone health, cognitive function, and chronic disease management." }
                         ].map((useCase, idx) => (
-                            <div key={idx} className="bg-card border border-border/50 p-6 rounded-2xl hover:border-primary/30 transition-colors">
+                            <div key={idx} className="bg-card border border-border/50 p-6 rounded-2xl hover:border-black/30 transition-colors">
                                 <h3 className="font-bold text-lg mb-2">{useCase.title}</h3>
-                                <p className="text-muted-foreground text-sm">{useCase.desc}</p>
+                                <p className="text-muted-foreground text-base leading-6">{useCase.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -218,7 +218,7 @@ const NutritionCopilotPage = () => {
             <Wrapper className="py-20 bg-muted/20">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Why Nutrition Co-Pilot Matters
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -229,7 +229,7 @@ const NutritionCopilotPage = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
                         <div>
                             <div className="mb-8">
-                                <h3 className="text-xl font-bold text-primary mb-3">Personalized Precision</h3>
+                                <h3 className="text-xl font-bold text-foreground mb-3">Personalized Precision</h3>
                                 <p className="text-muted-foreground leading-relaxed">
                                     Nutrition Co-Pilot analyzes individual genetic factors, medical history, lifestyle, and preferences to create
                                     truly personalized nutrition plans. This precision approach leads to better adherence and superior health outcomes.
@@ -237,7 +237,7 @@ const NutritionCopilotPage = () => {
                             </div>
 
                             <div>
-                                <h3 className="text-xl font-bold text-primary mb-3">Evidence-Based Intelligence</h3>
+                                <h3 className="text-xl font-bold text-foreground mb-3">Evidence-Based Intelligence</h3>
                                 <p className="text-muted-foreground leading-relaxed">
                                     Built on the latest nutritional science and continuously updated with new research, Nutrition Co-Pilot ensures
                                     that recommendations are always current and backed by scientific evidence.
@@ -246,7 +246,7 @@ const NutritionCopilotPage = () => {
                         </div>
                         <div>
                             <div className="mb-8">
-                                <h3 className="text-xl font-bold text-primary mb-3">Scalable Expertise</h3>
+                                <h3 className="text-xl font-bold text-foreground mb-3">Scalable Expertise</h3>
                                 <p className="text-muted-foreground leading-relaxed">
                                     Nutrition Co-Pilot makes expert-level nutritional guidance accessible to wellness practitioners of all experience levels,
                                     enabling them to provide sophisticated nutrition services at scale.
@@ -254,7 +254,7 @@ const NutritionCopilotPage = () => {
                             </div>
 
                             <div>
-                                <h3 className="text-xl font-bold text-primary mb-3">Continuous Learning</h3>
+                                <h3 className="text-xl font-bold text-foreground mb-3">Continuous Learning</h3>
                                 <p className="text-muted-foreground leading-relaxed">
                                     The AI continuously learns from user outcomes and feedback, improving recommendations over time and adapting
                                     to new nutritional research and individual response patterns.

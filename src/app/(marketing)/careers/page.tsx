@@ -198,19 +198,19 @@ const CareersPage = () => {
                         <h3 className="text-2xl md:text-3xl font-bold text-foreground">
                             {job.title}
                         </h3>
-                        <p className="text-muted-foreground text-base max-w-2xl line-clamp-2">
+                        <p className="text-muted-foreground text-base leading-6 max-w-2xl line-clamp-2">
                             {(job as any).role_overview || job.experience}
                         </p>
                         <div className="flex flex-wrap items-center gap-3 pt-2">
-                            <div className="flex items-center px-4 py-1.5 rounded-full border border-white/10 text-sm text-muted-foreground">
+                            <div className="flex items-center px-4 py-1.5 rounded-full border border-white/10 text-base leading-6 text-muted-foreground">
                                 <MapPin className="w-4 h-4 mr-2" />
                                 {job.location}
                             </div>
-                            <div className="flex items-center px-4 py-1.5 rounded-full border border-white/10 text-sm text-muted-foreground">
+                            <div className="flex items-center px-4 py-1.5 rounded-full border border-white/10 text-base leading-6 text-muted-foreground">
                                 <Briefcase className="w-4 h-4 mr-2" />
                                 {job.job_type}
                             </div>
-                            <div className="flex items-center px-4 py-1.5 rounded-full border border-white/10 text-sm text-muted-foreground">
+                            <div className="flex items-center px-4 py-1.5 rounded-full border border-white/10 text-base leading-6 text-muted-foreground">
                                 {job.positions} Positions
                             </div>
                         </div>
@@ -218,7 +218,7 @@ const CareersPage = () => {
 
                     <button
                         onClick={() => handleViewDetails(job._id)}
-                        className="flex items-center text-lg font-semibold text-foreground group-hover:text-blue-500 transition-colors shrink-0"
+                        className="flex items-center text-base leading-6 font-semibold text-foreground group-hover:text-blue-500 transition-colors shrink-0"
                     >
                         View Details <ArrowRight className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
                     </button>
@@ -231,7 +231,7 @@ const CareersPage = () => {
         <Wrapper className="py-20 relative">
             <Container>
                 <div className="flex flex-col items-center justify-center text-center max-w-6xl mx-auto mb-20">
-                    <h1 className="text-4xl md:text-5xl font-bold text-blue-500 mb-8">
+                    <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
                         Careers at 4SightAI
                     </h1>
                     <div className="space-y-6 text-muted-foreground text-lg leading-relaxed text-center max-w-5xl mx-auto">
@@ -282,7 +282,7 @@ const CareersPage = () => {
                             <JobList jobs={currentJobs} />
                         ) : (
                             <div className="text-center py-20 bg-white/5 rounded-2xl border border-white/10">
-                                <p className="text-muted-foreground text-lg">
+                                <p className="text-muted-foreground text-base leading-6">
                                     Currently no open positions in {activeTab === "US" ? "the United States" : "India"}.
                                     <br />
                                     Please check back later or explore other regions.
@@ -308,7 +308,7 @@ const CareersPage = () => {
                             <div className="space-y-6">
                                 <DialogHeader>
                                     <DialogTitle className="text-2xl font-bold">{selectedJob.title}</DialogTitle>
-                                    <DialogDescription className="text-base flex flex-wrap gap-4 pt-2">
+                                    <DialogDescription className="text-base leading-6 flex flex-wrap gap-4 pt-2">
                                         <span className="flex items-center"><MapPin className="w-4 h-4 mr-1" /> {selectedJob.location}</span>
                                         <span className="flex items-center"><Briefcase className="w-4 h-4 mr-1" /> {selectedJob.job_type}</span>
                                         <span className="flex items-center"><Clock className="w-4 h-4 mr-1" /> {selectedJob.experience}</span>
@@ -434,32 +434,32 @@ const CareersPage = () => {
                                 ) : (
                                     /* Job Description View */
                                     <div className="space-y-6">
-                                        <div className="space-y-8 text-foreground/90 leading-relaxed">
+                                        <div className="space-y-8 text-foreground/90 leading-6">
                                             {selectedJob.role_overview && (
                                                 <section>
                                                     <h3 className="text-xl font-semibold mb-2 text-foreground">Role Overview</h3>
-                                                    <p className="whitespace-pre-line text-sm md:text-base text-muted-foreground">{selectedJob.role_overview}</p>
+                                                    <p className="whitespace-pre-line text-base leading-6 text-muted-foreground">{selectedJob.role_overview}</p>
                                                 </section>
                                             )}
 
                                             {selectedJob.key_responsibilities && (
                                                 <section>
                                                     <h3 className="text-xl font-semibold mb-2 text-foreground">Key Responsibilities</h3>
-                                                    <p className="whitespace-pre-line text-sm md:text-base text-muted-foreground">{selectedJob.key_responsibilities}</p>
+                                                    <p className="whitespace-pre-line text-base leading-6 text-muted-foreground">{selectedJob.key_responsibilities}</p>
                                                 </section>
                                             )}
 
                                             {selectedJob.core_skills && (
                                                 <section>
                                                     <h3 className="text-xl font-semibold mb-2 text-foreground">Core Skills</h3>
-                                                    <p className="whitespace-pre-line text-sm md:text-base text-muted-foreground">{selectedJob.core_skills}</p>
+                                                    <p className="whitespace-pre-line text-base leading-6 text-muted-foreground">{selectedJob.core_skills}</p>
                                                 </section>
                                             )}
 
                                             {selectedJob.highly_desirable && (
                                                 <section>
                                                     <h3 className="text-xl font-semibold mb-2 text-foreground">Highly Desirable</h3>
-                                                    <p className="whitespace-pre-line text-sm md:text-base text-muted-foreground">{selectedJob.highly_desirable}</p>
+                                                    <p className="whitespace-pre-line text-base leading-6 text-muted-foreground">{selectedJob.highly_desirable}</p>
                                                 </section>
                                             )}
                                         </div>

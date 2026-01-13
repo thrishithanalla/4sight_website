@@ -11,17 +11,19 @@ const EventsPage = () => {
         <Wrapper className="py-12 md:py-20 relative overflow-hidden">
             <Container>
                 {/* Header Section */}
-                <div className="flex flex-col items-center justify-center text-center max-w-3xl mx-auto mb-16 md:mb-20 px-4">
-                    <h1 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-400 mb-4 md:mb-6">
-                        Events & Webinars
-                    </h1>
-                    <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto">
-                        Join us for upcoming events, workshops, and webinars to stay ahead of the curve in enterprise AI.
-                    </p>
+                <div className="group relative overflow-hidden rounded-2xl border border-black bg-white/5 p-8 md:p-12 hover:border-black/70 hover:bg-white/8 transition-all max-w-5xl mx-auto mb-16 md:mb-20">
+                    <div className="flex flex-col items-center justify-center text-center max-w-3xl mx-auto relative z-10">
+                        <h1 className="text-3xl md:text-5xl font-bold text-foreground mb-4 md:mb-6">
+                            Events & Webinars
+                        </h1>
+                        <p className="text-muted-foreground text-base leading-6 max-w-2xl mx-auto">
+                            Join us for upcoming events, workshops, and webinars to stay ahead of the curve in enterprise AI.
+                        </p>
+                    </div>
                 </div>
 
                 {/* Small Event Section */}
-                <div className="flex flex-col md:flex-row items-center gap-8 mb-20 p-8 bg-white/5 border border-white/10 rounded-2xl max-w-6xl mx-auto hover:border-blue-500/30 transition-all">
+                <div className="flex flex-col md:flex-row items-center gap-8 mb-20 p-8 bg-white/5 border border-black rounded-2xl max-w-6xl mx-auto hover:border-black/70 transition-all">
                     <div className="w-full md:w-1/2 relative aspect-video rounded-xl overflow-hidden shadow-lg">
                         <Image
                             src="/images/surya-police-session.png"
@@ -31,17 +33,17 @@ const EventsPage = () => {
                         />
                     </div>
                     <div className="w-full md:w-1/2 space-y-4">
-                        <div className="inline-block px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium">
+                        <div className="inline-block px-3 py-1 bg-white/10 border border-black rounded-full text-white text-sm font-medium">
                             Upcoming Session
                         </div>
                         <h3 className="text-3xl md:text-4xl font-bold text-white leading-tight">
                             AI Strategy Workshop
                         </h3>
-                        <p className="text-lg text-muted-foreground leading-relaxed">
+                        <p className="text-base leading-6 text-muted-foreground">
                             Join us for a focused session on implementing AI strategies in your organization.
                             Quick, impactful, and ready to deploy solutions for modern challenges.
                         </p>
-                        <div className="flex flex-wrap items-center gap-6 text-base text-gray-300 pt-4">
+                        <div className="flex flex-wrap items-center gap-6 text-base leading-6 text-gray-300 pt-4">
                             <div className="flex items-center gap-2">
                                 <span>📅</span>
                                 <span className="font-medium">Oct 15, 2025</span>
@@ -56,22 +58,22 @@ const EventsPage = () => {
 
                 <div className="flex flex-col gap-12 md:gap-20 max-w-7xl mx-auto w-full">
                     {/* Main Event Card / Hero Section */}
-                    <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 md:p-10 hover:border-blue-500/50 hover:bg-white/8 transition-all">
+                    <div className="group relative overflow-hidden rounded-2xl border border-black bg-white/5 p-5 md:p-10 hover:border-black/70 hover:bg-white/8 transition-all">
                         <div className="flex flex-col gap-6 md:gap-8">
                             <div className="flex flex-col lg:flex-row gap-8 items-start">
 
                                 <div className="flex-1 w-full space-y-6">
                                     <div className="space-y-4">
-                                        <h3 className="text-2xl sm:text-3xl md:text-5xl font-bold text-blue-500">
-                                            AI4AndhraPolice <span className="text-blue-500/80">Hackathon</span>
+                                        <h3 className="text-2xl sm:text-3xl md:text-5xl font-bold text-foreground">
+                                            AI4AndhraPolice <span className="text-foreground/80">Hackathon</span>
                                         </h3>
-                                        <div className="flex flex-wrap gap-3 md:gap-4 text-sm text-black">
-                                            <div className="flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-full border border-white/10">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-500"><rect width="18" height="18" x="3" y="4" rx="2" ry="2" /><line x1="16" x2="16" y1="2" y2="6" /><line x1="8" x2="8" y1="2" y2="6" /><line x1="3" x2="21" y1="10" y2="10" /></svg>
+                                        <div className="flex flex-wrap gap-3 md:gap-4 text-base leading-6 text-black">
+                                            <div className="flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-full border border-black">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-foreground"><rect width="18" height="18" x="3" y="4" rx="2" ry="2" /><line x1="16" x2="16" y1="2" y2="6" /><line x1="8" x2="8" y1="2" y2="6" /><line x1="3" x2="21" y1="10" y2="10" /></svg>
                                                 <span className="font-medium text-black-800 dark:text-black-200">June 27 – 29, 2025</span>
                                             </div>
-                                            <div className="flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-full border border-white/10">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-500"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" /></svg>
+                                            <div className="flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-full border border-black">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-foreground"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" /></svg>
                                                 <span className="font-medium text-black-800 dark:text-black-200">R.V.R. & J.C. College, Guntur</span>
                                             </div>
                                         </div>
@@ -79,8 +81,8 @@ const EventsPage = () => {
 
                                     <div className="flex flex-col gap-6">
                                         <div className="space-y-3">
-                                            <h4 className="text-lg md:text-xl font-semibold text-blue-500">Event Overview</h4>
-                                            <p className="text-base leading-relaxed text-black-700 dark:text-black-300">
+                                            <h4 className="text-lg md:text-xl font-semibold text-foreground">Event Overview</h4>
+                                            <p className="text-base leading-6 text-black-700 dark:text-black-300">
                                                 The AI 4 Andhra Police Hackathon is a technology-driven innovation event organized by the Andhra Pradesh Police Department, in collaboration with 4SightAI. It serves as a platform to design practical, deployable AI systems that enhance operational efficiency.
                                             </p>
                                         </div>
@@ -88,7 +90,7 @@ const EventsPage = () => {
                                             <Link
                                                 href="https://ai4andhrapolice.com"
                                                 target="_blank"
-                                                className="inline-flex items-center justify-center gap-2 bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors font-medium text-base w-full md:w-auto"
+                                                className="inline-flex items-center justify-center gap-2 bg-foreground text-background px-6 py-3 rounded-lg hover:bg-foreground/90 transition-colors font-medium text-base leading-6 w-full md:w-auto"
                                             >
                                                 View Official Website
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
@@ -101,43 +103,45 @@ const EventsPage = () => {
                     </div>
 
                     {/* Objectives Section */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-                        <div className="order-2 md:order-1 w-full h-full min-h-[300px]">
-                            <EventGalleryCarousel items={[
-                                { src: "1p1_11zon.jpg" }, { src: "1p2.JPG" }, { src: "1p3.jpg" }, { src: "1p4.jpg" },
-                                { src: "1p5.jpg" }, { src: "1p6.JPG" }, { src: "1p7.jpg" }, { src: "1p8.JPG" }
-                            ]} />
-                        </div>
-                        <div className="order-1 md:order-2 space-y-6">
-                            <div className="inline-block px-4 py-1.5 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-500 text-base font-medium">Objective</div>
-                            <h2 className="text-2xl md:text-3xl font-bold text-blue-500">Why This Matters</h2>
-                            <p className="text-black-700 dark:text-black-300 font-medium leading-relaxed">The primary objective of the hackathon is to bridge the gap between law enforcement needs and cutting-edge AI capabilities.</p>
-                            <ul className="space-y-4">
-                                {[
-                                    "Explore the use of AI in modern policing",
-                                    "Reduce manual effort in workflows",
-                                    "Enable faster insights from data",
-                                    "Encourage ethical use of AI"
-                                ].map((item, i) => (
-                                    <li key={i} className="flex items-start gap-3">
-                                        <div className="mt-1 w-5 h-5 rounded-full bg-blue-500/10 flex items-center justify-center shrink-0 border border-blue-500/20">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-blue-500"><polyline points="20 6 9 17 4 12" /></svg>
-                                        </div>
-                                        <span className="text-black-800 dark:text-black-200 text-sm md:text-base">{item}</span>
-                                    </li>
-                                ))}
-                            </ul>
+                    <div className="group relative overflow-hidden rounded-2xl border border-black bg-white/5 p-5 md:p-10 hover:border-black/70 hover:bg-white/8 transition-all">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+                            <div className="order-2 md:order-1 w-full h-full min-h-[300px]">
+                                <EventGalleryCarousel items={[
+                                    { src: "1p1_11zon.jpg" }, { src: "1p2.JPG" }, { src: "1p3.jpg" }, { src: "1p4.jpg" },
+                                    { src: "1p5.jpg" }, { src: "1p6.JPG" }, { src: "1p7.jpg" }, { src: "1p8.JPG" }
+                                ]} />
+                            </div>
+                            <div className="order-1 md:order-2 space-y-6">
+                                <div className="inline-block px-4 py-1.5 bg-white/10 border border-black rounded-full text-foreground text-base leading-6 font-medium">Objective</div>
+                                <h2 className="text-2xl md:text-3xl font-bold text-foreground">Why This Matters</h2>
+                                <p className="text-black-700 dark:text-black-300 font-medium text-base leading-6">The primary objective of the hackathon is to bridge the gap between law enforcement needs and cutting-edge AI capabilities.</p>
+                                <ul className="space-y-4">
+                                    {[
+                                        "Explore the use of AI in modern policing",
+                                        "Reduce manual effort in workflows",
+                                        "Enable faster insights from data",
+                                        "Encourage ethical use of AI"
+                                    ].map((item, i) => (
+                                        <li key={i} className="flex items-start gap-3">
+                                            <div className="mt-1 w-5 h-5 rounded-full bg-white/10 flex items-center justify-center shrink-0 border border-black">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-foreground"><polyline points="20 6 9 17 4 12" /></svg>
+                                            </div>
+                                            <span className="text-black-800 dark:text-black-200 text-base leading-6">{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
                     </div>
 
                     {/* Key Focus Areas */}
                     <div className="space-y-8 md:space-y-10">
                         <div className="text-center max-w-3xl mx-auto space-y-3 md:space-y-4">
-                            <h2 className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-blue-500 to-blue-500">
+                            <h2 className="text-2xl md:text-4xl font-bold text-foreground">
                                 Key Focus Areas
                             </h2>
-                            <div className="h-1 w-20 bg-gradient-to-r from-blue-500 to-blue-500 mx-auto rounded-full"></div>
-                            <p className="text-muted-foreground text-lg leading-relaxed pt-2">
+                            <div className="h-1 w-20 bg-foreground mx-auto rounded-full"></div>
+                            <p className="text-muted-foreground text-base leading-6 pt-2">
                                 Problem statements defined by senior police officials based on real operational needs, targeting high-impact areas of law enforcement.
                             </p>
                         </div>
@@ -169,20 +173,20 @@ const EventsPage = () => {
                                     icon: <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
                                 }
                             ].map((area, i) => (
-                                <div key={i} className="group relative overflow-hidden bg-gradient-to-br from-white/5 to-white/[0.02] p-6 rounded-2xl border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1">
-                                    <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl -mr-16 -mt-16 transition-opacity opacity-0 group-hover:opacity-100"></div>
+                                <div key={i} className="group relative overflow-hidden bg-white/5 p-6 rounded-2xl border border-black hover:border-black/70 hover:shadow-lg hover:shadow-black/5 hover:-translate-y-1 transition-all duration-300">
+                                    <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full blur-3xl -mr-16 -mt-16 opacity-0 transition-opacity group-hover:opacity-100"></div>
 
-                                    <div className="flex flex-col gap-4 relative z-10">
+                                    <div className="relative z-10 flex flex-col gap-4">
                                         <div className="flex items-center gap-4">
-                                            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500/20 to-blue-500/10 flex items-center justify-center border border-blue-500/20 group-hover:scale-110 transition-transform duration-300 shadow-inner shadow-blue-500/5">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7 text-blue-400 group-hover:text-blue-300 transition-colors">
+                                            <div className="flex h-14 w-14 items-center justify-center rounded-xl border border-black bg-white/5 shadow-inner shadow-black/5 transition-transform duration-300 group-hover:scale-110">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-7 w-7 text-foreground transition-colors">
                                                     {area.icon}
                                                 </svg>
                                             </div>
-                                            <h4 className="text-xl font-bold text-blue-500 transition-colors">{area.title}</h4>
+                                            <h4 className="text-xl font-bold text-foreground transition-colors">{area.title}</h4>
                                         </div>
 
-                                        <p className="text-muted-foreground text-base leading-relaxed group-hover:text-black transition-colors">{area.desc}</p>
+                                        <p className="text-base leading-6 text-muted-foreground transition-colors group-hover:text-black">{area.desc}</p>
                                     </div>
                                 </div>
                             ))}
@@ -191,44 +195,41 @@ const EventsPage = () => {
 
                     {/* Structure & Participants */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div className="bg-white/5 rounded-2xl border border-white/10 p-8 space-y-6">
-                            <h3 className="text-2xl font-bold text-blue-500">Event Structure</h3>
+                        <div className="bg-white/5 rounded-2xl border border-black p-8 space-y-6">
+                            <h3 className="text-2xl font-bold text-foreground">Event Structure</h3>
                             <ul className="space-y-4">
                                 <li className="flex gap-4">
-                                    <span className="flex items-center justify-center w-8 h-8 rounded-full bg-blue
-                                    -500/10 text-blue-500 font-bold text-sm border border-blue-500/20">1</span>
-                                    <p className="text-black">Problem statements defined by senior police officials based on real needs.</p>
+                                    <span className="flex items-center justify-center w-8 h-8 rounded-full bg-white/10 text-foreground font-bold text-sm border border-black">1</span>
+                                    <p className="text-black text-base leading-6">Problem statements defined by senior police officials based on real needs.</p>
                                 </li>
                                 <li className="flex gap-4">
-                                    <span className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-500/10 text-blue-500 font-bold text-sm border border-blue-500/20">2</span>
-                                    <p className="text-black">Participating teams design and build AI-based solutions within a fixed time frame.</p>
+                                    <span className="flex items-center justify-center w-8 h-8 rounded-full bg-white/10 text-foreground font-bold text-sm border border-black">2</span>
+                                    <p className="text-black text-base leading-6">Participating teams design and build AI-based solutions within a fixed time frame.</p>
                                 </li>
                                 <li className="flex gap-4">
-                                    <span className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-500/10 text-blue-500 font-bold text-sm border border-blue-500/20">3</span>
-                                    <p className="text-black">Solutions evaluated on feasibility, scalability, accuracy, and applicability.</p>
+                                    <span className="flex items-center justify-center w-8 h-8 rounded-full bg-white/10 text-foreground font-bold text-sm border border-black">3</span>
+                                    <p className="text-black text-base leading-6">Solutions evaluated on feasibility, scalability, accuracy, and applicability.</p>
                                 </li>
                                 <li className="flex gap-4">
-                                    <span className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-500/10 text-blue-500 font-bold text-sm border border-blue-500/20">4</span>
-                                    <p className="text-black">Selected solutions considered for further development and pilot implementation.</p>
+                                    <span className="flex items-center justify-center w-8 h-8 rounded-full bg-white/10 text-foreground font-bold text-sm border border-black">4</span>
+                                    <p className="text-black text-base leading-6">Selected solutions considered for further development and pilot implementation.</p>
                                 </li>
                             </ul>
                         </div>
 
-                        <div className="bg-white/5 rounded-2xl border border-white/10 p-8 space-y-6">
-                            <h3 className="text-2xl font-bold text-blue
-                            -500">Who Have Joined</h3>
+                        <div className="bg-white/5 rounded-2xl border border-black p-8 space-y-6">
+                            <h3 className="text-2xl font-bold text-foreground">Who Have Joined</h3>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 {["AI Engineers & Developers", "Startups & Tech Firms", "Academic Institutions", "Data Science Researchers"].map((p, i) => (
                                     <div key={i} className="bg-black/20 p-4 rounded-lg flex items-center gap-3">
-                                        <div className="w-2 h-2 rounded-full bg-blue-500"></div>
-                                        <span className="text-black font-medium">{p}</span>
+                                        <div className="w-2 h-2 rounded-full bg-foreground"></div>
+                                        <span className="text-black font-medium text-base leading-6">{p}</span>
                                     </div>
                                 ))}
                             </div>
-                            <div className="mt-6 pt-6 border-t border-white/10">
-                                <h4 className="text-lg font-semibold text-blue
-                                -500 mb-3">Expected Outcomes</h4>
-                                <ul className="space-y-2 text-sm text-black">
+                            <div className="mt-6 pt-6 border-t border-black">
+                                <h4 className="text-lg font-semibold text-foreground mb-3">Expected Outcomes</h4>
+                                <ul className="space-y-2 text-base leading-6 text-black">
                                     <li>• Development of proof-of-concept AI solutions</li>
                                     <li>• Knowledge exchange between law enforcement & AI ecosystem</li>
                                     <li>• Identification of scalable AI tools for long-term adoption</li>
@@ -239,11 +240,10 @@ const EventsPage = () => {
                     </div>
 
                     {/* Significance Section */}
-                    <div className="bg-gradient-to-r from-blue
-                    -500/10 to-transparent border border-blue-500/20 rounded-2xl p-6 md:p-12 text-center space-y-4 md:space-y-6">
-                        <h2 className="text-2xl md:text-3xl font-bold text-blue-500">Significance</h2>
-                        <p className="text-black max-w-3xl mx-auto text-lg leading-relaxed">
-                            The AI 4 Andhra Police Hackathon represents a step towards <span className="text-blue-400 font-medium">technology-enabled governance</span>, where artificial intelligence is used as a decision-support and productivity tool, while ensuring human oversight, transparency, and ethical compliance.
+                    <div className="bg-white/5 border border-black rounded-2xl p-6 md:p-12 text-center space-y-4 md:space-y-6">
+                        <h2 className="text-2xl md:text-3xl font-bold text-foreground">Significance</h2>
+                        <p className="text-black max-w-3xl mx-auto text-base leading-6">
+                            The AI 4 Andhra Police Hackathon represents a step towards <span className="text-foreground font-medium">technology-enabled governance</span>, where artificial intelligence is used as a decision-support and productivity tool, while ensuring human oversight, transparency, and ethical compliance.
                         </p>
                     </div>
 
@@ -263,7 +263,7 @@ const EventsPage = () => {
 
                         <div className="space-y-6">
                             <div className="flex justify-center">
-                                <div className="inline-block px-8 py-3 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-500 font-semibold text-sm md:text-base tracking-widest uppercase shadow-sm">
+                                <div className="inline-block px-8 py-3 rounded-full bg-white/10 border border-black text-foreground font-semibold text-base leading-6 tracking-widest uppercase shadow-sm">
                                     Hackathon Highlights
                                 </div>
                             </div>
@@ -295,34 +295,34 @@ const EventsPage = () => {
                         </div>
                     </div>
                 </div>
-                <div className="mt-10 md:mt-16 pt-8 border-t border-white/10">
+                <div className="mt-10 md:mt-16 pt-8 border-t border-black">
                     <div className="flex flex-col gap-12 md:gap-20 max-w-7xl mx-auto w-full">
                         {/* Header Section */}
                         <div className="flex flex-col items-center justify-center text-center max-w-3xl mx-auto">
-                            <h2 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4 md:mb-6">
-                                AdAsia 2025
-                            </h2>
-                            <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto">
+                            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+                                Our Events
+                            </h1>
+                            <p className="text-muted-foreground text-base leading-6 max-w-2xl mx-auto">
                                 Beijing, China | December 2025
                             </p>
                         </div>
 
                         {/* Main Event Card / Hero Section */}
-                        <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 md:p-10 hover:border-blue-500/50 hover:bg-white/8 transition-all">
+                        <div className="group relative overflow-hidden rounded-2xl border border-black bg-white/5 p-5 md:p-10 hover:border-black/70 hover:bg-white/8 transition-all">
                             <div className="flex flex-col gap-6 md:gap-8">
                                 <div className="flex flex-col lg:flex-row gap-8 items-start">
                                     <div className="flex-1 w-full space-y-6">
                                         <div className="space-y-4">
-                                            <h3 className="text-2xl sm:text-3xl md:text-5xl font-bold text-blue-500">
-                                                AdAsia <span className="text-blue-500/80">2025</span>
+                                            <h3 className="text-2xl sm:text-3xl md:text-5xl font-bold text-foreground">
+                                                AdAsia <span className="text-foreground/80">2025</span>
                                             </h3>
-                                            <div className="flex flex-wrap gap-3 md:gap-4 text-sm text-black">
-                                                <div className="flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-full border border-white/10">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-500"><rect width="18" height="18" x="3" y="4" rx="2" ry="2" /><line x1="16" x2="16" y1="2" y2="6" /><line x1="8" x2="8" y1="2" y2="6" /><line x1="3" x2="21" y1="10" y2="10" /></svg>
+                                            <div className="flex flex-wrap gap-3 md:gap-4 text-base leading-6 text-black">
+                                                <div className="flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-full border border-black">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-foreground"><rect width="18" height="18" x="3" y="4" rx="2" ry="2" /><line x1="16" x2="16" y1="2" y2="6" /><line x1="8" x2="8" y1="2" y2="6" /><line x1="3" x2="21" y1="10" y2="10" /></svg>
                                                     <span className="font-medium text-black dark:text-black">December 2025</span>
                                                 </div>
-                                                <div className="flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-full border border-white/10">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-500"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" /></svg>
+                                                <div className="flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-full border border-black">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-foreground"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" /></svg>
                                                     <span className="font-medium text-black dark:text-black">Beijing, China</span>
                                                 </div>
                                             </div>
@@ -330,8 +330,8 @@ const EventsPage = () => {
 
                                         <div className="flex flex-col gap-6">
                                             <div className="space-y-3">
-                                                <h4 className="text-lg md:text-xl font-semibold text-blue-500">Event Overview</h4>
-                                                <p className="text-base leading-relaxed text-black dark:text-black">
+                                                <h4 className="text-lg md:text-xl font-semibold text-foreground">Event Overview</h4>
+                                                <p className="text-base leading-6 text-black dark:text-black">
                                                     AdAsia 2025 was a landmark international conference in the global advertising, marketing, and media (Marcom) ecosystem, held in Beijing, China. The event convened senior industry leaders, strategists, technologists, and creative professionals from across the world to examine how emerging technologies are redefining the future of brand communication.
                                                     <br /><br />
                                                     Anchored around the theme AI: Advertising Innovation and Artificial Intelligence,” AdAsia 2025 focused on the growing convergence of artificial intelligence and creative practice. The conference explored how AI is influencing strategy, creativity, media planning, and agency operations, while emphasizing human-centric innovation and responsible adoption.
@@ -343,7 +343,7 @@ const EventsPage = () => {
                                                 <Link
                                                     href="https://www.adasia2025.org/"
                                                     target="_blank"
-                                                    className="inline-flex items-center justify-center gap-2 bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors font-medium text-base w-full md:w-auto"
+                                                    className="inline-flex items-center justify-center gap-2 bg-foreground text-background px-6 py-3 rounded-lg hover:bg-foreground/90 transition-colors font-medium text-base leading-6 w-full md:w-auto"
                                                 >
                                                     View Official Website
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
@@ -351,7 +351,7 @@ const EventsPage = () => {
                                                 <Link
                                                     href="https://www.adasia2025.org/speakers.php"
                                                     target="_blank"
-                                                    className="inline-flex items-center justify-center gap-2 bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors font-medium text-base w-full md:w-auto"
+                                                    className="inline-flex items-center justify-center gap-2 bg-foreground text-background px-6 py-3 rounded-lg hover:bg-foreground/90 transition-colors font-medium text-base leading-6 w-full md:w-auto"
                                                 >
                                                     View Speakers
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
@@ -366,19 +366,19 @@ const EventsPage = () => {
                         {/* Keynote Highlight Section */}
                         <div className="flex flex-col gap-6 md:gap-8">
                             <div className="space-y-4">
-                                <div className="inline-block px-6 py-2 rounded-full bg-blue-50 border border-blue-100 text-blue-600 font-semibold text-xs md:text-sm tracking-widest uppercase shadow-sm">
+                                <div className="inline-block px-6 py-2 rounded-full bg-white/10 border border-black text-foreground font-semibold text-base leading-6 tracking-widest uppercase shadow-sm">
                                     Keynote Highlight
                                 </div>
-                                <h2 className="text-2xl md:text-4xl font-bold text-blue-500">
+                                <h2 className="text-2xl md:text-4xl font-bold text-foreground">
                                     4SightAI at AdAsia
                                 </h2>
 
-                                <div className="space-y-4 text-muted-foreground text-base md:text-lg max-w-none">
+                                <div className="space-y-4 text-muted-foreground text-base leading-6 max-w-none">
                                     <p className="leading-relaxed">
-                                        A major highlight of AdAsia 2025 was the keynote address delivered by <span className="text-blue-500 font-semibold">Surya Kotha</span>, Chief Executive Officer of 4SightAI (USA).
+                                        A major highlight of AdAsia 2025 was the keynote address delivered by <span className="text-foreground font-semibold">Surya Kotha</span>, Chief Executive Officer of 4SightAI (USA).
                                     </p>
                                     <div className="flex items-center gap-2">
-                                        <Link href="https://www.adasia2025.org/surya-kotha.php" target="_blank" className="inline-flex items-center gap-2 text-blue-500 hover:text-blue-600 font-medium transition-colors hover:underline">
+                                        <Link href="https://www.adasia2025.org/surya-kotha.php" target="_blank" className="inline-flex items-center gap-2 text-foreground hover:text-foreground/90 font-medium transition-colors hover:underline">
                                             Speaker Profile
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /><polyline points="15 3 21 3 21 9" /><line x1="10" y1="14" x2="21" y2="3" /></svg>
                                         </Link>
@@ -395,16 +395,16 @@ const EventsPage = () => {
                                     ]} />
                                 </div>
                                 <div className="">
-                                    <div className="bg-white/5 border border-blue-500/20 rounded-xl p-6 md:p-8 relative overflow-hidden group hover:border-blue-500/40 transition-colors flex flex-col justify-between">
-                                        <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full blur-3xl -mr-16 -mt-16"></div>
+                                    <div className="bg-white/5 border border-black rounded-xl p-6 md:p-8 relative overflow-hidden group hover:border-black/70 transition-colors flex flex-col justify-between">
+                                        <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full blur-3xl -mr-16 -mt-16"></div>
 
                                         <div className="space-y-4 relative z-10">
                                             <div>
-                                                <h3 className="text-xl font-bold text-blue-500 mb-1">Keynote Session</h3>
-                                                <p className="text-blue-500/90 font-medium text-sm md:text-base">“Building the AI-First Agency: Road from GenAI to AGI”</p>
+                                                <h3 className="text-xl font-bold text-foreground mb-1">Keynote Session</h3>
+                                                <p className="text-foreground/90 font-medium text-base leading-6">“Building the AI-First Agency: Road from GenAI to AGI”</p>
                                             </div>
 
-                                            <p className="text-black/80 text-sm leading-relaxed">
+                                            <p className="text-black/80 text-base leading-6">
                                                 In this session, 4SightAI presented a forward-looking vision of how agencies can evolve by embedding AI deeply into their intellectual property, workflows, and operational core.
                                             </p>
 
@@ -416,17 +416,17 @@ const EventsPage = () => {
                                                     "Building future-ready agencies that combine strategic thinking, technology, and creativity"
                                                 ].map((item, i) => (
                                                     <li key={i} className="flex items-start gap-3">
-                                                        <div className="mt-1 w-4 h-4 rounded-full bg-blue-500/10 flex items-center justify-center shrink-0 border border-blue-500/20 text-blue-500">
+                                                        <div className="mt-1 w-4 h-4 rounded-full bg-white/10 flex items-center justify-center shrink-0 border border-black text-foreground">
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
                                                         </div>
-                                                        <span className="text-black/80 text-sm">{item}</span>
+                                                        <span className="text-black/80 text-base leading-6">{item}</span>
                                                     </li>
                                                 ))}
                                             </ul>
                                         </div>
 
-                                        <div className="mt-6 pt-4 border-t border-blue-500/10 relative z-10">
-                                            <p className="text-xs md:text-sm text-blue-500/70 italic">
+                                        <div className="mt-6 pt-4 border-t border-black relative z-10">
+                                            <p className="text-base leading-6 text-foreground/70 italic">
                                                 This keynote positioned 4SightAI as a thought leader in AI-driven transformation for the global advertising and marketing industry.
                                             </p>
                                         </div>
@@ -438,11 +438,11 @@ const EventsPage = () => {
                         {/* Key Focus Areas */}
                         <div className="space-y-8 md:space-y-10">
                             <div className="text-center max-w-3xl mx-auto space-y-3 md:space-y-4">
-                                <h2 className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-blue-500 to-blue-500">
+                                <h2 className="text-2xl md:text-4xl font-bold text-foreground">
                                     Conference Focus
                                 </h2>
-                                <div className="h-1 w-20 bg-gradient-to-r from-blue-500 to-blue-500 mx-auto rounded-full"></div>
-                                <p className="text-muted-foreground text-lg leading-relaxed pt-2">
+                                <div className="h-1 w-20 bg-foreground mx-auto rounded-full"></div>
+                                <p className="text-muted-foreground text-base leading-6 pt-2">
                                     AdAsia 2025 explored how artificial intelligence is transforming the advertising ecosystem.
                                 </p>
                             </div>
@@ -474,22 +474,20 @@ const EventsPage = () => {
                                         icon: <CircleIcon />
                                     }
                                 ].map((area, i) => (
-                                    <div key={i} className="group relative overflow-hidden bg-gradient-to-br from-white/5 to-white/[0.02] p-6 rounded-2xl border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1">
-                                        <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl -mr-16 -mt-16 transition-opacity opacity-0 group-hover:opacity-100"></div>
+                                    <div key={i} className="group relative overflow-hidden bg-white/5 p-6 rounded-2xl border border-black hover:border-black/70 transition-all duration-300 hover:shadow-lg hover:shadow-black/5 hover:-translate-y-1">
+                                        <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full blur-3xl -mr-16 -mt-16 opacity-0 transition-opacity group-hover:opacity-100"></div>
 
                                         <div className="flex flex-col gap-4 relative z-10">
                                             <div className="flex items-center gap-4">
-                                                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500/20 to-blue-500/10 flex items-center justify-center border border-blue-500/20 group-hover:scale-110 transition-transform duration-300 shadow-inner shadow-blue-500/5">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7 text-blue
-                                                        -400 group-hover:text-blue
-                                                        -300 transition-colors">
+                                                <div className="w-14 h-14 rounded-xl bg-white/5 flex items-center justify-center border border-black group-hover:scale-110 transition-transform duration-300 shadow-inner shadow-black/5">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7 text-foreground transition-colors">
                                                         {area.icon}
                                                     </svg>
                                                 </div>
-                                                <h4 className="text-xl font-bold text-blue-500 transition-colors">{area.title}</h4>
+                                                <h4 className="text-xl font-bold text-foreground transition-colors">{area.title}</h4>
                                             </div>
 
-                                            <p className="text-muted-foreground text-base leading-relaxed group-hover:text-black transition-colors">{area.desc}</p>
+                                            <p className="text-muted-foreground text-base leading-6 group-hover:text-black transition-colors">{area.desc}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -497,10 +495,10 @@ const EventsPage = () => {
                         </div>
 
                         {/* Significance Section - Mirrored styling */}
-                        <div className="bg-gradient-to-r from-blue-500/10 to-transparent border border-blue-500/20 rounded-2xl p-6 md:p-12 text-center space-y-4 md:space-y-6">
-                            <h2 className="text-2xl md:text-3xl font-bold text-blue-500">Purpose & Impact</h2>
-                            <p className="text-black max-w-3xl mx-auto text-lg leading-relaxed">
-                                The event reinforced the role of <span className="text-blue-400 font-medium">AI as a strategic enabler</span> for future growth in advertising, marketing, and media.
+                        <div className="bg-white/5 border border-black rounded-2xl p-6 md:p-12 text-center space-y-4 md:space-y-6">
+                            <h2 className="text-2xl md:text-3xl font-bold text-foreground">Purpose & Impact</h2>
+                            <p className="text-black max-w-3xl mx-auto text-base leading-6">
+                                The event reinforced the role of <span className="text-foreground font-medium">AI as a strategic enabler</span> for future growth in advertising, marketing, and media.
                             </p>
                         </div>
                     </div>

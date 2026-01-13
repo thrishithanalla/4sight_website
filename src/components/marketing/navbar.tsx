@@ -97,7 +97,7 @@ const Navbar = () => {
                                                             href={govItem.href}
                                                             className="flex items-start gap-4 p-3 rounded-lg hover:bg-muted/50 transition-colors"
                                                         >
-                                                            <div className="mt-1 bg-blue-500/10 rounded-lg shrink-0 w-10 h-10 flex items-center justify-center overflow-hidden">
+                                                            <div className="mt-1 bg-muted rounded-lg shrink-0 w-10 h-10 flex items-center justify-center overflow-hidden">
                                                                 {/* @ts-ignore */}
                                                                 {govItem.iconImage ? (
                                                                     <Image
@@ -108,7 +108,7 @@ const Navbar = () => {
                                                                         className="w-full h-full object-cover"
                                                                     />
                                                                 ) : (
-                                                                    <govItem.icon className="w-5 h-5 text-blue-500" />
+                                                                    <govItem.icon className="w-5 h-5 text-foreground" />
                                                                 )}
                                                             </div>
                                                             <div>

@@ -13,23 +13,23 @@ export default function Hero() {
 
             {/* LEFT CONTENT */}
             <Container className="w-full lg:w-[45%] text-center lg:items-center relative z-10 flex flex-col items-center">
-                <div className="inline-flex items-center justify-center px-4 py-2 rounded-full border border-blue-200 bg-blue-50 mb-6 max-w-[90%] lg:max-w-none lg:self-center">
-                    <span className="text-xs font-bold text-blue-600 tracking-wide md:tracking-widest uppercase whitespace-normal md:whitespace-nowrap text-center break-words leading-relaxed">
+                <div className="inline-flex items-center justify-center px-4 py-2 rounded-full border border-gray-200 bg-gray-100 mb-6 max-w-[90%] lg:max-w-none lg:self-center">
+                    <span className="text-xs font-bold text-gray-700 tracking-wide md:tracking-widest uppercase whitespace-normal md:whitespace-nowrap text-center break-words leading-relaxed">
                         Empowering Enterprises to harness the power of AI
                     </span>
                 </div>
 
-                <h1 className="text-[1.75rem] lg:text-[2.25rem] font-heading font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 !leading-tight tracking-tight mb-4 lg:self-center lg:text-center">
+                <h1 className="text-[1.75rem] lg:text-[2.25rem] font-heading font-bold text-foreground !leading-tight tracking-tight mb-4 lg:self-center lg:text-center">
                     4SightAI <br />
                 </h1>
 
-                <p className="text-muted-foreground text-sm md:text-base max-w-xl text-center font-light leading-relaxed mb-8">
+                <p className="text-muted-foreground text-base md:text-lg max-w-xl text-center mb-8">
                     4SightAI is an Artificial Intelligence and Generative AI company that builds large-scale, domain-specific AI platforms for governments and enterprises, specializing in Large Language Models (LLMs), AI agents, and real-time decision systems. The company develops Government-grade LLMs for Police and Real-Time Governance, while also delivering enterprise AI solutions that embed GenAI into core business workflows to improve productivity, intelligence, and operational efficiency. With strong capabilities across AI architecture, data engineering, and applied GenAI, 4SightAI delivers end-to-end solutions—from master data standardization and AI infrastructure to workflow-driven copilots and autonomous agents—enabling organizations to transition from traditional analytics to AI-driven, real-time, and outcome-focused operating models.
                 </p>
 
                 <div className="flex flex-wrap gap-4 justify-center lg:justify-center">
                     <Link href="/contact">
-                        <Button size="lg" className="rounded-full px-8 py-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold text-base shadow-lg shadow-blue-500/20">
+                        <Button size="lg" className="rounded-full px-8 py-6 bg-black hover:bg-neutral-800 text-white font-semibold text-base shadow-lg shadow-black/20">
                             Contact Us
                         </Button>
                     </Link>

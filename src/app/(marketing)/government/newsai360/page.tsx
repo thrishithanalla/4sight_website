@@ -22,9 +22,9 @@ const NewsAI360Page = () => {
             {/* Hero Section */}
             <Wrapper className="pt-20 pb-10 relative overflow-hidden">
                 <Container>
-                    <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8 md:p-12 hover:border-blue-500/50 hover:bg-white/8 transition-all max-w-5xl mx-auto">
+                    <div className="group relative overflow-hidden rounded-2xl border border-black bg-white/5 p-8 md:p-12 hover:border-black/70 hover:bg-white/8 transition-all max-w-5xl mx-auto">
                         <div className="flex flex-col items-center justify-center text-center relative z-10 w-full">
-                            <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-6">
+                            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
                                 NewsAI360
                             </h1>
                             <p className="text-xl md:text-2xl text-foreground/90 font-medium mb-4">
@@ -60,7 +60,7 @@ const NewsAI360Page = () => {
                             />
                         </div>
                         <div className="flex flex-col gap-6">
-                            <h3 className="text-2xl font-bold text-blue-500">Automated Intelligence</h3>
+                            <h3 className="text-xl font-bold text-foreground mb-3">Multi-Language Support</h3>
                             <p className="text-muted-foreground text-lg leading-relaxed">
                                 NewsAI360 replaces manual newspaper clipping processes with an automated system that collects news from print, e-papers, and digital media. Using advanced AI and language models, the platform analyzes news for relevance, sentiment, and context.
                             </p>
@@ -76,8 +76,8 @@ const NewsAI360Page = () => {
             <Wrapper className="py-20 relative">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
-                            Platform Features
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                            24/7 Global Intelligence Monitoring
                         </h2>
                         <p className="text-muted-foreground text-lg">
                             Comprehensive tools for real-time media monitoring
@@ -86,8 +86,8 @@ const NewsAI360Page = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {/* Feature 1 */}
-                        <div className="bg-card border border-border/50 p-6 rounded-2xl shadow-sm hover:shadow-md transition-all group hover:border-blue-500/30">
-                            <div className="bg-blue-500/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-blue-500 group-hover:scale-110 transition-transform">
+                        <div className="bg-card border border-border/50 p-6 rounded-2xl shadow-sm hover:shadow-md transition-all group hover:border-black/50">
+                            <div className="bg-white/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-foreground border border-black/10 group-hover:scale-110 transition-transform">
                                 <NewspaperIcon className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Automated Ingestion</h3>
@@ -96,8 +96,8 @@ const NewsAI360Page = () => {
                             </p>
                         </div>
                         {/* Feature 2 */}
-                        <div className="bg-card border border-border/50 p-6 rounded-2xl shadow-sm hover:shadow-md transition-all group hover:border-blue-500/30">
-                            <div className="bg-blue-500/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-blue-500 group-hover:scale-110 transition-transform">
+                        <div className="bg-card border border-border/50 p-6 rounded-2xl shadow-sm hover:shadow-md transition-all group hover:border-black/50">
+                            <div className="bg-white/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-foreground border border-black/10 group-hover:scale-110 transition-transform">
                                 <FilterIcon className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Relevance Filtering</h3>
@@ -106,8 +106,8 @@ const NewsAI360Page = () => {
                             </p>
                         </div>
                         {/* Feature 3 */}
-                        <div className="bg-card border border-border/50 p-6 rounded-2xl shadow-sm hover:shadow-md transition-all group hover:border-blue-500/30">
-                            <div className="bg-blue-500/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-blue-500 group-hover:scale-110 transition-transform">
+                        <div className="bg-card border border-border/50 p-6 rounded-2xl shadow-sm hover:shadow-md transition-all group hover:border-black/50">
+                            <div className="bg-white/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-foreground border border-black/10 group-hover:scale-110 transition-transform">
                                 <LineChartIcon className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Sentiment Analysis</h3>
@@ -116,8 +116,8 @@ const NewsAI360Page = () => {
                             </p>
                         </div>
                         {/* Feature 4 */}
-                        <div className="bg-card border border-border/50 p-6 rounded-2xl shadow-sm hover:shadow-md transition-all group hover:border-blue-500/30">
-                            <div className="bg-blue-500/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-blue-500 group-hover:scale-110 transition-transform">
+                        <div className="bg-card border border-border/50 p-6 rounded-2xl shadow-sm hover:shadow-md transition-all group hover:border-black/50">
+                            <div className="bg-white/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-foreground border border-black/10 group-hover:scale-110 transition-transform">
                                 <LayersIcon className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Story Clustering</h3>
@@ -126,8 +126,8 @@ const NewsAI360Page = () => {
                             </p>
                         </div>
                         {/* Feature 5 */}
-                        <div className="bg-card border border-border/50 p-6 rounded-2xl shadow-sm hover:shadow-md transition-all group hover:border-blue-500/30">
-                            <div className="bg-blue-500/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-blue-500 group-hover:scale-110 transition-transform">
+                        <div className="bg-card border border-border/50 p-6 rounded-2xl shadow-sm hover:shadow-md transition-all group hover:border-black/50">
+                            <div className="bg-white/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-foreground border border-black/10 group-hover:scale-110 transition-transform">
                                 <BrainCircuitIcon className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Bias Insights</h3>
@@ -136,8 +136,8 @@ const NewsAI360Page = () => {
                             </p>
                         </div>
                         {/* Feature 6 */}
-                        <div className="bg-card border border-border/50 p-6 rounded-2xl shadow-sm hover:shadow-md transition-all group hover:border-blue-500/30">
-                            <div className="bg-blue-500/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-blue-500 group-hover:scale-110 transition-transform">
+                        <div className="bg-card border border-border/50 p-6 rounded-2xl shadow-sm hover:shadow-md transition-all group hover:border-black/50">
+                            <div className="bg-white/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-foreground border border-black/10 group-hover:scale-110 transition-transform">
                                 <ArchiveIcon className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Digital Archive</h3>
@@ -146,8 +146,8 @@ const NewsAI360Page = () => {
                             </p>
                         </div>
                         {/* Feature 7 */}
-                        <div className="bg-card border border-border/50 p-6 rounded-2xl shadow-sm hover:shadow-md transition-all group hover:border-blue-500/30">
-                            <div className="bg-blue-500/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-blue-500 group-hover:scale-110 transition-transform">
+                        <div className="bg-card border border-border/50 p-6 rounded-2xl shadow-sm hover:shadow-md transition-all group hover:border-black/50">
+                            <div className="bg-white/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-foreground border border-black/10 group-hover:scale-110 transition-transform">
                                 <BellIcon className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Real-time Alerts</h3>
@@ -156,8 +156,8 @@ const NewsAI360Page = () => {
                             </p>
                         </div>
                         {/* Feature 8 */}
-                        <div className="bg-card border border-border/50 p-6 rounded-2xl shadow-sm hover:shadow-md transition-all group hover:border-blue-500/30">
-                            <div className="bg-blue-500/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-blue-500 group-hover:scale-110 transition-transform">
+                        <div className="bg-card border border-border/50 p-6 rounded-2xl shadow-sm hover:shadow-md transition-all group hover:border-black/50">
+                            <div className="bg-white/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-foreground border border-black/10 group-hover:scale-110 transition-transform">
                                 <ShieldCheckIcon className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Role-Based Access</h3>
@@ -173,10 +173,10 @@ const NewsAI360Page = () => {
             <Wrapper className="py-20 bg-muted/20">
                 <Container>
                     <div className="bg-card border border-border/50 rounded-3xl p-8 md:p-12 relative overflow-hidden">
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-black/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
 
                         <div className="relative z-10">
-                            <h3 className="text-2xl font-bold text-blue-500 mb-6 text-center md:text-left">Project Impact</h3>
+                            <h3 className="text-xl font-bold text-foreground mb-3 text-center md:text-left">Real-time Monitoring</h3>
                             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
                                 NewsAI360 transforms governance from reactive to proactive by enabling real-time awareness and data-backed decisions. It significantly reduces manual effort, preserves institutional memory, and improves response speed during critical events.
                             </p>

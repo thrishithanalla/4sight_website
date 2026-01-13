@@ -11,9 +11,9 @@ const AIEnvelopPage = () => {
             {/* Hero Section */}
             <Wrapper className="pt-20 pb-10 relative overflow-hidden">
                 <Container>
-                    <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8 md:p-12 hover:border-blue-500/50 hover:bg-white/8 transition-all max-w-5xl mx-auto">
+                    <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8 md:p-12 hover:border-black/70 hover:bg-white/8 transition-all max-w-5xl mx-auto">
                         <div className="flex flex-col items-center justify-center text-center max-w-3xl mx-auto relative z-10">
-                            <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-6">
+                            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
                                 AI Envelop
                             </h1>
                             <p className="text-xl md:text-2xl text-accent-foreground/90 font-medium mb-4">
@@ -31,7 +31,7 @@ const AIEnvelopPage = () => {
             <Wrapper className="py-20 bg-muted/20">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Comprehensive Enterprise AI Infrastructure
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -67,7 +67,7 @@ const AIEnvelopPage = () => {
             <Wrapper className="py-20 relative">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Key Features
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -82,7 +82,7 @@ const AIEnvelopPage = () => {
                                 <LinkIcon className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Seamless Integration</h3>
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground text-base leading-6">
                                 Seamlessly integrates with existing enterprise systems without requiring complete overhauls.
                                 Our modular architecture ensures compatibility with your current infrastructure.
                             </p>
@@ -93,7 +93,7 @@ const AIEnvelopPage = () => {
                                 <ZapIcon className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Real-time Processing</h3>
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground text-base leading-6">
                                 Advanced real-time data processing and analytics capabilities that provide instant insights
                                 and enable immediate decision-making across your organization.
                             </p>
@@ -104,7 +104,7 @@ const AIEnvelopPage = () => {
                                 <ShieldCheckIcon className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Advanced Security</h3>
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground text-base leading-6">
                                 Enterprise-grade security frameworks with advanced encryption, compliance monitoring,
                                 and robust governance protocols to protect your sensitive data.
                             </p>
@@ -115,7 +115,7 @@ const AIEnvelopPage = () => {
                                 <TrendingUpIcon className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Scalable Architecture</h3>
-                            <p className="text-muted-foreground text-sm">
+                            <p className="text-muted-foreground text-base leading-6">
                                 Built for growth with scalable infrastructure that supports increasing workloads and
                                 expanding AI capabilities as your business evolves.
                             </p>
@@ -128,7 +128,7 @@ const AIEnvelopPage = () => {
             <Wrapper className="py-20 bg-muted/20">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Technical Architecture
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -137,23 +137,23 @@ const AIEnvelopPage = () => {
                     </div>
 
                     <div className="bg-card border border-border/50 rounded-3xl p-8 md:p-12">
-                        <h3 className="text-2xl font-bold text-primary mb-8">Core Components</h3>
+                        <h3 className="text-2xl font-bold text-foreground mb-8">Core Components</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                             <div>
                                 <h4 className="font-semibold text-lg mb-2 text-foreground">Microservices Architecture</h4>
-                                <p className="text-muted-foreground text-sm">Flexible deployment with independent, scalable services that can be updated and maintained separately.</p>
+                                <p className="text-muted-foreground text-base leading-6">Flexible deployment with independent, scalable services that can be updated and maintained separately.</p>
                             </div>
                             <div>
                                 <h4 className="font-semibold text-lg mb-2 text-foreground">API-First Design</h4>
-                                <p className="text-muted-foreground text-sm">Comprehensive API ecosystem enabling seamless third-party integrations and custom development.</p>
+                                <p className="text-muted-foreground text-base leading-6">Comprehensive API ecosystem enabling seamless third-party integrations and custom development.</p>
                             </div>
                             <div>
                                 <h4 className="font-semibold text-lg mb-2 text-foreground">Multi-Cloud Support</h4>
-                                <p className="text-muted-foreground text-sm">Native support for AWS, Azure, and Google Cloud with hybrid deployment capabilities.</p>
+                                <p className="text-muted-foreground text-base leading-6">Native support for AWS, Azure, and Google Cloud with hybrid deployment capabilities.</p>
                             </div>
                             <div>
                                 <h4 className="font-semibold text-lg mb-2 text-foreground">Real-time Streaming</h4>
-                                <p className="text-muted-foreground text-sm">Advanced data streaming capabilities for real-time processing and instant insights delivery.</p>
+                                <p className="text-muted-foreground text-base leading-6">Advanced data streaming capabilities for real-time processing and instant insights delivery.</p>
                             </div>
                         </div>
                     </div>
@@ -164,7 +164,7 @@ const AIEnvelopPage = () => {
             <Wrapper className="py-20 relative">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Use Cases
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -181,9 +181,9 @@ const AIEnvelopPage = () => {
                             { title: "Business Intelligence", desc: "Real-time business intelligence and reporting systems that provide instant access to critical performance metrics." },
                             { title: "Workflow Automation", desc: "Intelligent workflow automation that streamlines processes, reduces manual effort, and improves operational efficiency." }
                         ].map((useCase, idx) => (
-                            <div key={idx} className="bg-card border border-border/50 p-6 rounded-2xl hover:border-primary/30 transition-colors">
+                            <div key={idx} className="bg-card border border-border/50 p-6 rounded-2xl hover:border-black/30 transition-colors">
                                 <h3 className="font-bold text-lg mb-2">{useCase.title}</h3>
-                                <p className="text-muted-foreground text-sm">{useCase.desc}</p>
+                                <p className="text-muted-foreground text-base leading-6">{useCase.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -194,7 +194,7 @@ const AIEnvelopPage = () => {
             <Wrapper className="py-20 bg-muted/20">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                             Why AI Envelop is Essential
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -205,7 +205,7 @@ const AIEnvelopPage = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
                         <div>
                             <div className="mb-8">
-                                <h3 className="text-xl font-bold text-primary mb-3">Enhanced User Experience</h3>
+                                <h3 className="text-xl font-bold text-foreground mb-3">Enhanced User Experience</h3>
                                 <p className="text-muted-foreground leading-relaxed">
                                     AI Envelop makes software applications more accessible and user-friendly, especially for those without specialized knowledge.
                                     This natural interaction paradigm removes barriers to technology adoption and enables users of all skill levels to leverage sophisticated AI capabilities.
@@ -213,7 +213,7 @@ const AIEnvelopPage = () => {
                             </div>
 
                             <div>
-                                <h3 className="text-xl font-bold text-primary mb-3">Increased Efficiency</h3>
+                                <h3 className="text-xl font-bold text-foreground mb-3">Increased Efficiency</h3>
                                 <p className="text-muted-foreground leading-relaxed">
                                     Automating routine tasks and data processing reduces time and resource expenditure by up to 50%.
                                     This allows your team to focus on high-value activities that require human creativity and judgment.
@@ -222,7 +222,7 @@ const AIEnvelopPage = () => {
                         </div>
                         <div>
                             <div className="mb-8">
-                                <h3 className="text-xl font-bold text-primary mb-3">Competitive Edge</h3>
+                                <h3 className="text-xl font-bold text-foreground mb-3">Competitive Edge</h3>
                                 <p className="text-muted-foreground leading-relaxed">
                                     In a market where user experience is key, AI Envelop provides a significant advantage by modernizing and enhancing software capabilities.
                                     Organizations using AI Envelop report improved customer satisfaction and higher retention rates.
@@ -230,7 +230,7 @@ const AIEnvelopPage = () => {
                             </div>
 
                             <div>
-                                <h3 className="text-xl font-bold text-primary mb-3">Future-Readiness</h3>
+                                <h3 className="text-xl font-bold text-foreground mb-3">Future-Readiness</h3>
                                 <p className="text-muted-foreground leading-relaxed">
                                     As AI continues to shape the technological landscape, having an AI wrapper ensures that software remains relevant and cutting-edge.
                                     AI Envelop positions your organization to quickly adopt new AI innovations as they emerge.
