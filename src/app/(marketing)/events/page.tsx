@@ -247,37 +247,52 @@ const EventsPage = () => {
                         </p>
                     </div>
 
-                    <div className="space-y-8">
-                        <div className="flex items-center gap-4">
-                            <h2 className="text-2xl font-bold text-white">Event Gallery</h2>
-                            <div className="h-px bg-white/10 flex-1"></div>
+                    {/* Combined Galleries Section with reduced spacing */}
+                    <div className="flex flex-col gap-8 md:gap-10">
+                        <div className="space-y-6">
+                            <div className="flex items-center gap-4">
+                                <h2 className="text-2xl font-bold text-white">Event Gallery</h2>
+                                <div className="h-px bg-white/10 flex-1"></div>
+                            </div>
+                            <EventsCoverflow items={[
+                                { src: "ALI04161.JPG" }, { src: "ALI05290.JPG" }, { src: "ALI04711.JPG" }, { src: "ALI05384.JPG" },
+                                { src: "ALI05258.JPG" }, { src: "ALI05500.JPG" }, { src: "MVS02596.JPG" }, { src: "ALI05414.JPG" },
+                                { src: "ALI05142.JPG" }, { src: "ALI05635.JPG" }, { src: "ALI05708.JPG" }, { src: "ALI05775.JPG" }
+                            ]} />
                         </div>
-                        <EventsCoverflow items={[
-                            { src: "ALI04161.JPG" }, { src: "ALI05290.JPG" }, { src: "ALI04711.JPG" }, { src: "ALI05384.JPG" },
-                            { src: "ALI05258.JPG" }, { src: "ALI05500.JPG" }, { src: "MVS02596.JPG" }, { src: "ALI05414.JPG" },
-                            { src: "ALI05142.JPG" }, { src: "ALI05635.JPG" }, { src: "ALI05708.JPG" }, { src: "ALI05775.JPG" }
-                        ]} />
-                    </div>
 
-                    <div className="space-y-8">
-                        <div className="flex items-center gap-4">
-                            <h2 className="text-2xl font-bold text-white">Hackathon Highlights</h2>
-                            <div className="h-px bg-white/10 flex-1"></div>
+                        <div className="space-y-6">
+                            <div className="flex justify-center">
+                                <div className="inline-block px-8 py-3 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-500 font-semibold text-sm md:text-base tracking-widest uppercase shadow-sm">
+                                    Hackathon Highlights
+                                </div>
+                            </div>
+                            <EventsCoverflow items={[
+                                { src: "ALI04081.JPG", caption: "Use Cases led by Malika Garg, IPS; B. Raja Kumari, IPS; and Tushar Dudi, IPS" },
+                                { src: "ALI04096.JPG", caption: "Use Cases led by Kommi Prathap Sive Kishore, IPS; and Dr. Fakkeerappa Kaginelli, IPS" },
+                                { src: "ALI05635.JPG", caption: "Caption for Image 4" },
+                                { src: "3u.jpeg", caption: "Caption for Image 6" },
+                                { src: "4u.jpeg", caption: "Caption for Image 7" },
+                                { src: "10u.jpeg", caption: "Caption for Image 8" },
+                                { src: "6u.jpeg", caption: "Caption for Image 9" },
+                                { src: "7u.jpeg", caption: "The Grid Dynamics team worked on the use case to generate district-focused intelligence from newspaper content using AI." },
+                                { src: "8u.jpeg", caption: "Tech Talk on AI4AndhraPolice" },
+                                { src: "9u.jpeg", caption: "Team 4sightAI " },
+                                { src: "UC 1-7.jpg", caption: "Sri Vakul Jindal, IPS led the use case on AI-assisted petition analysis for effective grievance redressal." },
+                                { src: "UC 2.jpg", caption: "Use Case led by Tushar Dudi, IPS on AI-powered voice-based natural language querying and report generation from CCTNS data." },
+                                { src: "UC 2(1).jpg", caption: "Validation on usecase the voice-enabled AI access to CCTNS for intuitive querying and automated report generation." },
+                                { src: "UC 3.jpg", caption: "Dr. Fakkeerappa Kaginelli, IPS led the use case focusing on AI-driven identification and escalation of social media scam advertisements." },
+                                { src: "UC 3(1).jpg", caption: "Validation of the Usecase AI-driven identification and escalation of social media scam advertisementsss." },
+                                { src: "UC 4.jpg", caption: "Kommi Prathap Sive Kishore, IPS led the use case focused on intelligent CDR/IPDR analytics to uncover complex crime networks." },
+                                { src: "UC 4(1).jpg", caption: "validation of usecase Centralized intelligence platform enabling secure analysis of telecom, financial, and multi-source investigation data." },
+                                { src: "UC 4(2).jpg", caption: "Advanced analytics and link analysis dashboards supporting evidence-driven crime network identification." },
+                                { src: "UC 5-8.jpg", caption: "Malika Garg, IPS leading the use case on AI-powered analysis of Dial 112 and FIR data for hotspot identification and early law & order alerts." },
+                                { src: "UC 6.jpg", caption: "B. Raja Kumari, IPS leading the use case focused on intelligent digitization and analysis of police service records for personnel management." },
+                                { src: "UC 6(1).jpg", caption: "Validation of the use case Intelligent digitization and validation of police service records for rewards, medals, and career management." },
+                                { src: "UC 1-7(1).jpg", caption: "Use Case led by Sri Vakul Jindal, IPS on AI-powered analysis of WhatsApp group chats to flag key points, track tasks, and enable early warnings for proactive policing." },
+                                { src: "UC 5-8(1).jpg", caption: "Use Case led by Malika Garg, IPS on AI-powered analysis of newspaper news feeds to generate district-focused daily intelligence digests for policing." }
+                            ]} />
                         </div>
-                        <EventsCoverflow items={[
-                            { src: "1u.jpeg", caption: "Caption for Image 1" },
-                            { src: "ALI04081.JPG", caption: "Caption for Image 2" },
-                            { src: "ALI04096.JPG", caption: "Caption for Image 3" },
-                            { src: "ALI05635.JPG", caption: "Caption for Image 4" },
-                            { src: "2u.jpeg", caption: "Caption for Image 5" },
-                            { src: "3u.jpeg", caption: "Caption for Image 6" },
-                            { src: "4u.jpeg", caption: "Caption for Image 7" },
-                            { src: "5u.jpeg", caption: "Caption for Image 8" },
-                            { src: "6u.jpeg", caption: "Caption for Image 9" },
-                            { src: "7u.jpeg", caption: "Caption for Image 10" },
-                            { src: "8u.jpeg", caption: "Caption for Image 11" },
-                            { src: "9u.jpeg", caption: "Caption for Image 12" }
-                        ]} />
                     </div>
                 </div>
                 <div className="mt-10 md:mt-16 pt-8 border-t border-white/10">
