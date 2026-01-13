@@ -131,7 +131,7 @@ const Footer = () => {
                             </li>
                             <li className="mt-2">
                                 <Link href="https://x.com/_4sightai?s=21" target="_blank" className="link hover:text-foreground transition-all duration-300">
-                                    Twitter
+                                    X
                                 </Link>
                             </li>
                         </ul>
