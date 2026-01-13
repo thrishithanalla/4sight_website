@@ -9,7 +9,7 @@ export async function generateStaticParams() {
         const res = await fetch("http://127.0.0.1:8000/api/jobs");
         if (!res.ok) {
             console.error("Failed to fetch jobs for static params");
-            return [];
+            return [{ jobId: "missing-job-fallback" }];
         }
         const jobs: Job[] = await res.json();
         return jobs.map((job) => ({
@@ -17,7 +17,7 @@ export async function generateStaticParams() {
         }));
     } catch (error) {
         console.error("Error generating static params:", error);
-        return [];
+        return [{ jobId: "missing-job-fallback" }];
     }
 }
 
