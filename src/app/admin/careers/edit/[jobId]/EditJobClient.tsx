@@ -6,10 +6,13 @@ import Container from "@/components/global/container";
 import Link from "next/link";
 import { ArrowLeft, Save } from "lucide-react";
 import { useRouter, useParams } from "next/navigation";
+import { useAdminAuth } from "@/context/admin-auth";
 
 const EditJobClient = () => {
     const router = useRouter();
     const { jobId } = useParams();
+    const { token, isAuthenticated, isLoading: authLoading } = useAdminAuth();
+
     const [submitting, setSubmitting] = useState(false);
     const [loading, setLoading] = useState(true);
     const [formData, setFormData] = useState({
@@ -28,18 +31,18 @@ const EditJobClient = () => {
     });
 
     useEffect(() => {
-        const token = localStorage.getItem("admin_token");
-        if (!token) {
+        if (authLoading) return;
+        if (!isAuthenticated) {
             router.push("/admin/login");
         }
-    }, [router]);
+    }, [isAuthenticated, authLoading, router]);
 
     useEffect(() => {
         if (!jobId) return;
 
         const fetchJob = async () => {
             try {
-                const res = await fetch(`http://localhost:8000/api/jobs/${jobId}`);
+                const res = await fetch(`http://127.0.0.1:8000/api/jobs/${jobId}`);
                 if (res.ok) {
                     const data = await res.json();
                     setFormData({
@@ -78,16 +81,16 @@ const EditJobClient = () => {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        setSubmitting(true);
 
-        const token = localStorage.getItem("admin_token");
-        if (!token) {
+        if (!isAuthenticated || !token) {
             router.push("/admin/login");
             return;
         }
 
+        setSubmitting(true);
+
         try {
-            const res = await fetch(`http://localhost:8000/api/jobs/${jobId}`, {
+            const res = await fetch(`http://127.0.0.1:8000/api/jobs/${jobId}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
@@ -109,7 +112,7 @@ const EditJobClient = () => {
         }
     };
 
-    if (loading) {
+    if (loading || authLoading) {
         return (
             <Wrapper className="py-20">
                 <div className="flex justify-center">

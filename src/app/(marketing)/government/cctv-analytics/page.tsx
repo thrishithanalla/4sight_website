@@ -1,5 +1,6 @@
 import Wrapper from "@/components/global/wrapper";
 import Container from "@/components/global/container";
+import Image from "next/image";
 import {
     BrainCircuitIcon,
     VideoIcon,
@@ -19,7 +20,7 @@ const CCTVAnalyticsPage = () => {
                 <Container>
                     <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8 md:p-12 hover:border-blue-500/50 hover:bg-white/8 transition-all max-w-5xl mx-auto">
                         <div className="flex flex-col items-center justify-center text-center relative z-10 w-full">
-                            <h1 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-6">
+                            <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-6">
                                 CCTV Intelligence & Video LLM Innovation
                             </h1>
                             <p className="text-lg md:text-xl text-foreground/90 font-medium mb-6">
@@ -75,8 +76,13 @@ const CCTVAnalyticsPage = () => {
                             </div>
                         </div>
                         <div className="hidden md:flex w-full md:w-1/3 justify-center items-center">
-                            <div className="relative w-full aspect-square max-w-sm rounded-full bg-gradient-to-tr from-blue-500/20 to-cyan-500/20 flex items-center justify-center animate-pulse">
-                                <VideoIcon className="w-32 h-32 text-blue-500/50" />
+                            <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-video w-full border border-border/50 bg-black/50">
+                                <Image
+                                    src="/gov_images/cctv-analytics.jpg"
+                                    alt="Video LLM Research & Innovation"
+                                    fill
+                                    className="object-cover"
+                                />
                             </div>
                         </div>
                     </div>

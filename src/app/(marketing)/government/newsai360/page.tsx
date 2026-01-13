@@ -1,6 +1,7 @@
 import Wrapper from "@/components/global/wrapper";
 import Container from "@/components/global/container";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
     NewspaperIcon,
@@ -23,7 +24,7 @@ const NewsAI360Page = () => {
                 <Container>
                     <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8 md:p-12 hover:border-blue-500/50 hover:bg-white/8 transition-all max-w-5xl mx-auto">
                         <div className="flex flex-col items-center justify-center text-center relative z-10 w-full">
-                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-6">
+                            <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-6">
                                 NewsAI360
                             </h1>
                             <p className="text-xl md:text-2xl text-foreground/90 font-medium mb-4">
@@ -51,10 +52,12 @@ const NewsAI360Page = () => {
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-video w-full border border-border/50 bg-black/50">
-                            {/* Placeholder for NewsAI image */}
-                            <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
-                                <NewspaperIcon className="w-16 h-16 opacity-20" />
-                            </div>
+                            <Image
+                                src="/gov_images/newsai360.jpg"
+                                alt="NewsAI360 Overview"
+                                fill
+                                className="object-cover"
+                            />
                         </div>
                         <div className="flex flex-col gap-6">
                             <h3 className="text-2xl font-bold text-blue-500">Automated Intelligence</h3>

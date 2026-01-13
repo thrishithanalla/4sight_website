@@ -75,24 +75,26 @@ const AboutPage = () => {
                                 </p>
                             </div>
 
-                            <div className="flex flex-col items-center justify-end w-full mt-auto relative min-h-[140px] pb-4">
-                                <div className="absolute bottom-[2px] w-[90%] border-t border-dashed border-neutral-300 dark:border-neutral-700 z-0 opacity-50"></div>
-                                <div className="absolute bottom-[10px] w-[85%] border-t border-dashed border-neutral-300 dark:border-neutral-700 z-0 opacity-70"></div>
-                                <div className="absolute bottom-[18px] w-[80%] border-t border-dashed border-neutral-300 dark:border-neutral-700 z-0"></div>
-
-                                <div className="bg-neutral-950 text-white rounded-xl p-3 flex shadow-xl z-10 w-[85%] max-w-[240px] relative">
-                                    <div className="bg-blue-600 rounded-lg p-2 mr-3 flex items-center justify-center h-10 w-10 shrink-0">
-                                        <ZapIcon className="w-5 h-5 text-white" fill="currentColor" />
-                                    </div>
-                                    <div className="flex flex-col justify-center">
-                                        <div className="flex items-center gap-2 text-[10px] font-bold text-blue-400 mb-0.5">
-                                            <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-                                            NEW
-                                        </div>
-                                        <div className="text-sm font-semibold leading-tight">Top trends</div>
-                                        <div className="text-[10px] text-neutral-400">Today, 10:25</div>
-                                    </div>
-                                </div>
+                            <div className="w-full h-40 mt-auto">
+                                <ResponsiveContainer width="100%" height="100%">
+                                    <LineChart data={chartData}>
+                                        <Line
+                                            type="monotone"
+                                            dataKey="val"
+                                            stroke="#2563eb"
+                                            strokeWidth={3}
+                                            dot={(props) => {
+                                                const { cx, cy, index } = props;
+                                                if (index === 5) return <circle key={index} cx={cx} cy={cy} r={4} fill="#2563eb" stroke="white" strokeWidth={2} />;
+                                                return <circle key={index} r={0} />;
+                                            }}
+                                        />
+                                        <Tooltip
+                                            cursor={{ stroke: '#2563eb', strokeWidth: 1, strokeDasharray: "4 4" }}
+                                            content={<CustomTooltip />}
+                                        />
+                                    </LineChart>
+                                </ResponsiveContainer>
                             </div>
                         </MagicCard>
                     </div>
@@ -135,9 +137,6 @@ const AboutPage = () => {
                                         />
                                     </LineChart>
                                 </ResponsiveContainer>
-                                <div className="flex justify-between text-xs text-muted-foreground mt-2 px-1">
-                                    <span>-5</span><span>0</span><span>5</span><span>10</span><span>15</span><span>20</span><span>25</span>
-                                </div>
                             </div>
                         </MagicCard>
                     </div>

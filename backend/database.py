@@ -10,3 +10,4 @@ DB_NAME = os.getenv("DB_NAME", "4sight_website")
 client = motor.motor_asyncio.AsyncIOMotorClient(MONGO_URI)
 db = client[DB_NAME]
 jobs_collection = db["jobs"]
+applications_collection = db["applications"]

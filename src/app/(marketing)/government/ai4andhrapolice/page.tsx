@@ -39,7 +39,7 @@ const AI4AndhraPolicePage = () => {
                                     priority
                                 />
                             </div>
-                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-6">
+                            <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-6">
                                 AI 4 Andhra Police
                             </h1>
                             <p className="text-xl md:text-2xl text-foreground/90 font-medium mb-4">
@@ -67,10 +67,12 @@ const AI4AndhraPolicePage = () => {
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-video w-full border border-border/50 bg-black/50">
-                            {/* Placeholder for Police image */}
-                            <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
-                                <ShieldIcon className="w-16 h-16 opacity-20" />
-                            </div>
+                            <Image
+                                src="/gov_images/ai4andhrapolice.jpg"
+                                alt="AI 4 Andhra Police Overview"
+                                fill
+                                className="object-cover"
+                            />
                         </div>
                         <div className="flex flex-col gap-6">
                             <h3 className="text-2xl font-bold text-blue-500">Intelligence-Driven Systems</h3>
@@ -162,19 +164,19 @@ const AI4AndhraPolicePage = () => {
                             <h3 className="text-2xl font-bold text-blue-500 mb-6 text-center md:text-left">Project Impact</h3>
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                                 <div className="text-center space-y-2">
-                                    <div className="text-3xl md:text-4xl font-bold text-foreground">40%</div>
+                                    <div className="text-2xl font-bold text-foreground">40%</div>
                                     <div className="text-sm text-muted-foreground uppercase tracking-wider font-medium">Reduced Response Time</div>
                                 </div>
                                 <div className="text-center space-y-2">
-                                    <div className="text-3xl md:text-4xl font-bold text-foreground">90%</div>
+                                    <div className="text-2xl font-bold text-foreground">90%</div>
                                     <div className="text-sm text-muted-foreground uppercase tracking-wider font-medium">Prediction Accuracy</div>
                                 </div>
                                 <div className="text-center space-y-2">
-                                    <div className="text-3xl md:text-4xl font-bold text-foreground">10k+</div>
+                                    <div className="text-2xl font-bold text-foreground">10k+</div>
                                     <div className="text-sm text-muted-foreground uppercase tracking-wider font-medium">Man-hours Saved</div>
                                 </div>
                                 <div className="text-center space-y-2">
-                                    <div className="text-3xl md:text-4xl font-bold text-foreground">100%</div>
+                                    <div className="text-2xl font-bold text-foreground">100%</div>
                                     <div className="text-sm text-muted-foreground uppercase tracking-wider font-medium">District Coverage</div>
                                 </div>
                             </div>

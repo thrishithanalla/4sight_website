@@ -11,6 +11,7 @@ import Pricing from "@/components/marketing/pricing";
 import Team from "@/components/marketing/team";
 import UseCases from "@/components/marketing/use-cases";
 import Testimonials from "@/components/marketing/testimonials";
+import WhyChooseText from "@/components/marketing/why-choose-text";
 
 const HomePage = () => {
     return (
@@ -20,6 +21,7 @@ const HomePage = () => {
             </div>
 
             <Features />
+            <WhyChooseText />
             <Testimonials />
 
             {/* <StackingCards /> */}

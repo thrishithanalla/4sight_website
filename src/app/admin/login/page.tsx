@@ -25,7 +25,7 @@ const AdminLoginPage = () => {
             formData.append('username', username);
             formData.append('password', password);
 
-            const res = await fetch("http://localhost:8000/token", {
+            const res = await fetch("http://127.0.0.1:8000/token", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/x-www-form-urlencoded",

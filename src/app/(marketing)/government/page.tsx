@@ -12,7 +12,7 @@ const governmentProjects = [
         id: 'ai4andhrapolice',
         title: 'AI 4 Andhra Police',
         desc: 'A comprehensive AI-powered initiative to modernize law enforcement in Andhra Pradesh. This project leverages data analytics, predictive modeling, and real-time monitoring to enhance public safety, optimize resource allocation, and improve response times.',
-        img: '/images/police_hero_image.png',
+        img: '/gov_images/ai4andhrapolice.jpg',
         alt: 'AI 4 Andhra Police Initiative',
         route: '/government/ai4andhrapolice'
     },
@@ -20,7 +20,7 @@ const governmentProjects = [
         id: 'cctv-analytics',
         title: 'CCTV Analytics',
         desc: 'Transforming passive surveillance into active intelligence. Our video analytics platform processes thousands of feeds in real-time to detect anomalies, track suspects, and assist law enforcement with edge-based computing.',
-        img: '/images/cctv-analytics.jpg',
+        img: '/gov_images/cctv-analytics.jpg',
         alt: 'CCTV Analytics Platform',
         route: '/government/cctv-analytics'
     },
@@ -28,7 +28,7 @@ const governmentProjects = [
         id: 'event-governance',
         title: 'Event Governance',
         desc: 'An AI-powered, event-driven system designed to monitor, analyze, and respond to critical incidents in real time. It automates workflows and identifies the right authorities for rapid response.',
-        img: '/images/event-governance.jpg',
+        img: '/gov_images/event-governance.png',
         alt: 'Event Governance Platform',
         route: '/government/event-governance'
     },
@@ -36,7 +36,7 @@ const governmentProjects = [
         id: 'newsai360',
         title: 'NewsAI360',
         desc: 'Automated media intelligence platform that modernizes news monitoring. It collects and analyzes news from print and digital sources to ensure the right information reaches the right officials in real time.',
-        img: '/images/news-ai.jpg',
+        img: '/gov_images/newsai360.jpg',
         alt: 'NewsAI360 Platform',
         route: '/government/newsai360'
     }
@@ -85,12 +85,12 @@ const GovernmentPage = () => {
 
                                     {/* Image Side */}
                                     <div className={`relative rounded-2xl overflow-hidden shadow-md aspect-video lg:aspect-auto lg:h-[300px] w-full ${index % 2 === 1 ? "lg:order-2" : "lg:order-1"}`}>
-                                        {/* Using a solid color placeholder if image fails or path is tricky, but trying Image first */}
-                                        <div className="absolute inset-0 bg-blue-900/20 z-0"></div>
-                                        {/* Placeholder logic or actual image */}
-                                        <div className="w-full h-full flex items-center justify-center bg-muted/30">
-                                            <span className="text-muted-foreground text-sm">Project Preview</span>
-                                        </div>
+                                        <Image
+                                            src={project.img}
+                                            alt={project.alt}
+                                            fill
+                                            className="object-cover transition-transform duration-500 hover:scale-105"
+                                        />
                                     </div>
 
                                     {/* Content Side */}

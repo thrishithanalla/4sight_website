@@ -86,13 +86,16 @@ const ProductsPage = () => {
         <Wrapper className="py-20 relative bg-background lg:!max-w-[90%]">
             <Container>
                 {/* Header */}
-                <div className="flex flex-col items-center justify-center text-center mb-16 max-w-2xl mx-auto">
-                    <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400 mb-6">
-                        Our Products
-                    </h1>
-                    <p className="text-muted-foreground text-lg">
-                        Cutting-edge AI technologies tailored for diverse enterprise needs
-                    </p>
+                {/* Header */}
+                <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8 md:p-12 hover:border-blue-500/50 hover:bg-white/8 transition-all max-w-5xl mx-auto mb-16">
+                    <div className="flex flex-col items-center justify-center text-center max-w-2xl mx-auto relative z-10">
+                        <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-6">
+                            Our Products
+                        </h1>
+                        <p className="text-muted-foreground text-lg">
+                            Cutting-edge AI technologies tailored for diverse enterprise needs
+                        </p>
+                    </div>
                 </div>
 
                 {/* Products List */}

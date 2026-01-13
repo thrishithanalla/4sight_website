@@ -6,9 +6,11 @@ import Container from "@/components/global/container";
 import Link from "next/link";
 import { ArrowLeft, Save } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { useAdminAuth } from "@/context/admin-auth";
 
 const AddJobPage = () => {
     const router = useRouter();
+    const { token, isAuthenticated, isLoading: authLoading } = useAdminAuth();
     const [submitting, setSubmitting] = useState(false);
     const [formData, setFormData] = useState({
         title: "",
@@ -34,13 +36,13 @@ const AddJobPage = () => {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        setSubmitting(true);
 
-        const token = localStorage.getItem("admin_token");
-        if (!token) {
+        if (!isAuthenticated || !token) {
             router.push("/admin/login");
             return;
         }
+
+        setSubmitting(true);
 
         // Auto-append country if not present
         let finalLocation = formData.location;
@@ -56,7 +58,7 @@ const AddJobPage = () => {
         };
 
         try {
-            const res = await fetch("http://localhost:8000/api/jobs", {
+            const res = await fetch("http://127.0.0.1:8000/api/jobs", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -77,6 +79,21 @@ const AddJobPage = () => {
             setSubmitting(false);
         }
     };
+
+    useEffect(() => {
+        if (authLoading) return;
+        if (!isAuthenticated) {
+            router.push("/admin/login");
+        }
+    }, [isAuthenticated, authLoading, router]);
+
+    if (authLoading) {
+        return (
+            <div className="flex justify-center items-center h-screen bg-black">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+            </div>
+        );
+    }
 
     return (
         <Wrapper className="py-20">
@@ -292,9 +309,9 @@ const AddJobPage = () => {
                             </button>
                         </div>
                     </form>
-                </div>
-            </Container>
-        </Wrapper>
+                </div >
+            </Container >
+        </Wrapper >
     );
 };
 

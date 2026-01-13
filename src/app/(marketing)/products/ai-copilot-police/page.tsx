@@ -20,16 +20,18 @@ const AICopilotPolicePage = () => {
             {/* Hero Section */}
             <Wrapper className="pt-20 pb-10 relative overflow-hidden">
                 <Container>
-                    <div className="flex flex-col items-center justify-center text-center max-w-3xl mx-auto">
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-foreground to-muted-foreground mb-6">
-                            AI Co-pilot (Police)
-                        </h1>
-                        <p className="text-xl md:text-2xl text-accent-foreground/90 font-medium mb-4">
-                            Law Enforcement AI Assistant
-                        </p>
-                        <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
-                            Intelligent AI assistant designed to support police operations with data analysis, pattern recognition, and evidence-based decision-making.
-                        </p>
+                    <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8 md:p-12 hover:border-blue-500/50 hover:bg-white/8 transition-all max-w-5xl mx-auto">
+                        <div className="flex flex-col items-center justify-center text-center max-w-3xl mx-auto relative z-10">
+                            <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-6">
+                                AI Co-pilot (Police)
+                            </h1>
+                            <p className="text-xl md:text-2xl text-accent-foreground/90 font-medium mb-4">
+                                Law Enforcement AI Assistant
+                            </p>
+                            <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
+                                Intelligent AI assistant designed to support police operations with data analysis, pattern recognition, and evidence-based decision-making.
+                            </p>
+                        </div>
                     </div>
                 </Container>
             </Wrapper>
@@ -38,7 +40,7 @@ const AICopilotPolicePage = () => {
             <Wrapper className="py-20 bg-muted/20">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
                             AI-Powered Law Enforcement Support
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -76,7 +78,7 @@ const AICopilotPolicePage = () => {
             <Wrapper className="py-20 relative">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
                             Key Features
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -137,7 +139,7 @@ const AICopilotPolicePage = () => {
             <Wrapper className="py-20 bg-muted/20">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
                             Applications in Law Enforcement
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -185,7 +187,7 @@ const AICopilotPolicePage = () => {
             <Wrapper className="py-20 relative">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
                             Law Enforcement Use Cases
                         </h2>
                         <p className="text-muted-foreground text-lg">
@@ -215,7 +217,7 @@ const AICopilotPolicePage = () => {
             <Wrapper className="py-20 bg-muted/20">
                 <Container>
                     <div className="flex flex-col items-center justify-center text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 mb-4">
                             Why AI Co-pilot (Police) Matters
                         </h2>
                         <p className="text-muted-foreground text-lg">

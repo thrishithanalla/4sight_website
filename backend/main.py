@@ -1,4 +1,5 @@
-from fastapi import FastAPI, Body, HTTPException, status, Depends
+from fastapi import FastAPI, Body, HTTPException, status, Depends, File, UploadFile, Form
+from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from fastapi.encoders import jsonable_encoder
@@ -9,12 +10,18 @@ from datetime import datetime, timedelta
 from jose import JWTError, jwt
 from passlib.context import CryptContext
 from pydantic import BaseModel
+import shutil
+import uuid
 
-from models import Job, JobCreate, JobUpdate
-from database import jobs_collection
+from models import Job, JobCreate, JobUpdate, Application, ApplicationCreate
+from database import jobs_collection, applications_collection
 import os
 
 app = FastAPI()
+
+# Mount uploads directory for serving resumes
+os.makedirs("uploads", exist_ok=True)
+app.mount("/uploads", StaticFiles(directory="uploads"), name="uploads")
 
 app.add_middleware(
     CORSMiddleware,
@@ -279,6 +286,124 @@ def send_email(contact: ContactForm):
     except Exception as e:
         print(f"Error sending email: {e}")
         return False
+
+def send_application_email(application: dict, resume_filename: str):
+    sender_email = os.getenv("SMTP_USER")
+    sender_password = os.getenv("SMTP_PASS")
+    smtp_host = os.getenv("SMTP_HOST")
+    smtp_port = int(os.getenv("SMTP_PORT", 587))
+
+    if not sender_email or not sender_password:
+        return False
+
+    msg = MIMEMultipart()
+    msg['From'] = sender_email
+    msg['To'] = sender_email
+    msg['Subject'] = f"New Job Application: {application.get('job_title', 'Unknown')} - {application.get('name')}"
+
+    body = f"""
+    New Job Application Received:
+
+    Job: {application.get('job_title')} (ID: {application.get('job_id')})
+    
+    Candidate Details:
+    ------------------
+    Name: {application.get('name')}
+    Email: {application.get('email')}
+    Phone: {application.get('phone')}
+    Experience: {application.get('experience')}
+    Address: {application.get('address')}
+    
+    Links:
+    ------
+    LinkedIn: {application.get('linkedin_url')}
+    GitHub: {application.get('github_url')}
+    
+    Why Hire Me:
+    ------------
+    {application.get('why_hire_me')}
+    
+    Resume:
+    -------
+    stored at: uploads/{resume_filename}
+    """
+    msg.attach(MIMEText(body, 'plain'))
+
+    # Attach resume
+    file_path = os.path.join("uploads", resume_filename)
+    if os.path.exists(file_path):
+        from email.mime.application import MIMEApplication
+        with open(file_path, "rb") as f:
+            part = MIMEApplication(f.read(), Name=resume_filename)
+            part['Content-Disposition'] = f'attachment; filename="{resume_filename}"'
+            msg.attach(part)
+
+    try:
+        server = smtplib.SMTP(smtp_host, smtp_port)
+        server.starttls()
+        server.login(sender_email, sender_password)
+        text = msg.as_string()
+        server.sendmail(sender_email, sender_email, text)
+        server.quit()
+        return True
+    except Exception as e:
+        print(f"Error sending app email: {e}")
+        return False
+
+@app.post("/api/applications", response_description="Submit job application")
+async def submit_application(
+    job_id: str = Form(...),
+    job_title: str = Form(...),
+    name: str = Form(...),
+    email: str = Form(...),
+    phone: str = Form(...),
+    experience: str = Form(...),
+    address: str = Form(None),
+    why_hire_me: str = Form(...),
+    linkedin_url: str = Form(None),
+    github_url: str = Form(None),
+    resume: UploadFile = File(...)
+):
+    # Save Resume
+    file_extension = os.path.splitext(resume.filename)[1]
+    unique_filename = f"{uuid.uuid4()}{file_extension}"
+    file_path = os.path.join("uploads", unique_filename)
+    
+    with open(file_path, "wb") as buffer:
+        shutil.copyfileobj(resume.file, buffer)
+        
+    # Create Application Object
+    application_data = {
+        "job_id": job_id,
+        "job_title": job_title,
+        "name": name,
+        "email": email,
+        "phone": phone,
+        "experience": experience,
+        "address": address,
+        "why_hire_me": why_hire_me,
+        "linkedin_url": linkedin_url,
+        "github_url": github_url,
+        "resume_path": unique_filename,
+        "created_at": datetime.utcnow(),
+        "status": "New"
+    }
+    
+    new_app = await applications_collection.insert_one(application_data)
+    created_app = await applications_collection.find_one({"_id": new_app.inserted_id})
+    
+    # Send Email
+    send_application_email(application_data, unique_filename)
+    
+    return fix_id(created_app)
+
+@app.get("/api/applications", response_description="List all applications (Admin)", response_model=List[Application])
+async def list_applications(current_user: dict = Depends(get_current_active_user)):
+    apps = []
+    cursor = applications_collection.find().sort("created_at", -1)
+    async for app in cursor:
+        apps.append(fix_id(app))
+    return apps
 
 @app.post("/api/contact", response_description="Submit contact form")
 async def submit_contact_form(contact: ContactForm = Body(...)):

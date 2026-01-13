@@ -16,7 +16,7 @@ export default function RootLayout({
         <html lang="en" suppressHydrationWarning>
             <body
                 className={cn(
-                    "min-h-screen bg-background text-foreground antialiased font-heading overflow-x-hidden !scrollbar-hide",
+                    "min-h-screen bg-background text-foreground antialiased font-base overflow-x-hidden !scrollbar-hide",
                     base.variable,
                     heading.variable,
                     subheading.variable,
