@@ -13,23 +13,49 @@ import UseCases from "@/components/marketing/use-cases";
 import Testimonials from "@/components/marketing/testimonials";
 import WhyChooseText from "@/components/marketing/why-choose-text";
 
+import FadeUpOnScroll from "@/components/ui/fade-up-on-scroll";
+
+import ScrollZoomHero from "@/components/marketing/scroll-zoom-hero";
+import StrategicTeam from "@/components/marketing/strategic-team";
+
 const HomePage = () => {
     return (
         <div className="flex flex-col relative w-full">
-            <div className="w-full mx-auto lg:max-w-[1600px] relative overflow-hidden">
+            <ScrollZoomHero />
+            {/* <div className="w-full mx-auto lg:max-w-[1600px] relative overflow-hidden">
                 <Hero />
-            </div>
+            </div> */ }
 
-            <Features />
-            <WhyChooseText />
-            <Testimonials />
+            <FadeUpOnScroll>
+                <Features />
+            </FadeUpOnScroll>
+
+            <FadeUpOnScroll>
+                <WhyChooseText />
+            </FadeUpOnScroll>
+
+            <FadeUpOnScroll>
+                <Testimonials />
+            </FadeUpOnScroll>
 
             {/* <StackingCards /> */}
 
             <Wrapper className="pb-20 relative overflow-hidden">
-                <ImpactStats />
-                <Team />
-                <UseCases />
+                <FadeUpOnScroll>
+                    <ImpactStats />
+                </FadeUpOnScroll>
+
+                <FadeUpOnScroll>
+                    <StrategicTeam />
+                </FadeUpOnScroll>
+
+                <FadeUpOnScroll>
+                    <Team />
+                </FadeUpOnScroll>
+
+                <FadeUpOnScroll>
+                    <UseCases />
+                </FadeUpOnScroll>
                 {/* <Companies /> */}
 
                 {/* <Analysis /> */}

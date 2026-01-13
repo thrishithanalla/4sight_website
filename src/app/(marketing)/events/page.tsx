@@ -300,7 +300,7 @@ const EventsPage = () => {
                         {/* Header Section */}
                         <div className="flex flex-col items-center justify-center text-center max-w-3xl mx-auto">
                             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-                                Our Events
+                                AdAsia 2025
                             </h1>
                             <p className="text-muted-foreground text-base leading-6 max-w-2xl mx-auto">
                                 Beijing, China | December 2025
