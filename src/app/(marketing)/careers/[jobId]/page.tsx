@@ -4,9 +4,10 @@ interface Job {
     _id: string;
 }
 
+// Generate segments for [jobId]
 export async function generateStaticParams() {
     try {
-        const res = await fetch("http://127.0.0.1:8000/api/jobs");
+        const res = await fetch("http://127.0.0.1:8000/api/jobs", { cache: 'no-store' });
         if (!res.ok) {
             console.warn("Failed to fetch jobs for static params");
             return [];
@@ -16,7 +17,7 @@ export async function generateStaticParams() {
             jobId: job._id,
         }));
     } catch (error) {
-        console.warn("Backend offline, skipping static param generation");
+        console.warn("Backend offline or unreachable during build, skipping static param generation for careers", error);
         return [];
     }
 }
