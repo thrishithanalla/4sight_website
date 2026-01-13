@@ -268,12 +268,12 @@ const EventsPage = () => {
                                 </div>
                             </div>
                             <EventsCoverflow items={[
-                                { src: "ALI04081.JPG", caption: "Use Cases led by Malika Garg, IPS; B. Raja Kumari, IPS; and Tushar Dudi, IPS" },
-                                { src: "ALI04096.JPG", caption: "Use Cases led by Kommi Prathap Sive Kishore, IPS; and Dr. Fakkeerappa Kaginelli, IPS" },
-                                { src: "ALI05635.JPG", caption: "Caption for Image 4" },
-                                { src: "3u.jpeg", caption: "Caption for Image 6" },
-                                { src: "4u.jpeg", caption: "Caption for Image 7" },
-                                { src: "10u.jpeg", caption: "Caption for Image 8" },
+                                { src: "ALI04081.JPG", caption: "Use Cases led by ShriMalika Garg, IPS; Shri B. Raja Kumari, IPS; and Shri Tushar Dudi, IPS" },
+                                { src: "ALI04096.JPG", caption: "Use Cases led by Shri Kommi Prathap Sive Kishore, IPS; and Shri Dr. Fakkeerappa Kaginelli, IPS" },
+                                { src: "ALI05635.JPG", caption: "Inspector General of Police Shri Ch. Srikanth engaging with officials during the AI4AndhraPolice Hackathon, reinforcing innovation-led policing." },
+                                { src: "3u.jpeg", caption: "Hon’ble Chief Minister Shri N. Chandrababu Naidu at the AI4AndhraPolice Hackathon, emphasizing innovation and the future of AI-enabled policing for our State, Andhra Pradesh." },
+                                { src: "4u.jpeg", caption: "With 150+ police officers in attendance, the AI4AndhraPolice Hackathon marks a major step towards strengthening law enforcement through innovation and AI across Andhra Pradesh." },
+                                { src: "10u.jpeg", caption: "Address by Hon’ble Smt. Vangalapudi Anitha during the AI4AndhraPolice Hackathon, highlighting the vision and future of AI-enabled law enforcement for the State of Andhra Pradesh." },
                                 { src: "6u.jpeg", caption: "Caption for Image 9" },
                                 { src: "7u.jpeg", caption: "The Grid Dynamics team worked on the use case to generate district-focused intelligence from newspaper content using AI." },
                                 { src: "8u.jpeg", caption: "Tech Talk on AI4AndhraPolice" },
@@ -281,16 +281,16 @@ const EventsPage = () => {
                                 { src: "UC 1-7.jpg", caption: "Sri Vakul Jindal, IPS led the use case on AI-assisted petition analysis for effective grievance redressal." },
                                 { src: "UC 2.jpg", caption: "Use Case led by Tushar Dudi, IPS on AI-powered voice-based natural language querying and report generation from CCTNS data." },
                                 { src: "UC 2(1).jpg", caption: "Validation on usecase the voice-enabled AI access to CCTNS for intuitive querying and automated report generation." },
-                                { src: "UC 3.jpg", caption: "Dr. Fakkeerappa Kaginelli, IPS led the use case focusing on AI-driven identification and escalation of social media scam advertisements." },
+                                { src: "UC 3.jpg", caption: "Shri Dr. Fakkeerappa Kaginelli, IPS led the use case focusing on AI-driven identification and escalation of social media scam advertisements." },
                                 { src: "UC 3(1).jpg", caption: "Validation of the Usecase AI-driven identification and escalation of social media scam advertisementsss." },
-                                { src: "UC 4.jpg", caption: "Kommi Prathap Sive Kishore, IPS led the use case focused on intelligent CDR/IPDR analytics to uncover complex crime networks." },
+                                { src: "UC 4.jpg", caption: "Shri Kommi Prathap Sive Kishore, IPS led the use case focused on intelligent CDR/IPDR analytics to uncover complex crime networks." },
                                 { src: "UC 4(1).jpg", caption: "validation of usecase Centralized intelligence platform enabling secure analysis of telecom, financial, and multi-source investigation data." },
                                 { src: "UC 4(2).jpg", caption: "Advanced analytics and link analysis dashboards supporting evidence-driven crime network identification." },
-                                { src: "UC 5-8.jpg", caption: "Malika Garg, IPS leading the use case on AI-powered analysis of Dial 112 and FIR data for hotspot identification and early law & order alerts." },
-                                { src: "UC 6.jpg", caption: "B. Raja Kumari, IPS leading the use case focused on intelligent digitization and analysis of police service records for personnel management." },
+                                { src: "UC 5-8.jpg", caption: "Shri Malika Garg, IPS, leading the use case on AI-powered analysis of Dial 112 and FIR data for hotspot identification and early law & order alerts.." },
+                                { src: "UC 6.jpg", caption: "Shri B. Raja Kumari, IPS, leading the use case focused on intelligent digitization and analysis of police service records for effective personnel management." },
                                 { src: "UC 6(1).jpg", caption: "Validation of the use case Intelligent digitization and validation of police service records for rewards, medals, and career management." },
                                 { src: "UC 1-7(1).jpg", caption: "Use Case led by Sri Vakul Jindal, IPS on AI-powered analysis of WhatsApp group chats to flag key points, track tasks, and enable early warnings for proactive policing." },
-                                { src: "UC 5-8(1).jpg", caption: "Use Case led by Malika Garg, IPS on AI-powered analysis of newspaper news feeds to generate district-focused daily intelligence digests for policing." }
+                                { src: "UC 5-8(1).jpg", caption: "Use Case led by Shri Malika Garg, IPS on AI-powered analysis of newspaper news feeds to generate district-focused daily intelligence digests for policing." }
                             ]} />
                         </div>
                     </div>
